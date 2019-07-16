@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="addon">
+  <id>io.elementary.switchboard.wacom</id>
+  <extends>io.elementary.switchboard</extends>
+  <name>Wacom Settings</name>
+  <summary>Configure Wacom tablets</summary>
+  <screenshots>
+      <screenshot type="default">
+          <image>https://raw.githubusercontent.com/elementary/switchboard-plug-wacom/master/data/screenshot-general.png</image>
+      </screenshot>
+  </screenshots>
+  <url type="homepage">https://elementary.io</url>
+  <url type="bugtracker">https://github.com/elementary/switchboard-plug-wacom/issues</url>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+</component>
+
