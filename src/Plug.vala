@@ -28,6 +28,8 @@ public class Wacom.Plug : Switchboard.Plug {
 
     private Backend.DeviceManager device_manager;
 
+    private Gee.HashMap<Backend.Device, Backend.WacomDevice>? devices = null;
+
     public Plug () {
         var settings = new Gee.TreeMap<string, string?> (null, null);
         settings.set ("input/pointing/stylus", "general");
@@ -46,6 +48,13 @@ public class Wacom.Plug : Switchboard.Plug {
 
     public override Gtk.Widget get_widget () {
         if (empty_stack == null) {
+
+            if (devices == null) {
+                devices = new Gee.HashMap<Backend.Device, Backend.WacomDevice> ();
+            } else {
+                devices.clear ();
+            }
+
             stylus_view = new StylusView ();
             tablet_view = new TabletView ();
 
@@ -86,17 +95,50 @@ public class Wacom.Plug : Switchboard.Plug {
             device_manager = Backend.DeviceManager.get_default ();
             device_manager.device_added.connect (on_device_added);
             device_manager.device_removed.connect (on_device_removed);
+
+            foreach (var device in device_manager.list_devices (Backend.Device.DeviceType.TABLET)) {
+                add_known_device (device);
+            }
+
+            update_current_page ();
         }
 
         return empty_stack;
     }
 
-    private void on_device_added (Backend.Device device) {
+    private void add_known_device (Backend.Device d) {
+        if (!(Backend.Device.DeviceType.TABLET in d.dev_type)) {
+            return;
+        }
 
+        if (Backend.Device.DeviceType.TOUCHSCREEN in d.dev_type ||
+            Backend.Device.DeviceType.TOUCHPAD in d.dev_type) {
+            return;
+        }
+
+        var device = new Backend.WacomDevice (d);
+        devices[d] = device;
+    }
+
+    private void update_current_page () {
+        foreach (var device in devices.keys) {
+            if (Backend.Device.DeviceType.PAD in device.dev_type) {
+                empty_stack.visible_child_name = "main_view";
+                return;
+            }
+        }
+
+        empty_stack.visible_child_name = "no_tablets";
+    }
+
+    private void on_device_added (Backend.Device device) {
+        add_known_device (device);
+        update_current_page ();
     }
 
     private void on_device_removed (Backend.Device device) {
-
+        devices.unset (device);
+        update_current_page ();
     }
 
     public override void shown () {

@@ -18,4 +18,21 @@
  */
 
 public class Wacom.Backend.WacomDevice : GLib.Object {
+    public Device device { private get; construct; }
+    private Wacom.Device? wacom_device = null;
+
+    private static Wacom.DeviceDatabase? wacom_db = null;
+
+    static construct {
+        wacom_db = new Wacom.DeviceDatabase ();
+    }
+
+    public WacomDevice (Device device) {
+        Object (device: device);
+    }
+
+    construct {
+        wacom_device = wacom_db.get_device_from_path (device.device_file);
+        warning (wacom_device.get_class ().to_string ());
+    }
 }
