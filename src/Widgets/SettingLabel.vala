@@ -17,28 +17,14 @@
  * Boston, MA 02110-1301 USA.
  */
 
-public class Wacom.TabletView : Gtk.Grid {
-    private Backend.WacomDevice device;
-    private GLib.Settings settings;
-
-    private Gtk.Switch left_handed_switch;
-
-    construct {
-        row_spacing = 12;
-        column_spacing = 12;
-
-        left_handed_switch = new Gtk.Switch ();
-        left_handed_switch.halign = Gtk.Align.START;
-
-        attach (new Widgets.SettingLabel (_("Left-handed orientation:")), 0, 0);
-        attach (left_handed_switch, 1, 0);
+public class Wacom.Widgets.SettingLabel : Gtk.Label {
+    public SettingLabel (string label) {
+        Object (label: label);
     }
 
-    public void set_device (Backend.WacomDevice dev) {
-        device = dev;
-        settings = device.get_settings ();
-
-        settings.bind ("left-handed", left_handed_switch, "active", SettingsBindFlags.DEFAULT);
+    construct {
+        halign = Gtk.Align.END;
+        margin_start = 12;
     }
 }
 

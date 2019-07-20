@@ -116,14 +116,19 @@ public class Wacom.Plug : Switchboard.Plug {
             return;
         }
 
-        var device = new Backend.WacomDevice (d);
-        devices[d] = device;
+        try {
+            devices[d] = new Backend.WacomDevice (d);
+        } catch (WacomException e) {
+            warning ("Error initializing Wacom device: %s", e.message);
+            return;
+        }
     }
 
     private void update_current_page () {
         foreach (var device in devices.keys) {
             if (Backend.Device.DeviceType.PAD in device.dev_type) {
                 empty_stack.visible_child_name = "main_view";
+                tablet_view.set_device (devices[device]);
                 return;
             }
         }
@@ -164,5 +169,4 @@ public Switchboard.Plug get_plug (Module module) {
 
     return plug;
 }
-
 

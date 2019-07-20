@@ -6,6 +6,7 @@ plug_files = files(
     'Backend/WacomDevice.vala',
     'Views/StylusView.vala',
     'Views/TabletView.vala',
+    'Widgets/SettingLabel.vala',
     'Plug.vala',
     'Utils.vala'
 )
