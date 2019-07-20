@@ -53,8 +53,6 @@ public class Wacom.Backend.WacomDevice : GLib.Object {
         if (wacom_device == null) {
             throw new WacomException.LIBWACOM_ERROR (error.get_message ());
         }
-
-        warning (wacom_device.get_class ().to_string ());
     }
 
     public GLib.Settings get_settings () {
