@@ -1,4 +1,4 @@
-# Switchboard Mouse & Touchpad Plug
+# Switchboard Wacom Plug
 
 This is a WIP plug for [elementary Switchboard](https://github.com/elementary/switchboard) to configure settings for Wacom tablets.
 
