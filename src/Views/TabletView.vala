@@ -21,17 +21,25 @@ public class Wacom.TabletView : Gtk.Grid {
     private Backend.WacomDevice device;
     private GLib.Settings settings;
 
+    private Gtk.ComboBoxText tracking_mode_combo;
     private Gtk.Switch left_handed_switch;
 
     construct {
         row_spacing = 12;
         column_spacing = 12;
 
+        tracking_mode_combo = new Gtk.ComboBoxText ();
+        tracking_mode_combo.hexpand = true;
+        tracking_mode_combo.append ("absolute", _("Tablet (absolute)"));
+        tracking_mode_combo.append ("relative", _("Touchpad (relative)"));
+
         left_handed_switch = new Gtk.Switch ();
         left_handed_switch.halign = Gtk.Align.START;
 
-        attach (new Widgets.SettingLabel (_("Left-handed orientation:")), 0, 0);
-        attach (left_handed_switch, 1, 0);
+        attach (new Widgets.SettingLabel (_("Tracking mode:")), 0, 0);
+        attach (tracking_mode_combo, 1, 0);
+        attach (new Widgets.SettingLabel (_("Left-handed orientation:")), 0, 1);
+        attach (left_handed_switch, 1, 1);
     }
 
     public void set_device (Backend.WacomDevice dev) {
@@ -39,6 +47,7 @@ public class Wacom.TabletView : Gtk.Grid {
         settings = device.get_settings ();
 
         settings.bind ("left-handed", left_handed_switch, "active", SettingsBindFlags.DEFAULT);
+        settings.bind ("mapping", tracking_mode_combo, "active-id", SettingsBindFlags.DEFAULT);
     }
 }
 
