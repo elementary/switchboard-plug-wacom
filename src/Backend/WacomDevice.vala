@@ -55,6 +55,14 @@ public class Wacom.Backend.WacomDevice : GLib.Object {
         }
     }
 
+    public int[] get_supported_tools () {
+        if (wacom_device == null) {
+            return new int[] {};
+        }
+
+        return wacom_device.get_supported_styli ();
+    }
+
     public GLib.Settings get_settings () {
         if (wacom_settings == null) {
             var path = WACOM_SETTINGS_BASE.printf (device.vendor_id, device.product_id);

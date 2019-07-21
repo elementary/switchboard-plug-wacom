@@ -22,7 +22,42 @@ public class Wacom.Backend.WacomTool : GLib.Object {
     public uint64 serial { public get; construct; }
     public WacomDevice? device { public get; construct; }
 
-    public WacomTool (uint64 serial, uint64 id, WacomDevice? device) {
+    private unowned Wacom.Stylus? wstylus = null;
+    private GLib.Settings? settings = null;
+
+    private static Wacom.DeviceDatabase? wacom_db = null;
+
+    public WacomTool (uint64 serial, uint64 id, WacomDevice? device) throws WacomException {
+        if (serial == 0 && device != null) {
+            var ids = this.device.get_supported_tools ();
+            if (ids.length > 0) {
+                id = ids[0];
+            }
+        }
+
         Object (id: id, serial: serial, device: device);
+
+        if (wacom_db == null) {
+            wacom_db = new Wacom.DeviceDatabase ();
+        }
+
+        wstylus = wacom_db.get_stylus_for_id ((int)this.id);
+
+        if (wstylus == null) {
+            throw new WacomException.LIBWACOM_ERROR ("Stylus description not found");
+        }
+
+        string settings_path;
+        if (this.serial == 0) {
+            settings_path = "/org/gnome/desktop/peripherals/stylus/default-%s:%s/".printf (device.device.vendor_id, device.device.product_id);
+        } else {
+            settings_path = "/org/gnome/desktop/peripherals/stylus/%llx/".printf (this.serial);
+        }
+
+        settings = new GLib.Settings.with_path ("org.gnome.desktop.peripherals.tablet.stylus", settings_path);
+    }
+
+    public GLib.Settings get_settings () {
+        return settings;
     }
 }

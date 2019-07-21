@@ -46,8 +46,8 @@ public class Wacom.TabletView : Gtk.Grid {
         device = dev;
         settings = device.get_settings ();
 
-        settings.bind ("left-handed", left_handed_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("mapping", tracking_mode_combo, "active-id", SettingsBindFlags.DEFAULT);
+        settings.bind ("left-handed", left_handed_switch, "active", SettingsBindFlags.DEFAULT);
     }
 }
 

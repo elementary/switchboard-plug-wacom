@@ -107,8 +107,11 @@ public class Wacom.Backend.WacomToolMap : GLib.Object {
                 continue;
             }
 
-            var tool = new WacomTool (serial, id, null);
-            tool_map[serials[i]] = tool;
+            try {
+                tool_map[serials[i]] = new WacomTool (serial, id, null);
+            } catch (GLib.Error e) {
+                continue;
+            }
         }
     }
 

@@ -30,6 +30,8 @@ public class Wacom.Plug : Switchboard.Plug {
 
     private Gee.HashMap<Backend.Device, Backend.WacomDevice>? devices = null;
 
+    private Backend.WacomTool? last_stylus = null;
+
     public Plug () {
         var settings = new Gee.TreeMap<string, string?> (null, null);
         settings.set ("input/pointing/stylus", "general");
@@ -130,12 +132,20 @@ public class Wacom.Plug : Switchboard.Plug {
 
             var stylus = tool_map.lookup_tool (wacom_device, serial);
             if (stylus == null) {
-                warning ("tool lookup failed");
                 var id = tool.get_hardware_id ();
-                stylus = new Backend.WacomTool (serial, id, wacom_device);
+                try {
+                    stylus = new Backend.WacomTool (serial, id, wacom_device);
+                } catch (GLib.Error e) {
+                    return Gdk.EVENT_PROPAGATE;
+                }
             }
 
             tool_map.add_relation (wacom_device, stylus);
+            if (stylus != last_stylus) {
+                stylus_view.set_device (stylus);
+            }
+
+            last_stylus = stylus;
         }
 
         return Gdk.EVENT_PROPAGATE;
