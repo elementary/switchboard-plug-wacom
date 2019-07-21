@@ -17,10 +17,12 @@
  * Boston, MA 02110-1301 USA.
  */
 
-public class Wacom.Backend.DeviceManagerWayland : DeviceManager {
-    public DeviceManagerWayland () {
+public class Wacom.Backend.WacomTool : GLib.Object {
+    public uint64 id { public get; construct; }
+    public uint64 serial { public get; construct; }
+    public WacomDevice? device { public get; construct; }
 
+    public WacomTool (uint64 serial, uint64 id, WacomDevice? device) {
+        Object (id: id, serial: serial, device: device);
     }
 }
-
-

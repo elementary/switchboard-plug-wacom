@@ -25,7 +25,7 @@ public class Wacom.Backend.WacomDevice : GLib.Object {
     private const string WACOM_TABLET_SCHEMA = "org.gnome.desktop.peripherals.tablet";
     private const string WACOM_SETTINGS_BASE = "/org/gnome/desktop/peripherals/tablets/%s:%s/";
 
-    public Device device { private get; construct; }
+    public Device device { public get; construct; }
     private Wacom.Device? wacom_device = null;
     private GLib.Settings? wacom_settings = null;
 

@@ -92,6 +92,8 @@ public class Wacom.Plug : Switchboard.Plug {
 
             empty_stack.visible_child_name = "no_tablets";
 
+            empty_stack.event.connect (update_current_tool);
+
             device_manager = Backend.DeviceManager.get_default ();
             device_manager.device_added.connect (on_device_added);
             device_manager.device_removed.connect (on_device_removed);
@@ -104,6 +106,39 @@ public class Wacom.Plug : Switchboard.Plug {
         }
 
         return empty_stack;
+    }
+
+    private bool update_current_tool (Gdk.Event event) {
+        if (event.get_event_type () == Gdk.EventType.MOTION_NOTIFY) {
+            var tool = event.get_device_tool ();
+            if (tool == null) {
+                return Gdk.EVENT_PROPAGATE;
+            }
+
+            var device = device_manager.lookup_gdk_device (event.get_source_device ());
+            if (device == null) {
+                return Gdk.EVENT_PROPAGATE;
+            }
+
+            var wacom_device = devices[device];
+            if (wacom_device == null) {
+                return Gdk.EVENT_PROPAGATE;
+            }
+
+            var serial = tool.get_serial ();
+            var tool_map = Backend.WacomToolMap.get_default ();
+
+            var stylus = tool_map.lookup_tool (wacom_device, serial);
+            if (stylus == null) {
+                warning ("tool lookup failed");
+                var id = tool.get_hardware_id ();
+                stylus = new Backend.WacomTool (serial, id, wacom_device);
+            }
+
+            tool_map.add_relation (wacom_device, stylus);
+        }
+
+        return Gdk.EVENT_PROPAGATE;
     }
 
     private void add_known_device (Backend.Device d) {
