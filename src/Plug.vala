@@ -31,6 +31,7 @@ public class Wacom.Plug : Switchboard.Plug {
     private Gee.HashMap<Backend.Device, Backend.WacomDevice>? devices = null;
 
     private Backend.WacomTool? last_stylus = null;
+    private Backend.WacomToolMap tool_map;
 
     public Plug () {
         var settings = new Gee.TreeMap<string, string?> (null, null);
@@ -56,6 +57,8 @@ public class Wacom.Plug : Switchboard.Plug {
             } else {
                 devices.clear ();
             }
+
+            tool_map = Backend.WacomToolMap.get_default ();
 
             stylus_view = new StylusView ();
             tablet_view = new TabletView ();
@@ -128,7 +131,6 @@ public class Wacom.Plug : Switchboard.Plug {
             }
 
             var serial = tool.get_serial ();
-            var tool_map = Backend.WacomToolMap.get_default ();
 
             var stylus = tool_map.lookup_tool (wacom_device, serial);
             if (stylus == null) {
@@ -167,7 +169,12 @@ public class Wacom.Plug : Switchboard.Plug {
             warning ("Error initializing Wacom device: %s", e.message);
             return;
         }
-    }
+
+        var tools = tool_map.list_tools (devices[d]);
+        if (tools.size > 0) {
+            stylus_view.set_device (tools[0]);
+        }
+     }
 
     private void update_current_page () {
         foreach (var device in devices.keys) {

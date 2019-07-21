@@ -238,4 +238,26 @@ public class Wacom.Backend.WacomToolMap : GLib.Object {
 
         return tool;
     }
+
+    public Gee.ArrayList<WacomTool> list_tools (WacomDevice device) {
+        var styli = new Gee.ArrayList<WacomTool> ();
+
+        var key = get_device_key (device);
+        var tablet_tools = tablet_map[key];
+        if (tablet_tools != null) {
+            styli.add_all (tablet_map[key]);
+        }
+
+        if (no_serial_tool_map.has_key (key)) {
+            var no_serial_tool = no_serial_tool_map[key];
+            if (no_serial_tool == null) {
+                no_serial_tool = new WacomTool (0, 0, device);
+                no_serial_tool_map[key] = no_serial_tool;
+            }
+
+            styli.add (no_serial_tool);
+        }
+
+        return styli;
+    }
 }
