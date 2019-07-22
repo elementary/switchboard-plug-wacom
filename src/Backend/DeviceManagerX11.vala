@@ -18,6 +18,8 @@
  */
 
 public class Wacom.Backend.DeviceManagerX11 : DeviceManager {
+    private Gee.HashMap<Gdk.Device, Device>? devices = null;
+
     public DeviceManagerX11 () {
         devices = new Gee.HashMap<Gdk.Device, Device> ();
 
@@ -134,6 +136,21 @@ public class Wacom.Backend.DeviceManagerX11 : DeviceManager {
         }
 
         return (string)data;
+    }
+
+    public override Gee.ArrayList<Device> list_devices (Device.DeviceType type) {
+        var result = new Gee.ArrayList<Device> ();
+        foreach (var device in devices.values) {
+            if (type in device.dev_type) {
+                result.add (device);
+            }
+        }
+
+        return result;
+    }
+
+    public override Device? lookup_gdk_device (Gdk.Device device) {
+        return devices[device];
     }
 }
 

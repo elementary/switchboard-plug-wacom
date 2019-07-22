@@ -27,6 +27,7 @@ shared_module(
         dependency('libwacom'),
         dependency('gudev-1.0'),
         dependency('gdk-x11-3.0'),
+        dependency('gdk-wayland-3.0'),
         dependency('x11'),
         dependency('xi'),
         switchboard_dep

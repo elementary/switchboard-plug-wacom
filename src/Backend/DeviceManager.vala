@@ -22,8 +22,6 @@ public abstract class Wacom.Backend.DeviceManager : GLib.Object {
     public signal void device_removed (Device device);
     public signal void device_changed (Device device);
 
-    protected Gee.HashMap<Gdk.Device, Device>? devices = null;
-
     private static GLib.Once<DeviceManager> instance;
     public static unowned DeviceManager get_default () {
         return instance.once (() => {
@@ -35,20 +33,8 @@ public abstract class Wacom.Backend.DeviceManager : GLib.Object {
         });
     }
 
-    public Gee.ArrayList<Device> list_devices (Device.DeviceType type) {
-        var result = new Gee.ArrayList<Device> ();
-        foreach (var device in devices.values) {
-            if (type in device.dev_type) {
-                result.add (device);
-            }
-        }
-
-        return result;
-    }
-
-    public Device? lookup_gdk_device (Gdk.Device device) {
-        return devices[device];
-    }
+    public abstract Gee.ArrayList<Device> list_devices (Device.DeviceType type);
+    public abstract Device? lookup_gdk_device (Gdk.Device device);
 }
 
 
