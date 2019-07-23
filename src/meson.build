@@ -8,6 +8,7 @@ plug_files = files(
     'Backend/WacomToolMap.vala',
     'Views/StylusView.vala',
     'Views/TabletView.vala',
+    'Widgets/DrawingArea.vala',
     'Widgets/SettingLabel.vala',
     'Plug.vala',
     'Utils.vala'

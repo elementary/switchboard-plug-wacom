@@ -39,6 +39,9 @@ public class Wacom.StylusView : Gtk.Stack {
 
         stylus_grid.attach (new Widgets.SettingLabel (_("Top Button:")), 0, 0);
         stylus_grid.attach (top_button_combo, 1, 0);
+        var da = new Widgets.DrawingArea ();
+        da.hexpand = da.vexpand = true;
+        stylus_grid.attach (da, 0, 1, 2);
 
         var no_stylus_view = new Granite.Widgets.AlertView (
             _("No Stylus Detected"),

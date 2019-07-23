@@ -27,6 +27,16 @@ public class Wacom.Backend.WacomTool : GLib.Object {
 
     private static Wacom.DeviceDatabase? wacom_db = null;
 
+    public string? name {
+        get {
+            if (wstylus == null) {
+                return null;
+            }
+
+            return wstylus.get_name ();
+        }
+    }
+
     public WacomTool (uint64 serial, uint64 id, WacomDevice? device) throws WacomException {
         if (serial == 0 && device != null) {
             var ids = device.get_supported_tools ();
