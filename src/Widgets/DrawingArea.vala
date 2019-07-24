@@ -108,9 +108,18 @@ public class Wacom.Widgets.DrawingArea : Gtk.EventBox {
             event.get_coords (out x, out y);
             event.get_axis (Gdk.AxisUse.PRESSURE, out pressure);
 
-            if (tool.get_tool_type () == Gdk.DeviceToolType.ERASER) {
+            Gdk.DeviceToolType tool_type = Gdk.DeviceToolType.UNKNOWN;
+            if (Utils.is_wayland ()) {
+                tool_type = tool.get_tool_type ();
+            } else {
+                tool_type = Backend.DeviceManagerX11.get_tool_type (device);
+            }
+
+            warning (tool_type.to_string ());
+
+            if (tool_type == Gdk.DeviceToolType.ERASER) {
                 cr.set_line_width (10 * pressure);
-                cr.set_operator (Cairo.Operator.OUT);
+                cr.set_operator (Cairo.Operator.DEST_OUT);
             } else {
                 cr.set_line_width (4 * pressure);
                 cr.set_operator (Cairo.Operator.SATURATE);

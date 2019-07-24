@@ -152,6 +152,67 @@ public class Wacom.Backend.DeviceManagerX11 : DeviceManager {
     public override Device? lookup_gdk_device (Gdk.Device device) {
         return devices[device];
     }
+
+    public static Gdk.DeviceToolType get_tool_type (Gdk.Device device) {
+        var tool_type = Gdk.DeviceToolType.UNKNOWN;
+
+        X.Atom act_type;
+        int act_format;
+        ulong n_items, bytes_after;
+        void* data;
+
+        int id = -1;
+        if (device is Gdk.X11.DeviceXI2) {
+            id = (device as Gdk.X11.DeviceXI2).device_id;
+        } else {
+            id = Gdk.X11.device_get_id ((Gdk.X11.DeviceCore)device);
+        }
+
+        var display = device.get_display () as Gdk.X11.Display;
+        display.error_trap_push ();
+
+        var ret = XI2.get_property (
+            display.get_xdisplay (),
+            id,
+            Gdk.X11.get_xatom_by_name_for_display (display, "Wacom Tool Type"),
+            0,
+            1,
+            false,
+            X.XA_ATOM,
+            out act_type,
+            out act_format,
+            out n_items,
+            out bytes_after,
+            out data
+        );
+
+        display.error_trap_pop_ignored ();
+
+        if (ret != X.Success) {
+            return tool_type;
+        }
+
+        if (act_type != X.XA_ATOM || act_format != 32 || n_items != 1) {
+            return tool_type;
+        }
+
+        X.Atom device_type = *((X.Atom*)data);
+        if (device_type == 0) {
+            return tool_type;
+        }
+
+        var name = display.get_xdisplay ().get_atom_name (device_type);
+        if (name == "STYLUS") {
+            tool_type = Gdk.DeviceToolType.PEN;
+        } else if (name == "CURSOR") {
+            tool_type = Gdk.DeviceToolType.MOUSE;
+        } else if (name == "ERASER") {
+            tool_type = Gdk.DeviceToolType.ERASER;
+        }
+
+        return tool_type;
+    }
+
 }
 
 
