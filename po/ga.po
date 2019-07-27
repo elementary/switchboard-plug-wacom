@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-13 17:12+0100\n"
+"POT-Creation-Date: 2019-07-27 17:52+0100\n"
 "PO-Revision-Date: 2019-07-13 17:12+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,10 +17,106 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n==2 ? 1 : 2;\n"
 
-#: src/Plug.vala:30
+#: src/Views/StylusView.vala:44
+msgid "No Stylus Detected"
+msgstr ""
+
+#: src/Views/StylusView.vala:45
+msgid "Please move your stylus close to the tablet"
+msgstr ""
+
+#: src/Views/StylusView.vala:61
+msgid "Default"
+msgstr ""
+
+#: src/Views/StylusView.vala:62
+msgid "Middle Mouse Button Click"
+msgstr ""
+
+#: src/Views/StylusView.vala:63
+msgid "Right Mouse Button Click"
+msgstr ""
+
+#: src/Views/StylusView.vala:64
+msgid "Back"
+msgstr ""
+
+#: src/Views/StylusView.vala:65
+msgid "Forward"
+msgstr ""
+
+#: src/Views/StylusView.vala:123
+msgid "Soft"
+msgstr ""
+
+#: src/Views/StylusView.vala:124
+msgid "Firm"
+msgstr ""
+
+#: src/Views/StylusView.vala:146
+msgid "Eraser Pressure Feel:"
+msgstr ""
+
+#: src/Views/StylusView.vala:151
+msgid "Button Action:"
+msgstr ""
+
+#: src/Views/StylusView.vala:154 src/Views/StylusView.vala:158
+msgid "Top Button Action:"
+msgstr ""
+
+#: src/Views/StylusView.vala:155 src/Views/StylusView.vala:160
+msgid "Bottom Button Action:"
+msgstr ""
+
+#: src/Views/StylusView.vala:159
+msgid "Middle Button Action:"
+msgstr ""
+
+#: src/Views/StylusView.vala:167
+msgid "Tip Pressure Feel:"
+msgstr ""
+
+#: src/Views/StylusView.vala:171
+msgid "Test Tablet Settings"
+msgstr ""
+
+#: src/Views/TabletView.vala:33
+msgid "Tablet (absolute)"
+msgstr ""
+
+#: src/Views/TabletView.vala:34
+msgid "Touchpad (relative)"
+msgstr ""
+
+#: src/Views/TabletView.vala:39
+msgid "Tracking mode:"
+msgstr ""
+
+#: src/Views/TabletView.vala:41
+msgid "Left-handed orientation:"
+msgstr ""
+
+#: src/Plug.vala:45
 msgid "Wacom"
 msgstr ""
 
-#: src/Plug.vala:31
+#: src/Plug.vala:46
 msgid "Configure Wacom tablet"
+msgstr ""
+
+#: src/Plug.vala:68
+msgid "Stylus"
+msgstr ""
+
+#: src/Plug.vala:69
+msgid "Tablet"
+msgstr ""
+
+#: src/Plug.vala:87
+msgid "No Tablets Available"
+msgstr ""
+
+#: src/Plug.vala:88
+msgid "Please ensure your tablet is connected and switched on"
 msgstr ""

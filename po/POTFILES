@@ -1,2 +1,4 @@
+src/Views/StylusView.vala
+src/Views/TabletView.vala
 src/Plug.vala
 
