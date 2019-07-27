@@ -37,6 +37,36 @@ public class Wacom.Backend.WacomTool : GLib.Object {
         }
     }
 
+    public int num_buttons {
+        get {
+            if (wstylus == null) {
+                return 0;
+            }
+
+            return wstylus.get_num_buttons ();
+        }
+    }
+
+    public bool has_pressure_detection {
+        get {
+            if (wstylus == null) {
+                return false;
+            }
+
+            return Wacom.AxisTypeFlags.PRESSURE in wstylus.get_axes ();
+        }
+    }
+
+    public bool has_eraser {
+        get {
+            if (wstylus == null) {
+                return false;
+            }
+
+            return wstylus.has_eraser ();
+        }
+    }
+
     public WacomTool (uint64 serial, uint64 id, WacomDevice? device) throws WacomException {
         if (serial == 0 && device != null) {
             var ids = device.get_supported_tools ();
