@@ -153,6 +153,10 @@ public class Wacom.Backend.DeviceManagerWayland : DeviceManager {
         }
 
         var node_path = (device as GdkWayland.Device).get_node_path ();
+        if (node_path == null) {
+            return null;
+        }
+
         foreach (var dev in devices.values) {
             if (dev.device_file == node_path) {
                 return dev;
