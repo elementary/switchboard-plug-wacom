@@ -142,8 +142,8 @@ public class Wacom.StylusView : Gtk.Stack {
         device = dev;
         settings = device.get_settings ();
 
-        if (device.has_pressure_detection) {
-            build_pressure_slider (_("Tip Pressure Feel:"), "pressure-curve");
+        if (device.has_pressure_detection && device.has_eraser) {
+            build_pressure_slider (_("Eraser Pressure Feel:"), "eraser-pressure-curve");
         }
 
         switch (device.num_buttons) {
@@ -151,20 +151,20 @@ public class Wacom.StylusView : Gtk.Stack {
                 build_button_settings (_("Button Action:"), "button-action");
                 break;
             case 2:
-                build_button_settings (_("Top Button Action:"), "button-action");
-                build_button_settings (_("Lower Button Action:"), "secondary-button-action");
+                build_button_settings (_("Top Button Action:"), "secondary-button-action");
+                build_button_settings (_("Bottom Button Action:"), "button-action");
                 break;
             case 3:
-                build_button_settings (_("Top Button Action:"), "button-action");
-                build_button_settings (_("Lower Button Action:"), "secondary-button-action");
-                build_button_settings (_("Lowest Button Action:"), "tertiary-button-action");
+                build_button_settings (_("Top Button Action:"), "secondary-button-action");
+                build_button_settings (_("Middle Button Action:"), "button-action");
+                build_button_settings (_("Bottom Button Action:"), "tertiary-button-action");
                 break;
             default:
                 break;
         }
 
-        if (device.has_pressure_detection && device.has_eraser) {
-            build_pressure_slider (_("Eraser Pressure Feel:"), "eraser-pressure-curve");
+        if (device.has_pressure_detection) {
+            build_pressure_slider (_("Tip Pressure Feel:"), "pressure-curve");
         }
 
         show_all ();
