@@ -167,6 +167,26 @@ public class Wacom.StylusView : Gtk.Stack {
             build_pressure_slider (_("Tip Pressure Feel:"), "pressure-curve");
         }
 
+
+        var test_button = new Gtk.Button.with_label (_("Test Tablet Settings"));
+        var test_popover = new Gtk.Popover (test_button);
+        test_popover.vexpand = true;
+        test_popover.hexpand = true;
+        test_popover.position = Gtk.PositionType.BOTTOM;
+
+        var test_area = new Widgets.DrawingArea ();
+        test_area.hexpand = true;
+        test_area.vexpand = true;
+
+        test_popover.add (test_area);
+
+        test_button.clicked.connect (() => {
+            test_area.clear ();
+            test_popover.show_all ();
+        });
+
+        stylus_grid.attach (test_button, 0, last_grid_y_pos, 2, 1);
+
         show_all ();
 
         visible_child_name = "stylus";

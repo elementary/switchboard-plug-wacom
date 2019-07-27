@@ -46,11 +46,18 @@ public class Wacom.Widgets.DrawingArea : Gtk.EventBox {
         ensure_drawing_surface (allocation.width, allocation.height);
     }
 
-    private void ensure_drawing_surface (int width, int height) {
-        if (surface == null || surface.get_width () != width || surface.get_height () != height) {
+    public void clear () {
+        Gtk.Allocation allocation;
+        get_allocation (out allocation);
+
+        ensure_drawing_surface (allocation.width, allocation.height, true);
+    }
+
+    private void ensure_drawing_surface (int width, int height, bool force = false) {
+        if (surface == null || surface.get_width () != width || surface.get_height () != height || force) {
             var new_surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, width, height);
 
-            if (surface != null) {
+            if (surface != null && !force) {
                 var cr = new Cairo.Context (new_surface);
                 cr.set_source_surface (surface, 0, 0);
                 cr.paint ();
@@ -72,10 +79,6 @@ public class Wacom.Widgets.DrawingArea : Gtk.EventBox {
 
         cr.set_source_surface (surface, 0, 0);
         cr.paint ();
-
-        cr.set_source_rgb (0.6, 0.6, 0.6);
-        cr.rectangle (0, 0, alloc.width, alloc.height);
-        cr.stroke ();
 
         return false;
     }
@@ -114,8 +117,6 @@ public class Wacom.Widgets.DrawingArea : Gtk.EventBox {
             } else {
                 tool_type = Backend.DeviceManagerX11.get_tool_type (device);
             }
-
-            warning (tool_type.to_string ());
 
             if (tool_type == Gdk.DeviceToolType.ERASER) {
                 cr.set_line_width (10 * pressure);
