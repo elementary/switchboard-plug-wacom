@@ -1,0 +1,7 @@
+*~
+.debhelper/
+debhelper-build-stamp
+files
+io.elementary.switchboard.wacom.substvars
+io.elementary.switchboard.wacom/
+ob-x86_64-linux-gnu/
