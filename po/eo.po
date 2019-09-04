@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-27 17:52+0100\n"
 "PO-Revision-Date: 2019-09-05 19:23+0000\n"
-"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
+"Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/eo/>\n"
 "Language: eo\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: src/Views/StylusView.vala:44
 msgid "No Stylus Detected"
-msgstr ""
+msgstr "Neniu grifelo detektita"
 
 #: src/Views/StylusView.vala:45
 msgid "Please move your stylus close to the tablet"
-msgstr ""
+msgstr "Bonvolu movi vian grifelon proksime de la tabulkomputilo"
 
 #: src/Views/StylusView.vala:61
 msgid "Default"
@@ -33,11 +33,11 @@ msgstr "Apriora"
 
 #: src/Views/StylusView.vala:62
 msgid "Middle Mouse Button Click"
-msgstr ""
+msgstr "Musa mezbutona klako"
 
 #: src/Views/StylusView.vala:63
 msgid "Right Mouse Button Click"
-msgstr ""
+msgstr "Musa dekstrobutona klako"
 
 #: src/Views/StylusView.vala:64
 msgid "Back"
@@ -45,80 +45,80 @@ msgstr "Reen"
 
 #: src/Views/StylusView.vala:65
 msgid "Forward"
-msgstr ""
+msgstr "Antaŭen"
 
 #: src/Views/StylusView.vala:123
 msgid "Soft"
-msgstr ""
+msgstr "Modera"
 
 #: src/Views/StylusView.vala:124
 msgid "Firm"
-msgstr ""
+msgstr "Firma"
 
 #: src/Views/StylusView.vala:146
 msgid "Eraser Pressure Feel:"
-msgstr ""
+msgstr "Skrapguma prema sento:"
 
 #: src/Views/StylusView.vala:151
 msgid "Button Action:"
-msgstr ""
+msgstr "Butona ago:"
 
 #: src/Views/StylusView.vala:154 src/Views/StylusView.vala:158
 msgid "Top Button Action:"
-msgstr ""
+msgstr "Supra butona ago:"
 
 #: src/Views/StylusView.vala:155 src/Views/StylusView.vala:160
 msgid "Bottom Button Action:"
-msgstr ""
+msgstr "Malsupra butona ago:"
 
 #: src/Views/StylusView.vala:159
 msgid "Middle Button Action:"
-msgstr ""
+msgstr "Meza butona ago:"
 
 #: src/Views/StylusView.vala:167
 msgid "Tip Pressure Feel:"
-msgstr ""
+msgstr "Pinta prema sento:"
 
 #: src/Views/StylusView.vala:171
 msgid "Test Tablet Settings"
-msgstr ""
+msgstr "Testi tabulkomputilajn agordojn"
 
 #: src/Views/TabletView.vala:33
 msgid "Tablet (absolute)"
-msgstr ""
+msgstr "Tabulkomputilo (absoluta)"
 
 #: src/Views/TabletView.vala:34
 msgid "Touchpad (relative)"
-msgstr ""
+msgstr "Tuŝplato (relativa)"
 
 #: src/Views/TabletView.vala:39
 msgid "Tracking mode:"
-msgstr ""
+msgstr "Sekvada reĝimo:"
 
 #: src/Views/TabletView.vala:41
 msgid "Left-handed orientation:"
-msgstr ""
+msgstr "Maldekstro-mana orientiĝo:"
 
 #: src/Plug.vala:45
 msgid "Wacom"
-msgstr ""
+msgstr "Wacom"
 
 #: src/Plug.vala:46
 msgid "Configure Wacom tablet"
-msgstr ""
+msgstr "Agordi la Wacom-tabulkomputilon"
 
 #: src/Plug.vala:68
 msgid "Stylus"
-msgstr ""
+msgstr "Grifelo"
 
 #: src/Plug.vala:69
 msgid "Tablet"
-msgstr ""
+msgstr "Tabulkomputilo"
 
 #: src/Plug.vala:87
 msgid "No Tablets Available"
-msgstr ""
+msgstr "Neniu tabulkomputilo disponebla"
 
 #: src/Plug.vala:88
 msgid "Please ensure your tablet is connected and switched on"
-msgstr ""
+msgstr "Bonvolu certiĝi, ke la tabulkomputilo estas konektita kaj ŝaltita"
