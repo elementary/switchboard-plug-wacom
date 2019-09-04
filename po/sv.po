@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-27 17:52+0100\n"
 "PO-Revision-Date: 2019-09-05 19:23+0000\n"
-"Last-Translator: Coi-l <dev@skyshaper.net>\n"
+"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Swedish <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/sv/>\n"
 "Language: sv\n"
@@ -29,7 +29,7 @@ msgstr ""
 
 #: src/Views/StylusView.vala:61
 msgid "Default"
-msgstr ""
+msgstr "Standard"
 
 #: src/Views/StylusView.vala:62
 msgid "Middle Mouse Button Click"
