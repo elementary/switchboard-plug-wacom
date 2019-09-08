@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-27 17:52+0100\n"
 "PO-Revision-Date: 2019-09-08 22:07+0000\n"
-"Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
+"Last-Translator: Michael Leocádio <leocadiomichael@outlook.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
 "switchboard/plug-wacom/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -69,7 +69,7 @@ msgstr "Ação do botão superior:"
 
 #: src/Views/StylusView.vala:155 src/Views/StylusView.vala:160
 msgid "Bottom Button Action:"
-msgstr ""
+msgstr "Ação do Botão Inferior:"
 
 #: src/Views/StylusView.vala:159
 msgid "Middle Button Action:"
@@ -85,11 +85,11 @@ msgstr ""
 
 #: src/Views/TabletView.vala:33
 msgid "Tablet (absolute)"
-msgstr ""
+msgstr "Tablet (absoluto)"
 
 #: src/Views/TabletView.vala:34
 msgid "Touchpad (relative)"
-msgstr ""
+msgstr "Touchpad (relativo)"
 
 #: src/Views/TabletView.vala:39
 msgid "Tracking mode:"
@@ -101,23 +101,23 @@ msgstr ""
 
 #: src/Plug.vala:45
 msgid "Wacom"
-msgstr ""
+msgstr "Wacom"
 
 #: src/Plug.vala:46
 msgid "Configure Wacom tablet"
-msgstr ""
+msgstr "Configurar tablet Wacom"
 
 #: src/Plug.vala:68
 msgid "Stylus"
-msgstr ""
+msgstr "Stylus"
 
 #: src/Plug.vala:69
 msgid "Tablet"
-msgstr ""
+msgstr "Tablet"
 
 #: src/Plug.vala:87
 msgid "No Tablets Available"
-msgstr ""
+msgstr "Nenhum Tablet Disponível"
 
 #: src/Plug.vala:88
 msgid "Please ensure your tablet is connected and switched on"
