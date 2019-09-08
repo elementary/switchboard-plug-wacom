@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-27 17:52+0100\n"
 "PO-Revision-Date: 2019-09-09 20:12+0000\n"
-"Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
+"Last-Translator: Michael Leocádio <leocadiomichael@outlook.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
 "switchboard/plug-wacom/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: src/Views/StylusView.vala:44
 msgid "No Stylus Detected"
-msgstr "Nenhuma caneta stylus detectada"
+msgstr "Nenhuma Stylus Detectada"
 
 #: src/Views/StylusView.vala:45
 msgid "Please move your stylus close to the tablet"
-msgstr "Por favor mova sua caneta stylus próxima ao tablet"
+msgstr "Por favor mova sua stylus próxima ao tablet"
 
 #: src/Views/StylusView.vala:61
 msgid "Default"
@@ -33,11 +33,11 @@ msgstr "Padrão"
 
 #: src/Views/StylusView.vala:62
 msgid "Middle Mouse Button Click"
-msgstr "Clique do botão do meio do mouse"
+msgstr "Clique do Botão do Meio do Mouse"
 
 #: src/Views/StylusView.vala:63
 msgid "Right Mouse Button Click"
-msgstr "Clique com o botão direito do mouse"
+msgstr "Clique do Botão Direito do Mouse"
 
 #: src/Views/StylusView.vala:64
 msgid "Back"
@@ -53,19 +53,19 @@ msgstr "Suave"
 
 #: src/Views/StylusView.vala:124
 msgid "Firm"
-msgstr "Firmar"
+msgstr "Firme"
 
 #: src/Views/StylusView.vala:146
 msgid "Eraser Pressure Feel:"
-msgstr "Sensação de pressão da borracha:"
+msgstr "Sensação de Pressão da Borracha:"
 
 #: src/Views/StylusView.vala:151
 msgid "Button Action:"
-msgstr "Botão de ação:"
+msgstr "Ação do Botão:"
 
 #: src/Views/StylusView.vala:154 src/Views/StylusView.vala:158
 msgid "Top Button Action:"
-msgstr "Ação do botão superior:"
+msgstr "Ação do Botão Superior:"
 
 #: src/Views/StylusView.vala:155 src/Views/StylusView.vala:160
 msgid "Bottom Button Action:"
@@ -121,4 +121,4 @@ msgstr "Nenhum tablet disponível"
 
 #: src/Plug.vala:88
 msgid "Please ensure your tablet is connected and switched on"
-msgstr ""
+msgstr "Por favor verifique se o seu tablet está conectado e ligado"
