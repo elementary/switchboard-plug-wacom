@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-27 17:52+0100\n"
-"PO-Revision-Date: 2019-09-09 20:12+0000\n"
+"PO-Revision-Date: 2019-09-09 22:23+0000\n"
 "Last-Translator: Michael Leocádio <leocadiomichael@outlook.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
 "switchboard/plug-wacom/pt_BR/>\n"
@@ -73,15 +73,15 @@ msgstr "Ação do Botão Inferior:"
 
 #: src/Views/StylusView.vala:159
 msgid "Middle Button Action:"
-msgstr "Ação do botão do meio:"
+msgstr "Ação do Botão do Meio:"
 
 #: src/Views/StylusView.vala:167
 msgid "Tip Pressure Feel:"
-msgstr "Sensação de pressão da ponta:"
+msgstr "Sensação de Pressão da Ponta:"
 
 #: src/Views/StylusView.vala:171
 msgid "Test Tablet Settings"
-msgstr "Testar configurações do tablet"
+msgstr "Testar Configurações do Tablet"
 
 #: src/Views/TabletView.vala:33
 msgid "Tablet (absolute)"
@@ -117,7 +117,7 @@ msgstr "Tablet"
 
 #: src/Plug.vala:87
 msgid "No Tablets Available"
-msgstr "Nenhum tablet disponível"
+msgstr "Nenhum Tablet Disponível"
 
 #: src/Plug.vala:88
 msgid "Please ensure your tablet is connected and switched on"
