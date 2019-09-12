@@ -22,7 +22,7 @@ jobs:
         ninja -C build
 
   lint:
-	
+
     runs-on: ubuntu-latest
 
     container:
