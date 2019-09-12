@@ -50,4 +50,3 @@ public class Wacom.TabletView : Gtk.Grid {
         settings.bind ("left-handed", left_handed_switch, "active", SettingsBindFlags.DEFAULT);
     }
 }
-

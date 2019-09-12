@@ -196,7 +196,7 @@ public class Wacom.Backend.DeviceManagerX11 : DeviceManager {
             return tool_type;
         }
 
-        X.Atom device_type = *((X.Atom*)data);
+        X.Atom device_type = * ((X.Atom*)data);
         if (device_type == 0) {
             return tool_type;
         }
@@ -214,5 +214,3 @@ public class Wacom.Backend.DeviceManagerX11 : DeviceManager {
     }
 
 }
-
-

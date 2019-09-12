@@ -36,5 +36,3 @@ public abstract class Wacom.Backend.DeviceManager : GLib.Object {
     public abstract Gee.ArrayList<Device> list_devices (Device.DeviceType type);
     public abstract Device? lookup_gdk_device (Gdk.Device device);
 }
-
-
