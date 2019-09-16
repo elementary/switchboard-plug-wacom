@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-27 17:52+0100\n"
-"PO-Revision-Date: 2019-09-05 19:23+0000\n"
-"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
+"PO-Revision-Date: 2019-09-16 16:23+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/fi/>\n"
 "Language: fi\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: src/Views/StylusView.vala:44
 msgid "No Stylus Detected"
-msgstr ""
+msgstr "Stylusta ei havaittu"
 
 #: src/Views/StylusView.vala:45
 msgid "Please move your stylus close to the tablet"
@@ -49,7 +49,7 @@ msgstr ""
 
 #: src/Views/StylusView.vala:123
 msgid "Soft"
-msgstr ""
+msgstr "Pehmeä"
 
 #: src/Views/StylusView.vala:124
 msgid "Firm"
@@ -61,19 +61,19 @@ msgstr ""
 
 #: src/Views/StylusView.vala:151
 msgid "Button Action:"
-msgstr ""
+msgstr "Painiketoiminto:"
 
 #: src/Views/StylusView.vala:154 src/Views/StylusView.vala:158
 msgid "Top Button Action:"
-msgstr ""
+msgstr "Yläpainikkeen toiminto:"
 
 #: src/Views/StylusView.vala:155 src/Views/StylusView.vala:160
 msgid "Bottom Button Action:"
-msgstr ""
+msgstr "Alapainikkeen toiminto:"
 
 #: src/Views/StylusView.vala:159
 msgid "Middle Button Action:"
-msgstr ""
+msgstr "Keskipainikkeen toiminto:"
 
 #: src/Views/StylusView.vala:167
 msgid "Tip Pressure Feel:"
@@ -101,7 +101,7 @@ msgstr ""
 
 #: src/Plug.vala:45
 msgid "Wacom"
-msgstr ""
+msgstr "Wacom"
 
 #: src/Plug.vala:46
 msgid "Configure Wacom tablet"
@@ -109,7 +109,7 @@ msgstr ""
 
 #: src/Plug.vala:68
 msgid "Stylus"
-msgstr ""
+msgstr "Stylus"
 
 #: src/Plug.vala:69
 msgid "Tablet"
