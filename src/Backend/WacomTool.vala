@@ -89,7 +89,9 @@ public class Wacom.Backend.WacomTool : GLib.Object {
 
         string settings_path;
         if (this.serial == 0) {
-            settings_path = "/org/gnome/desktop/peripherals/stylus/default-%s:%s/".printf (device.device.vendor_id, device.device.product_id);
+            settings_path = "/org/gnome/desktop/peripherals/stylus/default-%s:%s/".printf (
+                device.device.vendor_id, device.device.product_id
+            );
         } else {
             settings_path = "/org/gnome/desktop/peripherals/stylus/%llx/".printf (this.serial);
         }

@@ -85,5 +85,3 @@ public class Wacom.Backend.Device : GLib.Object {
         }
     }
 }
-
-

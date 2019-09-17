@@ -195,8 +195,9 @@ public class Wacom.Backend.DeviceManagerX11 : DeviceManager {
         if (act_type != X.XA_ATOM || act_format != 32 || n_items != 1) {
             return tool_type;
         }
-
-        X.Atom device_type = *((X.Atom*)data);
+        // vala-lint seemingly mistakes * as a multiplication operator. Ignore
+        // the error for now, since its a false positive.
+        X.Atom device_type = *((X.Atom*)data); // vala-lint=space-before-paren
         if (device_type == 0) {
             return tool_type;
         }
@@ -214,5 +215,3 @@ public class Wacom.Backend.DeviceManagerX11 : DeviceManager {
     }
 
 }
-
-
