@@ -27,4 +27,3 @@ public class Wacom.Widgets.SettingLabel : Gtk.Label {
         margin_start = 12;
     }
 }
-

@@ -22,7 +22,7 @@ public class Wacom.Backend.DeviceManagerWayland : DeviceManager {
     private GUdev.Client? client = null;
 
     // Keep in same order as types in Device.vala
-    const string[] udev_ids = {
+    const string[] UDEV_IDS = {
         "ID_INPUT_MOUSE",
         "ID_INPUT_KEYBOARD",
         "ID_INPUT_TOUCHPAD",
@@ -95,8 +95,8 @@ public class Wacom.Backend.DeviceManagerWayland : DeviceManager {
 
     private static Device.DeviceType get_udev_device_type (GUdev.Device device) {
         Device.DeviceType type = 0;
-        for (int i = 0; i < udev_ids.length; i++) {
-            if (device.get_property_as_boolean (udev_ids[i])) {
+        for (int i = 0; i < UDEV_IDS.length; i++) {
+            if (device.get_property_as_boolean (UDEV_IDS[i])) {
                 type |= (1 << i);
             }
         }
@@ -166,5 +166,3 @@ public class Wacom.Backend.DeviceManagerWayland : DeviceManager {
         return null;
     }
 }
-
-

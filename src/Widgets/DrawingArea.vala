@@ -100,12 +100,23 @@ public class Wacom.Widgets.DrawingArea : Gtk.EventBox {
             return Gdk.EVENT_PROPAGATE;
         }
 
-        if (event.get_event_type () == Gdk.EventType.BUTTON_PRESS && event.button.button == 1 && current_device == null) {
+        if (
+            event.get_event_type () == Gdk.EventType.BUTTON_PRESS
+            && event.button.button == 1
+            && current_device == null
+        ) {
             current_device = device;
-        } else if (event.get_event_type () == Gdk.EventType.BUTTON_RELEASE && event.button.button == 1 && current_device != null) {
+        } else if (
+            event.get_event_type () == Gdk.EventType.BUTTON_RELEASE
+            && event.button.button == 1
+            && current_device != null
+        ) {
             cr.new_path ();
             current_device = null;
-        } else if (event.get_event_type () == Gdk.EventType.MOTION_NOTIFY && Gdk.ModifierType.BUTTON1_MASK in event.motion.state) {
+        } else if (
+            event.get_event_type () == Gdk.EventType.MOTION_NOTIFY
+            && Gdk.ModifierType.BUTTON1_MASK in event.motion.state
+        ) {
             double x, y, pressure;
 
             event.get_coords (out x, out y);
@@ -140,4 +151,3 @@ public class Wacom.Widgets.DrawingArea : Gtk.EventBox {
         return Gdk.EVENT_PROPAGATE;
     }
 }
-
