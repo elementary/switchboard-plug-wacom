@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-27 17:52+0100\n"
-"PO-Revision-Date: 2019-09-05 19:23+0000\n"
-"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
+"PO-Revision-Date: 2019-09-22 19:23+0000\n"
+"Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/mr/>\n"
 "Language: mr\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: src/Views/StylusView.vala:44
 msgid "No Stylus Detected"
-msgstr ""
+msgstr "स्टाईलस आढळले नाही"
 
 #: src/Views/StylusView.vala:45
 msgid "Please move your stylus close to the tablet"
-msgstr ""
+msgstr "कृपया आपले स्टाईलस टॅब्लेटच्या जवळ हलवा"
 
 #: src/Views/StylusView.vala:61
 msgid "Default"
@@ -33,11 +33,11 @@ msgstr "डिफॉल्ट"
 
 #: src/Views/StylusView.vala:62
 msgid "Middle Mouse Button Click"
-msgstr ""
+msgstr "माउस माध्यम बटण क्लिक करा"
 
 #: src/Views/StylusView.vala:63
 msgid "Right Mouse Button Click"
-msgstr ""
+msgstr "राइट माउस बटण क्लिक"
 
 #: src/Views/StylusView.vala:64
 msgid "Back"
@@ -45,80 +45,80 @@ msgstr "मागे"
 
 #: src/Views/StylusView.vala:65
 msgid "Forward"
-msgstr ""
+msgstr "पुढे पाठवा"
 
 #: src/Views/StylusView.vala:123
 msgid "Soft"
-msgstr ""
+msgstr "सॉफ्ट"
 
 #: src/Views/StylusView.vala:124
 msgid "Firm"
-msgstr ""
+msgstr "फर्म"
 
 #: src/Views/StylusView.vala:146
 msgid "Eraser Pressure Feel:"
-msgstr ""
+msgstr "इरेझर दबाव:"
 
 #: src/Views/StylusView.vala:151
 msgid "Button Action:"
-msgstr ""
+msgstr "बटण क्रिया:"
 
 #: src/Views/StylusView.vala:154 src/Views/StylusView.vala:158
 msgid "Top Button Action:"
-msgstr ""
+msgstr "शीर्ष बटण क्रिया:"
 
 #: src/Views/StylusView.vala:155 src/Views/StylusView.vala:160
 msgid "Bottom Button Action:"
-msgstr ""
+msgstr "तळाच्या बटणाची क्रिया:"
 
 #: src/Views/StylusView.vala:159
 msgid "Middle Button Action:"
-msgstr ""
+msgstr "मध्यम बटण क्रिया:"
 
 #: src/Views/StylusView.vala:167
 msgid "Tip Pressure Feel:"
-msgstr ""
+msgstr "टीप दबाव भावना:"
 
 #: src/Views/StylusView.vala:171
 msgid "Test Tablet Settings"
-msgstr ""
+msgstr "टॅब्लेट सेटिंग्ज चाचणी"
 
 #: src/Views/TabletView.vala:33
 msgid "Tablet (absolute)"
-msgstr ""
+msgstr "टॅब्लेट (परिपूर्ण)"
 
 #: src/Views/TabletView.vala:34
 msgid "Touchpad (relative)"
-msgstr ""
+msgstr "टचपॅड (जवळपास)"
 
 #: src/Views/TabletView.vala:39
 msgid "Tracking mode:"
-msgstr ""
+msgstr "ट्रॅकिंग मोड:"
 
 #: src/Views/TabletView.vala:41
 msgid "Left-handed orientation:"
-msgstr ""
+msgstr "डावीकडून अभिमुखता:"
 
 #: src/Plug.vala:45
 msgid "Wacom"
-msgstr ""
+msgstr "वाकॉम"
 
 #: src/Plug.vala:46
 msgid "Configure Wacom tablet"
-msgstr ""
+msgstr "वॅकॉम टॅब्लेट कॉन्फिगर करा"
 
 #: src/Plug.vala:68
 msgid "Stylus"
-msgstr ""
+msgstr "स्टाईलस"
 
 #: src/Plug.vala:69
 msgid "Tablet"
-msgstr ""
+msgstr "टॅब्लेट"
 
 #: src/Plug.vala:87
 msgid "No Tablets Available"
-msgstr ""
+msgstr "कोणतेही टॅब्लेट्स उपलब्ध नाहीत"
 
 #: src/Plug.vala:88
 msgid "Please ensure your tablet is connected and switched on"
-msgstr ""
+msgstr "कृपया आपला टॅब्लेट कनेक्ट केलेला आणि चालू असल्याचे सुनिश्चित करा"
