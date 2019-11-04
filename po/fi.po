@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-27 17:52+0100\n"
-"PO-Revision-Date: 2019-09-16 16:23+0000\n"
+"PO-Revision-Date: 2019-11-05 14:24+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/fi/>\n"
@@ -25,7 +25,7 @@ msgstr "Stylusta ei havaittu"
 
 #: src/Views/StylusView.vala:45
 msgid "Please move your stylus close to the tablet"
-msgstr ""
+msgstr "Siirrä stylus-kynä lähelle piirtopöytää"
 
 #: src/Views/StylusView.vala:61
 msgid "Default"
@@ -33,11 +33,11 @@ msgstr "Oletus"
 
 #: src/Views/StylusView.vala:62
 msgid "Middle Mouse Button Click"
-msgstr ""
+msgstr "Keksimmäisen hiiren painikkeen napsautus"
 
 #: src/Views/StylusView.vala:63
 msgid "Right Mouse Button Click"
-msgstr ""
+msgstr "Hiiren oikean painikkeen napsautus"
 
 #: src/Views/StylusView.vala:64
 msgid "Back"
@@ -45,7 +45,7 @@ msgstr "Takaisin"
 
 #: src/Views/StylusView.vala:65
 msgid "Forward"
-msgstr ""
+msgstr "Eteenpäin"
 
 #: src/Views/StylusView.vala:123
 msgid "Soft"
@@ -81,7 +81,7 @@ msgstr ""
 
 #: src/Views/StylusView.vala:171
 msgid "Test Tablet Settings"
-msgstr ""
+msgstr "Testaa piirtopöydän asetuksia"
 
 #: src/Views/TabletView.vala:33
 msgid "Tablet (absolute)"
@@ -93,7 +93,7 @@ msgstr ""
 
 #: src/Views/TabletView.vala:39
 msgid "Tracking mode:"
-msgstr ""
+msgstr "Seurantatila:"
 
 #: src/Views/TabletView.vala:41
 msgid "Left-handed orientation:"
@@ -105,7 +105,7 @@ msgstr "Wacom"
 
 #: src/Plug.vala:46
 msgid "Configure Wacom tablet"
-msgstr ""
+msgstr "Määritä Wacom-piirtopöydän asetukset"
 
 #: src/Plug.vala:68
 msgid "Stylus"
@@ -113,12 +113,12 @@ msgstr "Stylus"
 
 #: src/Plug.vala:69
 msgid "Tablet"
-msgstr ""
+msgstr "Piirtopöytä"
 
 #: src/Plug.vala:87
 msgid "No Tablets Available"
-msgstr ""
+msgstr "Ei piirtopöytiä käytettävissä"
 
 #: src/Plug.vala:88
 msgid "Please ensure your tablet is connected and switched on"
-msgstr ""
+msgstr "Varmista että piirtopöytä on yhdistetty ja käynnistetty"
