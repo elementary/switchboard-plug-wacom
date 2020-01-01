@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-27 17:52+0100\n"
-"PO-Revision-Date: 2019-09-05 19:23+0000\n"
-"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
+"PO-Revision-Date: 2020-01-01 23:08+0000\n"
+"Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/nl/>\n"
 "Language: nl\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: src/Views/StylusView.vala:44
 msgid "No Stylus Detected"
-msgstr ""
+msgstr "Geen stylus gevonden"
 
 #: src/Views/StylusView.vala:45
 msgid "Please move your stylus close to the tablet"
-msgstr ""
+msgstr "Plaats uw stylus dicht bij de tablet alstublieft"
 
 #: src/Views/StylusView.vala:61
 msgid "Default"
@@ -33,92 +33,92 @@ msgstr "Standaard"
 
 #: src/Views/StylusView.vala:62
 msgid "Middle Mouse Button Click"
-msgstr ""
+msgstr "Klik met de middelste muisknop"
 
 #: src/Views/StylusView.vala:63
 msgid "Right Mouse Button Click"
-msgstr ""
+msgstr "Klik met de rechter muisknop"
 
 #: src/Views/StylusView.vala:64
 msgid "Back"
-msgstr ""
+msgstr "Terug"
 
 #: src/Views/StylusView.vala:65
 msgid "Forward"
-msgstr ""
+msgstr "Vooruit"
 
 #: src/Views/StylusView.vala:123
 msgid "Soft"
-msgstr ""
+msgstr "Zacht"
 
 #: src/Views/StylusView.vala:124
 msgid "Firm"
-msgstr ""
+msgstr "Stevig"
 
 #: src/Views/StylusView.vala:146
 msgid "Eraser Pressure Feel:"
-msgstr ""
+msgstr "Drukgevoel gum:"
 
 #: src/Views/StylusView.vala:151
 msgid "Button Action:"
-msgstr ""
+msgstr "Actie knop:"
 
 #: src/Views/StylusView.vala:154 src/Views/StylusView.vala:158
 msgid "Top Button Action:"
-msgstr ""
+msgstr "Actie bovenste knop:"
 
 #: src/Views/StylusView.vala:155 src/Views/StylusView.vala:160
 msgid "Bottom Button Action:"
-msgstr ""
+msgstr "Actie onderste knop:"
 
 #: src/Views/StylusView.vala:159
 msgid "Middle Button Action:"
-msgstr ""
+msgstr "Actie middelste knop:"
 
 #: src/Views/StylusView.vala:167
 msgid "Tip Pressure Feel:"
-msgstr ""
+msgstr "Drukgevoel punt:"
 
 #: src/Views/StylusView.vala:171
 msgid "Test Tablet Settings"
-msgstr ""
+msgstr "Test de tablet instellingen"
 
 #: src/Views/TabletView.vala:33
 msgid "Tablet (absolute)"
-msgstr ""
+msgstr "Tablet (absoluut)"
 
 #: src/Views/TabletView.vala:34
 msgid "Touchpad (relative)"
-msgstr ""
+msgstr "Touchpad (relatief)"
 
 #: src/Views/TabletView.vala:39
 msgid "Tracking mode:"
-msgstr ""
+msgstr "Volg modus:"
 
 #: src/Views/TabletView.vala:41
 msgid "Left-handed orientation:"
-msgstr ""
+msgstr "Linkshandige bediening:"
 
 #: src/Plug.vala:45
 msgid "Wacom"
-msgstr ""
+msgstr "Wacom"
 
 #: src/Plug.vala:46
 msgid "Configure Wacom tablet"
-msgstr ""
+msgstr "Configureer Wacom tablet"
 
 #: src/Plug.vala:68
 msgid "Stylus"
-msgstr ""
+msgstr "Stylus"
 
 #: src/Plug.vala:69
 msgid "Tablet"
-msgstr ""
+msgstr "Tablet"
 
 #: src/Plug.vala:87
 msgid "No Tablets Available"
-msgstr ""
+msgstr "Geen tablets beschikbaar"
 
 #: src/Plug.vala:88
 msgid "Please ensure your tablet is connected and switched on"
-msgstr ""
+msgstr "Controleer of uw tablet verbonden is en ingeschakeld is"
