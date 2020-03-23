@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-27 17:52+0100\n"
-"PO-Revision-Date: 2020-02-07 20:02+0000\n"
+"PO-Revision-Date: 2020-03-24 23:09+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/pt/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: src/Views/StylusView.vala:44
 msgid "No Stylus Detected"
-msgstr "Sem caneta detectada"
+msgstr "Sem caneta detetada"
 
 #: src/Views/StylusView.vala:45
 msgid "Please move your stylus close to the tablet"
@@ -61,19 +61,19 @@ msgstr "Sentir a pressão da borracha:"
 
 #: src/Views/StylusView.vala:151
 msgid "Button Action:"
-msgstr "Acção de botão:"
+msgstr "Ação do botão:"
 
 #: src/Views/StylusView.vala:154 src/Views/StylusView.vala:158
 msgid "Top Button Action:"
-msgstr "Acção de botão superior:"
+msgstr "Ação do botão superior:"
 
 #: src/Views/StylusView.vala:155 src/Views/StylusView.vala:160
 msgid "Bottom Button Action:"
-msgstr "Acção do botão inferior:"
+msgstr "Ação do botão inferior:"
 
 #: src/Views/StylusView.vala:159
 msgid "Middle Button Action:"
-msgstr "Acção do botão do meio:"
+msgstr "Ação do botão do meio:"
 
 #: src/Views/StylusView.vala:167
 msgid "Tip Pressure Feel:"
@@ -121,4 +121,4 @@ msgstr "Sem tablets disponíveis"
 
 #: src/Plug.vala:88
 msgid "Please ensure your tablet is connected and switched on"
-msgstr "Certifique-se de que o tablet está conectado e ligado"
+msgstr "Certifique-se de que o tablet está ligado e ativo"
