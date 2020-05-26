@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-27 17:52+0100\n"
-"PO-Revision-Date: 2019-09-05 19:23+0000\n"
-"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
+"PO-Revision-Date: 2020-05-27 13:11+0000\n"
+"Last-Translator: Rantyrant <diseasemonger@gmail.com>\n"
 "Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/da/>\n"
 "Language: da\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: src/Views/StylusView.vala:44
 msgid "No Stylus Detected"
-msgstr ""
+msgstr "Ingen Stylus Blev Detekteret"
 
 #: src/Views/StylusView.vala:45
 msgid "Please move your stylus close to the tablet"
-msgstr ""
+msgstr "Vær venlig at flytte din stylus tæt på tegnefladen"
 
 #: src/Views/StylusView.vala:61
 msgid "Default"
@@ -33,11 +33,11 @@ msgstr "Standard"
 
 #: src/Views/StylusView.vala:62
 msgid "Middle Mouse Button Click"
-msgstr ""
+msgstr "Mellemmuseknap Klik"
 
 #: src/Views/StylusView.vala:63
 msgid "Right Mouse Button Click"
-msgstr ""
+msgstr "Højre Muse Klik"
 
 #: src/Views/StylusView.vala:64
 msgid "Back"
@@ -45,80 +45,80 @@ msgstr "Tilbage"
 
 #: src/Views/StylusView.vala:65
 msgid "Forward"
-msgstr ""
+msgstr "Fremad"
 
 #: src/Views/StylusView.vala:123
 msgid "Soft"
-msgstr ""
+msgstr "Blød"
 
 #: src/Views/StylusView.vala:124
 msgid "Firm"
-msgstr ""
+msgstr "Fast"
 
 #: src/Views/StylusView.vala:146
 msgid "Eraser Pressure Feel:"
-msgstr ""
+msgstr "Viskelæderets Følsomhed:"
 
 #: src/Views/StylusView.vala:151
 msgid "Button Action:"
-msgstr ""
+msgstr "Knap Handling:"
 
 #: src/Views/StylusView.vala:154 src/Views/StylusView.vala:158
 msgid "Top Button Action:"
-msgstr ""
+msgstr "Handling For Øverste Knap:"
 
 #: src/Views/StylusView.vala:155 src/Views/StylusView.vala:160
 msgid "Bottom Button Action:"
-msgstr ""
+msgstr "Bundknappens Handling:"
 
 #: src/Views/StylusView.vala:159
 msgid "Middle Button Action:"
-msgstr ""
+msgstr "Midterste Knaps Handling:"
 
 #: src/Views/StylusView.vala:167
 msgid "Tip Pressure Feel:"
-msgstr ""
+msgstr "Spidsens Følsomhed:"
 
 #: src/Views/StylusView.vala:171
 msgid "Test Tablet Settings"
-msgstr ""
+msgstr "Test Tabletens Indstillinger"
 
 #: src/Views/TabletView.vala:33
 msgid "Tablet (absolute)"
-msgstr ""
+msgstr "Tablet (absolut)"
 
 #: src/Views/TabletView.vala:34
 msgid "Touchpad (relative)"
-msgstr ""
+msgstr "Touchpad (relativ)"
 
 #: src/Views/TabletView.vala:39
 msgid "Tracking mode:"
-msgstr ""
+msgstr "Sporningstilstand:"
 
 #: src/Views/TabletView.vala:41
 msgid "Left-handed orientation:"
-msgstr ""
+msgstr "Venstrehåndet orientering:"
 
 #: src/Plug.vala:45
 msgid "Wacom"
-msgstr ""
+msgstr "Wacom"
 
 #: src/Plug.vala:46
 msgid "Configure Wacom tablet"
-msgstr ""
+msgstr "Konfigurer Wacom Tablet"
 
 #: src/Plug.vala:68
 msgid "Stylus"
-msgstr ""
+msgstr "Stylus"
 
 #: src/Plug.vala:69
 msgid "Tablet"
-msgstr ""
+msgstr "Tablet"
 
 #: src/Plug.vala:87
 msgid "No Tablets Available"
-msgstr ""
+msgstr "Ingen Tablets til Rådighed"
 
 #: src/Plug.vala:88
 msgid "Please ensure your tablet is connected and switched on"
-msgstr ""
+msgstr "Sørg for, at din tablet er tilsluttet og tændt"
