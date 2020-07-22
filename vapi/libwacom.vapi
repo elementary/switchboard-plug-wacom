@@ -1,6 +1,5 @@
-[CCode (cheader_filename = "libwacom/libwacom.h")]
 namespace Wacom {
-	[CCode (cname = "enum WacomErrorCode", cprefix = "WERROR_", has_type_id = false)]
+	[CCode (cheader_filename = "libwacom/libwacom.h", cname = "enum WacomErrorCode", cprefix = "WERROR_", has_type_id = false)]
 	public enum ErrorCode {
 		NONE,
 		BAD_ALLOC,
@@ -10,7 +9,7 @@ namespace Wacom {
 		UNKNOWN_MODEL
 	}
 
-	[CCode (cprefix = "WBUSTYPE_", has_type_id = false)]
+	[CCode (cheader_filename = "libwacom/libwacom.h", cprefix = "WBUSTYPE_", has_type_id = false)]
 	public enum BusType {
 		UNKNOWN,
 		USB,
@@ -20,14 +19,14 @@ namespace Wacom {
 	}
 
 	[Flags]
-	[CCode (cprefix = "WACOM_DEVICE_INTEGRATED_", has_type_id = false)]
+	[CCode (cheader_filename = "libwacom/libwacom.h", cprefix = "WACOM_DEVICE_INTEGRATED_", has_type_id = false)]
 	public enum IntegrationFlags {
 		NONE,
 		DISPLAY,
 		SYSTEM
 	}
 
-	[CCode (cprefix = "WCLASS_", has_type_id = false)]
+	[CCode (cheader_filename = "libwacom/libwacom.h", cprefix = "WCLASS_", has_type_id = false)]
 	public enum Class {
 		UNKNOWN,
 		INTUOS3,
@@ -43,7 +42,7 @@ namespace Wacom {
 		REMOTE
 	}
 
-	[CCode (cprefix = "WSTYLUS_", has_type_id = false)]
+	[CCode (cheader_filename = "libwacom/libwacom.h", cprefix = "WSTYLUS_", has_type_id = false)]
 	public enum StylusType {
 		UNKNOWN,
 		GENERAL,
@@ -57,7 +56,7 @@ namespace Wacom {
 	}
 
 	[Flags]
-	[CCode (cprefix = "WACOM_BUTTON_", has_type_id = false)]
+	[CCode (cheader_filename = "libwacom/libwacom.h", cprefix = "WACOM_BUTTON_", has_type_id = false)]
 	public enum ButtonFlags {
 		NONE,
 		POSITION_LEFT,
@@ -76,7 +75,7 @@ namespace Wacom {
 	}
 
 	[Flags]
-	[CCode (cprefix = "WACOM_AXIS_TYPE_", has_type_id = false)]
+	[CCode (cheader_filename = "libwacom/libwacom.h", cprefix = "WACOM_AXIS_TYPE_", has_type_id = false)]
 	public enum AxisTypeFlags {
 		NONE,
 		TILT,
@@ -87,20 +86,20 @@ namespace Wacom {
 	}
 
 	[Flags]
-	[CCode (cprefix = "WFALLBACK_", has_type_id = false)]
+	[CCode (cheader_filename = "libwacom/libwacom.h", cprefix = "WFALLBACK_", has_type_id = false)]
 	public enum FallbackFlags {
 		NONE,
 		GENERIC
 	}
 
 	[Flags]
-	[CCode (cprefix = "WCOMPARE_", has_type_id = false)]
+	[CCode (cheader_filename = "libwacom/libwacom.h", cprefix = "WCOMPARE_", has_type_id = false)]
 	public enum CompareFlags {
 		NORMAL,
 		MATCHES
 	}
 
-	[CCode (cprefix = "WACOM_STATUS_LED_", has_type_id = false)]
+	[CCode (cheader_filename = "libwacom/libwacom.h", cprefix = "WACOM_STATUS_LED_", has_type_id = false)]
 	public enum StatusLEDs {
 		UNAVAILABLE,
 		RING,
@@ -109,7 +108,8 @@ namespace Wacom {
 		TOUCHSTRIP2
 	}
 
-	[Compact, CCode (cprefix = "libwacom_", free_function = "libwacom_destroy")]
+	[Compact]
+	[CCode (cheader_filename = "libwacom/libwacom.h", cprefix = "libwacom_", free_function = "libwacom_destroy")]
 	public class Device {
 		public int compare (Wacom.Device b, Wacom.CompareFlags flags = Wacom.CompareFlags.NORMAL);
 		public Wacom.Class get_class ();
@@ -175,7 +175,8 @@ namespace Wacom {
 		public void print_description (int fd);
 	}
 
-	[Compact, CCode (cprefix = "libwacom_match_", free_function = "")]
+	[Compact]
+	[CCode (cheader_filename = "libwacom/libwacom.h", cprefix = "libwacom_match_", free_function = "")]
 	public class Match {
 		public unowned string get_name ();
 		public Wacom.BusType get_bustype ();
@@ -184,7 +185,8 @@ namespace Wacom {
 		public unowned string get_match_string ();
 	}
 
-	[Compact, CCode (cprefix = "libwacom_stylus_", free_function = "")]
+	[Compact]
+	[CCode (cheader_filename = "libwacom/libwacom.h", cprefix = "libwacom_stylus_", free_function = "")]
 	public class Stylus {
 		[CCode (cname = "WACOM_STYLUS_FALLBACK_ID")]
 		public const int STYLUS_FALLBACK_ID;
@@ -223,14 +225,16 @@ namespace Wacom {
 		public void print_description (int fd);
 	}
 
-	[Compact, CCode (cprefix = "libwacom_error_", free_function = "libwacom_error_free", free_function_address_of = true)]
+	[Compact]
+	[CCode (cheader_filename = "libwacom/libwacom.h", cprefix = "libwacom_error_", free_function = "libwacom_error_free", free_function_address_of = true)]
 	public class Error {
 		public Error ();
 		public Wacom.ErrorCode get_code ();
 		public unowned string get_message ();
 	}
 
-	[Compact, CCode (cprefix = "libwacom_database_", free_function = "libwacom_database_destroy")]
+	[Compact]
+	[CCode (cheader_filename = "libwacom/libwacom.h", cprefix = "libwacom_database_", free_function = "libwacom_database_destroy")]
 	public class DeviceDatabase {
 		public DeviceDatabase ();
 		public DeviceDatabase.for_path (string datadir);
