@@ -17,7 +17,7 @@
  * Boston, MA 02110-1301 USA.
  */
 
-errordomain WacomException {
+public errordomain WacomException {
     LIBWACOM_ERROR
 }
 
