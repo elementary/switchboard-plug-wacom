@@ -51,7 +51,7 @@ public class Wacom.Backend.WacomDevice : GLib.Object {
         var error = new Wacom.Error ();
         wacom_device = wacom_db.get_device_from_path (device.device_file, Wacom.FallbackFlags.NONE, error);
         if (wacom_device == null) {
-            throw new WacomException.LIBWACOM_ERROR (error.get_message ());
+            throw new WacomException.LIBWACOM_ERROR (error.get_message () ?? "");
         }
     }
 
