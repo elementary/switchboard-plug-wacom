@@ -185,6 +185,16 @@ public class Wacom.Plug : Switchboard.Plug {
             }
         }
 
+        // Devices with no physical buttons on the tablet do not have DeviceType.PAD
+        // In this case, select the first TABLET device
+        foreach (var device in devices.keys) {
+            if (Backend.Device.DeviceType.TABLET in device.dev_type) {
+                empty_stack.visible_child_name = "main_view";
+                tablet_view.set_device (devices[device]);
+                return;
+            }
+        }
+
         empty_stack.visible_child_name = "no_tablets";
     }
 
