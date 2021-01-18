@@ -159,7 +159,8 @@ public class Wacom.Plug : Switchboard.Plug {
         }
 
         if (Backend.Device.DeviceType.TOUCHSCREEN in d.dev_type ||
-            Backend.Device.DeviceType.TOUCHPAD in d.dev_type) {
+            Backend.Device.DeviceType.TOUCHPAD in d.dev_type ||
+            Backend.Device.DeviceType.PAD in d.dev_type) {
             return;
         }
 
@@ -178,11 +179,9 @@ public class Wacom.Plug : Switchboard.Plug {
 
     private void update_current_page () {
         foreach (var device in devices.keys) {
-            if (Backend.Device.DeviceType.PAD in device.dev_type) {
-                empty_stack.visible_child_name = "main_view";
-                tablet_view.set_device (devices[device]);
-                return;
-            }
+            empty_stack.visible_child_name = "main_view";
+            tablet_view.set_device (devices[device]);
+            return;
         }
 
         empty_stack.visible_child_name = "no_tablets";
