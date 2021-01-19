@@ -3,6 +3,8 @@
 
 This is a WIP plug for [elementary Switchboard](https://github.com/elementary/switchboard) to configure settings for Wacom tablets.
 
+![screenshot](data/screenshot.png?raw=true)
+
 ## Building and Installation
 
 You'll need the following dependencies:
