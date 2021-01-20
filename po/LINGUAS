@@ -1,3 +1,4 @@
+
 aa
 ab
 ae
@@ -21,6 +22,7 @@ bn
 bo
 br
 bs
+btk
 ca
 ce
 ch
@@ -157,6 +159,7 @@ sn
 so
 sq
 sr
+sr@latin
 ss
 st
 su
@@ -195,7 +198,3 @@ zh_CN
 zh_HK
 zh_TW
 zu
-
-sr@latin
-btk
-en_US
