@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-27 17:52+0100\n"
-"PO-Revision-Date: 2021-02-13 12:34+0000\n"
+"PO-Revision-Date: 2021-02-13 13:01+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/plug-wacom/nb/>\n"
@@ -20,12 +20,14 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 
 #: src/Views/StylusView.vala:44
+#, fuzzy
 msgid "No Stylus Detected"
-msgstr ""
+msgstr "Fant ingen tegnepinne"
 
 #: src/Views/StylusView.vala:45
+#, fuzzy
 msgid "Please move your stylus close to the tablet"
-msgstr ""
+msgstr "Flytt tegnepinnen nærme tegneplaten"
 
 #: src/Views/StylusView.vala:61
 msgid "Default"
@@ -33,83 +35,88 @@ msgstr "Forvalg"
 
 #: src/Views/StylusView.vala:62
 msgid "Middle Mouse Button Click"
-msgstr ""
+msgstr "Midtmusetastklikk"
 
 #: src/Views/StylusView.vala:63
 msgid "Right Mouse Button Click"
-msgstr ""
+msgstr "Høyremusetastklikk"
 
 #: src/Views/StylusView.vala:64
 msgid "Back"
 msgstr "Tilbake"
 
 #: src/Views/StylusView.vala:65
+#, fuzzy
 msgid "Forward"
-msgstr ""
+msgstr "Framover"
 
 #: src/Views/StylusView.vala:123
 msgid "Soft"
-msgstr ""
+msgstr "Myk"
 
 #: src/Views/StylusView.vala:124
 msgid "Firm"
-msgstr ""
+msgstr "Fast"
 
 #: src/Views/StylusView.vala:146
 msgid "Eraser Pressure Feel:"
-msgstr ""
+msgstr "Viskelærets følsomhet:"
 
 #: src/Views/StylusView.vala:151
 msgid "Button Action:"
-msgstr ""
+msgstr "Knappehandling:"
 
 #: src/Views/StylusView.vala:154 src/Views/StylusView.vala:158
 msgid "Top Button Action:"
-msgstr ""
+msgstr "Toppknappshandling:"
 
 #: src/Views/StylusView.vala:155 src/Views/StylusView.vala:160
 msgid "Bottom Button Action:"
-msgstr ""
+msgstr "Bunnknappshandling:"
 
 #: src/Views/StylusView.vala:159
 msgid "Middle Button Action:"
-msgstr ""
+msgstr "Midtknappshandling:"
 
 #: src/Views/StylusView.vala:167
 msgid "Tip Pressure Feel:"
-msgstr ""
+msgstr "Spissens følsomhet:"
 
 #: src/Views/StylusView.vala:171
+#, fuzzy
 msgid "Test Tablet Settings"
-msgstr ""
+msgstr "Test tegneplatens innstillinger"
 
 #: src/Views/TabletView.vala:33
+#, fuzzy
 msgid "Tablet (absolute)"
-msgstr ""
+msgstr "Tegneplate (absolutt)"
 
 #: src/Views/TabletView.vala:34
 msgid "Touchpad (relative)"
-msgstr ""
+msgstr "Pekeflate (relativ)"
 
 #: src/Views/TabletView.vala:39
 msgid "Tracking mode:"
-msgstr ""
+msgstr "Sporingsmodus:"
 
 #: src/Views/TabletView.vala:41
+#, fuzzy
 msgid "Left-handed orientation:"
-msgstr ""
+msgstr "Venstrehendt retning:"
 
 #: src/Plug.vala:45
 msgid "Wacom"
-msgstr ""
+msgstr "Wacom"
 
 #: src/Plug.vala:46
 msgid "Configure Wacom tablet"
-msgstr ""
+msgstr "Sett opp Wacom-tegneplate"
 
 #: src/Plug.vala:68
+#, fuzzy
 msgid "Stylus"
-msgstr ""
+msgstr "Tegnepinne"
 
 #: src/Plug.vala:69
 msgid "Tablet"
@@ -117,8 +124,8 @@ msgstr "Nettbrett"
 
 #: src/Plug.vala:87
 msgid "No Tablets Available"
-msgstr ""
+msgstr "Ingen tilgjengelige tegneplater"
 
 #: src/Plug.vala:88
 msgid "Please ensure your tablet is connected and switched on"
-msgstr ""
+msgstr "Forsikre deg om at din tegneplate er tilkoblet og påslått"
