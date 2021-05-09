@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-27 17:52+0100\n"
-"PO-Revision-Date: 2019-11-05 14:24+0000\n"
+"PO-Revision-Date: 2021-05-10 00:55+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/fi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: src/Views/StylusView.vala:44
 msgid "No Stylus Detected"
@@ -33,7 +33,7 @@ msgstr "Oletus"
 
 #: src/Views/StylusView.vala:62
 msgid "Middle Mouse Button Click"
-msgstr "Keksimmäisen hiiren painikkeen napsautus"
+msgstr "Keskimmäisen hiiren painikkeen napsautus"
 
 #: src/Views/StylusView.vala:63
 msgid "Right Mouse Button Click"
@@ -53,11 +53,11 @@ msgstr "Pehmeä"
 
 #: src/Views/StylusView.vala:124
 msgid "Firm"
-msgstr ""
+msgstr "Luja"
 
 #: src/Views/StylusView.vala:146
 msgid "Eraser Pressure Feel:"
-msgstr ""
+msgstr "Pyyhekumin paineen tunne:"
 
 #: src/Views/StylusView.vala:151
 msgid "Button Action:"
@@ -77,7 +77,7 @@ msgstr "Keskipainikkeen toiminto:"
 
 #: src/Views/StylusView.vala:167
 msgid "Tip Pressure Feel:"
-msgstr ""
+msgstr "Kärjen paineen tunne:"
 
 #: src/Views/StylusView.vala:171
 msgid "Test Tablet Settings"
@@ -97,7 +97,7 @@ msgstr "Seurantatila:"
 
 #: src/Views/TabletView.vala:41
 msgid "Left-handed orientation:"
-msgstr ""
+msgstr "Vasenkätinen suuntaus:"
 
 #: src/Plug.vala:45
 msgid "Wacom"
