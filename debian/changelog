@@ -1,3 +1,9 @@
+io.elementary.switchboard.wacom (1.0.0) focal; urgency=medium
+
+  * New upstream release,
+
+ -- Daniel Foré <daniel@elementary.io>  Tue, 27 Jul 2021 12:18:46 -0700
+
 io.elementary.switchboard.wacom (1.0.0) bionic; urgency=medium
 
   * Initial release.
