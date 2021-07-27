@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-13 17:12+0100\n"
+"POT-Creation-Date: 2021-07-27 19:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,4 +23,8 @@ msgstr ""
 
 #: data/io.elementary.switchboard.wacom.appdata.xml.in:6
 msgid "Configure Wacom tablets"
+msgstr ""
+
+#: data/io.elementary.switchboard.wacom.appdata.xml.in:12
+msgid "Initial Release!"
 msgstr ""
