@@ -1,8 +1,6 @@
 # Switchboard Wacom Plug
 [![Translation status](https://l10n.elementary.io/widgets/switchboard/-/plug-wacom/svg-badge.svg)](https://l10n.elementary.io/engage/switchboard/?utm_source=widget)
 
-This is a WIP plug for [elementary Switchboard](https://github.com/elementary/switchboard) to configure settings for Wacom tablets.
-
 ![screenshot](data/screenshot.png?raw=true)
 
 ## Building and Installation
@@ -26,4 +24,4 @@ Run `meson` to configure the build environment and then `ninja` to build
 
 To install, use `ninja install`
 
-    sudo ninja install
+    ninja install
