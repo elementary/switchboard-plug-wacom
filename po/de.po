@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 19:16+0000\n"
-"PO-Revision-Date: 2021-08-23 14:23+0000\n"
-"Last-Translator: supaeasy <ismo+github@wolffson.ch>\n"
+"PO-Revision-Date: 2021-08-24 03:37+0000\n"
+"Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/de/>\n"
 "Language: de\n"
@@ -113,13 +113,14 @@ msgstr "Stift"
 
 #: src/Plug.vala:69
 msgid "Tablet"
-msgstr "Tablet-Rechner"
+msgstr "Grafiktablett"
 
 #: src/Plug.vala:87
 msgid "No Tablets Available"
-msgstr "Kein Tablett vorhanden"
+msgstr "Kein Grafiktablett vorhanden"
 
 #: src/Plug.vala:88
 msgid "Please ensure your tablet is connected and switched on"
 msgstr ""
-"Stellen Sie sicher, dass Ihr Tablett angeschlossen und eingeschaltet ist"
+"Stellen Sie sicher, dass Ihr Grafiktablett angeschlossen und eingeschaltet "
+"ist"
