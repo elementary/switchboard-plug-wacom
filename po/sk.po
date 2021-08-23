@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 19:16+0000\n"
-"PO-Revision-Date: 2021-08-23 13:53+0000\n"
+"PO-Revision-Date: 2021-08-23 14:23+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
-"Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/plug-"
-"wacom/sk/>\n"
+"Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
+"plug-wacom/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,7 +29,7 @@ msgstr "Prosím, priblížte svoj stylus k tabletu"
 
 #: src/Views/StylusView.vala:61
 msgid "Default"
-msgstr "Predvolené"
+msgstr "Predvolený"
 
 #: src/Views/StylusView.vala:62
 msgid "Middle Mouse Button Click"
