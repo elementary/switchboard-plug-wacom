@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 19:16+0000\n"
-"PO-Revision-Date: 2021-08-24 21:51+0000\n"
+"PO-Revision-Date: 2021-08-27 17:04+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/hu/>\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: src/Views/StylusView.vala:44
 msgid "No Stylus Detected"
-msgstr ""
+msgstr "Nem található ceruza"
 
 #: src/Views/StylusView.vala:45
 msgid "Please move your stylus close to the tablet"
-msgstr ""
+msgstr "Tartsa közelebb a ceruzát a tablethez"
 
 #: src/Views/StylusView.vala:61
 msgid "Default"
@@ -33,83 +33,83 @@ msgstr "Alapértelmezett"
 
 #: src/Views/StylusView.vala:62
 msgid "Middle Mouse Button Click"
-msgstr ""
+msgstr "Középső egérgombos kattintás"
 
 #: src/Views/StylusView.vala:63
 msgid "Right Mouse Button Click"
-msgstr ""
+msgstr "Jobb egérgombos kattintás"
 
 #: src/Views/StylusView.vala:64
 msgid "Back"
-msgstr ""
+msgstr "Vissza"
 
 #: src/Views/StylusView.vala:65
 msgid "Forward"
-msgstr ""
+msgstr "Előre"
 
 #: src/Views/StylusView.vala:123
 msgid "Soft"
-msgstr ""
+msgstr "Puha"
 
 #: src/Views/StylusView.vala:124
 msgid "Firm"
-msgstr ""
+msgstr "Kemény"
 
 #: src/Views/StylusView.vala:146
 msgid "Eraser Pressure Feel:"
-msgstr ""
+msgstr "A törlés nyomásának érzése:"
 
 #: src/Views/StylusView.vala:151
 msgid "Button Action:"
-msgstr ""
+msgstr "A gomb viselkedése:"
 
 #: src/Views/StylusView.vala:154 src/Views/StylusView.vala:158
 msgid "Top Button Action:"
-msgstr ""
+msgstr "A felső gomb viselkedése:"
 
 #: src/Views/StylusView.vala:155 src/Views/StylusView.vala:160
 msgid "Bottom Button Action:"
-msgstr ""
+msgstr "Az alsó gomb viselkedése:"
 
 #: src/Views/StylusView.vala:159
 msgid "Middle Button Action:"
-msgstr ""
+msgstr "A középső gomb viselkedése:"
 
 #: src/Views/StylusView.vala:167
 msgid "Tip Pressure Feel:"
-msgstr ""
+msgstr "A hegy nyomásának érzése:"
 
 #: src/Views/StylusView.vala:171
 msgid "Test Tablet Settings"
-msgstr ""
+msgstr "Tabletbeállítások tesztelése"
 
 #: src/Views/TabletView.vala:33
 msgid "Tablet (absolute)"
-msgstr ""
+msgstr "Tablet (abszolút)"
 
 #: src/Views/TabletView.vala:34
 msgid "Touchpad (relative)"
-msgstr ""
+msgstr "Touchpad (relatív)"
 
 #: src/Views/TabletView.vala:39
 msgid "Tracking mode:"
-msgstr ""
+msgstr "Követési mód:"
 
 #: src/Views/TabletView.vala:41
 msgid "Left-handed orientation:"
-msgstr ""
+msgstr "Balkezes elrendezés:"
 
 #: src/Plug.vala:45
 msgid "Wacom"
-msgstr ""
+msgstr "Wacom"
 
 #: src/Plug.vala:46
 msgid "Configure Wacom tablet"
-msgstr ""
+msgstr "Wacom tablet beállítása"
 
 #: src/Plug.vala:68
 msgid "Stylus"
-msgstr ""
+msgstr "Ceruza"
 
 #: src/Plug.vala:69
 msgid "Tablet"
@@ -117,8 +117,9 @@ msgstr "Tablet"
 
 #: src/Plug.vala:87
 msgid "No Tablets Available"
-msgstr ""
+msgstr "Nincs elérhető tablet"
 
 #: src/Plug.vala:88
 msgid "Please ensure your tablet is connected and switched on"
 msgstr ""
+"Győződjön meg róla, hogy a tablet csatlakoztatva van és be van kapcsolva"
