@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 19:16+0000\n"
-"PO-Revision-Date: 2021-11-08 08:27+0000\n"
+"PO-Revision-Date: 2021-11-08 08:35+0000\n"
 "Last-Translator: DarkKnightComes <darkknightcomes@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/pl/>\n"
@@ -86,7 +86,7 @@ msgstr "Przetestuj ustawienia tabletu"
 
 #: src/Views/TabletView.vala:33
 msgid "Tablet (absolute)"
-msgstr "Tablet (absolutne)"
+msgstr "Tablet (absolutny)"
 
 #: src/Views/TabletView.vala:34
 msgid "Touchpad (relative)"
@@ -106,11 +106,11 @@ msgstr ""
 
 #: src/Plug.vala:46
 msgid "Configure Wacom tablet"
-msgstr ""
+msgstr "Skonfiguruj tablet Wacom"
 
 #: src/Plug.vala:68
 msgid "Stylus"
-msgstr ""
+msgstr "Rysik"
 
 #: src/Plug.vala:69
 msgid "Tablet"
@@ -122,4 +122,4 @@ msgstr ""
 
 #: src/Plug.vala:88
 msgid "Please ensure your tablet is connected and switched on"
-msgstr ""
+msgstr "Upewnij się, że twój tablet jest podłączony i włączony"
