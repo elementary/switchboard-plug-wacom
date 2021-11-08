@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 19:16+0000\n"
 "PO-Revision-Date: 2021-11-08 08:35+0000\n"
-"Last-Translator: DarkKnightComes <darkknightcomes@gmail.com>\n"
+"Last-Translator: yahoo1999 <yahoo_1999@go2.pl>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/pl/>\n"
 "Language: pl\n"
@@ -98,11 +98,11 @@ msgstr "Tryb śledzenia:"
 
 #: src/Views/TabletView.vala:41
 msgid "Left-handed orientation:"
-msgstr ""
+msgstr "Tryb obsługi leworęcznej:"
 
 #: src/Plug.vala:45
 msgid "Wacom"
-msgstr ""
+msgstr "Wacom"
 
 #: src/Plug.vala:46
 msgid "Configure Wacom tablet"
@@ -118,7 +118,7 @@ msgstr "Tablet"
 
 #: src/Plug.vala:87
 msgid "No Tablets Available"
-msgstr ""
+msgstr "Brak dostępnych tabletów"
 
 #: src/Plug.vala:88
 msgid "Please ensure your tablet is connected and switched on"
