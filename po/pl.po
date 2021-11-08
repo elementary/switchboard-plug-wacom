@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-27 19:16+0000\n"
 "PO-Revision-Date: 2021-11-08 08:27+0000\n"
-"Last-Translator: yahoo1999 <yahoo_1999@go2.pl>\n"
+"Last-Translator: DarkKnightComes <darkknightcomes@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/pl/>\n"
 "Language: pl\n"
@@ -58,15 +58,15 @@ msgstr "Twardy"
 
 #: src/Views/StylusView.vala:146
 msgid "Eraser Pressure Feel:"
-msgstr ""
+msgstr "Twardość gumki:"
 
 #: src/Views/StylusView.vala:151
 msgid "Button Action:"
-msgstr ""
+msgstr "Działanie przycisku:"
 
 #: src/Views/StylusView.vala:154 src/Views/StylusView.vala:158
 msgid "Top Button Action:"
-msgstr ""
+msgstr "Działanie górnego przycisku:"
 
 #: src/Views/StylusView.vala:155 src/Views/StylusView.vala:160
 msgid "Bottom Button Action:"
@@ -78,7 +78,7 @@ msgstr "Działanie środkowego przycisku:"
 
 #: src/Views/StylusView.vala:167
 msgid "Tip Pressure Feel:"
-msgstr ""
+msgstr "Twardość rysika:"
 
 #: src/Views/StylusView.vala:171
 msgid "Test Tablet Settings"
@@ -90,7 +90,7 @@ msgstr "Tablet (absolutne)"
 
 #: src/Views/TabletView.vala:34
 msgid "Touchpad (relative)"
-msgstr ""
+msgstr "Panel dotykowy (względny)"
 
 #: src/Views/TabletView.vala:39
 msgid "Tracking mode:"
