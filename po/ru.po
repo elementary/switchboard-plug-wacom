@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-27 17:52+0100\n"
-"PO-Revision-Date: 2021-03-10 09:51+0000\n"
-"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
+"POT-Creation-Date: 2021-07-27 19:16+0000\n"
+"PO-Revision-Date: 2021-08-23 19:38+0000\n"
+"Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/ru/>\n"
 "Language: ru\n"
@@ -34,11 +34,11 @@ msgstr "По умолчанию"
 
 #: src/Views/StylusView.vala:62
 msgid "Middle Mouse Button Click"
-msgstr "Нажатие средней кнопкой мыши"
+msgstr "Нажатие средней кнопки мыши"
 
 #: src/Views/StylusView.vala:63
 msgid "Right Mouse Button Click"
-msgstr "Нажатие правой кнопкой мыши"
+msgstr "Нажатие правой кнопки мыши"
 
 #: src/Views/StylusView.vala:64
 msgid "Back"
@@ -85,14 +85,12 @@ msgid "Test Tablet Settings"
 msgstr "Тест настроек планшета"
 
 #: src/Views/TabletView.vala:33
-#, fuzzy
 msgid "Tablet (absolute)"
-msgstr "Планшет (абсолютный)"
+msgstr "Планшет (абсолютные координаты)"
 
 #: src/Views/TabletView.vala:34
-#, fuzzy
 msgid "Touchpad (relative)"
-msgstr "Тачпад (относительный)"
+msgstr "Сенсорная панель (относительные координаты)"
 
 #: src/Views/TabletView.vala:39
 msgid "Tracking mode:"

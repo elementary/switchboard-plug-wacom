@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-13 17:12+0100\n"
-"PO-Revision-Date: 2019-09-16 16:23+0000\n"
+"POT-Creation-Date: 2021-07-27 19:16+0000\n"
+"PO-Revision-Date: 2021-08-23 19:38+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom-extra/fi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/io.elementary.switchboard.wacom.appdata.xml.in:5
 msgid "Wacom Settings"
@@ -26,3 +26,7 @@ msgstr "Wacom-asetukset"
 #: data/io.elementary.switchboard.wacom.appdata.xml.in:6
 msgid "Configure Wacom tablets"
 msgstr "Määritä Wacom-piirtopöydät"
+
+#: data/io.elementary.switchboard.wacom.appdata.xml.in:12
+msgid "Initial Release!"
+msgstr "Ensimmäinen julkaisu!"

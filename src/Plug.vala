@@ -34,6 +34,9 @@ public class Wacom.Plug : Switchboard.Plug {
     private Backend.WacomToolMap tool_map;
 
     public Plug () {
+        GLib.Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+        GLib.Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+
         var settings = new Gee.TreeMap<string, string?> (null, null);
         settings.set ("input/pointing/stylus", "general");
         // deprecated
