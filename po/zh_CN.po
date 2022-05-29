@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-27 19:16+0000\n"
+"POT-Creation-Date: 2022-05-24 19:12+0000\n"
 "PO-Revision-Date: 2021-07-20 18:18+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -99,26 +99,26 @@ msgstr "跟踪模式："
 msgid "Left-handed orientation:"
 msgstr "适配左手："
 
-#: src/Plug.vala:45
+#: src/Plug.vala:48
 msgid "Wacom"
 msgstr "数位板"
 
-#: src/Plug.vala:46
+#: src/Plug.vala:49
 msgid "Configure Wacom tablet"
 msgstr "配置 Wacom 数位板"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 msgid "Stylus"
 msgstr "触控笔"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:72
 msgid "Tablet"
 msgstr "数位板"
 
-#: src/Plug.vala:87
+#: src/Plug.vala:90
 msgid "No Tablets Available"
 msgstr "无可用数位板"
 
-#: src/Plug.vala:88
+#: src/Plug.vala:91
 msgid "Please ensure your tablet is connected and switched on"
 msgstr "请确保您的数位板已接入且处于开启状态"

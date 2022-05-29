@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-27 19:16+0000\n"
+"POT-Creation-Date: 2022-05-24 19:12+0000\n"
 "PO-Revision-Date: 2019-10-24 21:24+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
@@ -99,26 +99,26 @@ msgstr "Modo de rastreamento:"
 msgid "Left-handed orientation:"
 msgstr "Orientação para canhotos:"
 
-#: src/Plug.vala:45
+#: src/Plug.vala:48
 msgid "Wacom"
 msgstr "Wacom"
 
-#: src/Plug.vala:46
+#: src/Plug.vala:49
 msgid "Configure Wacom tablet"
 msgstr "Configurar tablet Wacom"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 msgid "Stylus"
 msgstr "Caneta Stylus"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:72
 msgid "Tablet"
 msgstr "Tablet"
 
-#: src/Plug.vala:87
+#: src/Plug.vala:90
 msgid "No Tablets Available"
 msgstr "Nenhum Tablet Disponível"
 
-#: src/Plug.vala:88
+#: src/Plug.vala:91
 msgid "Please ensure your tablet is connected and switched on"
 msgstr "Por favor verifique se o seu tablet está conectado e ligado"
