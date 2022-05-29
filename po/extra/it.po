@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-27 19:16+0000\n"
+"POT-Creation-Date: 2022-05-24 19:12+0000\n"
 "PO-Revision-Date: 2020-10-24 13:15+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/plug-"
@@ -28,5 +28,13 @@ msgid "Configure Wacom tablets"
 msgstr "Configura tavolette Wacom"
 
 #: data/io.elementary.switchboard.wacom.appdata.xml.in:12
+msgid "Minor updates:"
+msgstr ""
+
+#: data/io.elementary.switchboard.wacom.appdata.xml.in:14
+msgid "Updated translations"
+msgstr ""
+
+#: data/io.elementary.switchboard.wacom.appdata.xml.in:20
 msgid "Initial Release!"
 msgstr ""
