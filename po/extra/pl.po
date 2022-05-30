@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-24 19:12+0000\n"
-"PO-Revision-Date: 2021-11-08 11:22+0000\n"
+"PO-Revision-Date: 2022-05-30 10:51+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
-"Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/plug-"
-"wacom-extra/pl/>\n"
+"Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
+"plug-wacom-extra/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,11 +30,11 @@ msgstr "Konfiguruj tablety Wacom"
 
 #: data/io.elementary.switchboard.wacom.appdata.xml.in:12
 msgid "Minor updates:"
-msgstr ""
+msgstr "Mniejsze aktualizacje:"
 
 #: data/io.elementary.switchboard.wacom.appdata.xml.in:14
 msgid "Updated translations"
-msgstr ""
+msgstr "Zaktualizowane tłumaczenia"
 
 #: data/io.elementary.switchboard.wacom.appdata.xml.in:20
 msgid "Initial Release!"
