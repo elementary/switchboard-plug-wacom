@@ -7,7 +7,7 @@
   <icon type="stock">input-tablet</icon>
   <translation type="gettext">wacom</translation>
   <releases>
-    <release version="1.0.1" date="2022-05-23" urgency="medium">
+    <release version="1.0.1" date="2022-07-03" urgency="medium">
       <description>
         <p>Minor updates:</p>
         <ul>
