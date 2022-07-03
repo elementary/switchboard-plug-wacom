@@ -1,3 +1,13 @@
+io.elementary.switchboard.wacom (1.0.1) focal; urgency=medium
+
+  * Release 1.0.1 (#32)
+  * Update translation files
+  * README: Remove WIP (#28)
+  * Update translation template
+  * l10n: Correctly setup the locales (#29)
+
+ -- elementary OS Team <builds@elementary.io>  Sun, 03 Jul 2022 15:33:33 +0000
+
 io.elementary.switchboard.wacom (1.0.0) focal; urgency=medium
 
   * New upstream release,
