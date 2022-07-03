@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-27 19:16+0000\n"
+"POT-Creation-Date: 2022-05-24 19:12+0000\n"
 "PO-Revision-Date: 2019-09-22 19:23+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/plug-"
@@ -99,26 +99,26 @@ msgstr "ट्रॅकिंग मोड:"
 msgid "Left-handed orientation:"
 msgstr "डावीकडून अभिमुखता:"
 
-#: src/Plug.vala:45
+#: src/Plug.vala:48
 msgid "Wacom"
 msgstr "वाकॉम"
 
-#: src/Plug.vala:46
+#: src/Plug.vala:49
 msgid "Configure Wacom tablet"
 msgstr "वॅकॉम टॅब्लेट कॉन्फिगर करा"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 msgid "Stylus"
 msgstr "स्टाईलस"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:72
 msgid "Tablet"
 msgstr "टॅब्लेट"
 
-#: src/Plug.vala:87
+#: src/Plug.vala:90
 msgid "No Tablets Available"
 msgstr "कोणतेही टॅब्लेट्स उपलब्ध नाहीत"
 
-#: src/Plug.vala:88
+#: src/Plug.vala:91
 msgid "Please ensure your tablet is connected and switched on"
 msgstr "कृपया आपला टॅब्लेट कनेक्ट केलेला आणि चालू असल्याचे सुनिश्चित करा"

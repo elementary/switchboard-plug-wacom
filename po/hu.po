@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-27 19:16+0000\n"
+"POT-Creation-Date: 2022-05-24 19:12+0000\n"
 "PO-Revision-Date: 2021-08-27 17:04+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
@@ -99,27 +99,27 @@ msgstr "Követési mód:"
 msgid "Left-handed orientation:"
 msgstr "Balkezes elrendezés:"
 
-#: src/Plug.vala:45
+#: src/Plug.vala:48
 msgid "Wacom"
 msgstr "Wacom"
 
-#: src/Plug.vala:46
+#: src/Plug.vala:49
 msgid "Configure Wacom tablet"
 msgstr "Wacom tablet beállítása"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 msgid "Stylus"
 msgstr "Ceruza"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:72
 msgid "Tablet"
 msgstr "Tablet"
 
-#: src/Plug.vala:87
+#: src/Plug.vala:90
 msgid "No Tablets Available"
 msgstr "Nincs elérhető tablet"
 
-#: src/Plug.vala:88
+#: src/Plug.vala:91
 msgid "Please ensure your tablet is connected and switched on"
 msgstr ""
 "Győződjön meg róla, hogy a tablet csatlakoztatva van és be van kapcsolva"

@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-27 19:16+0000\n"
+"POT-Creation-Date: 2022-05-24 19:12+0000\n"
 "PO-Revision-Date: 2021-08-24 03:37+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
-"Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
-"plug-wacom/de/>\n"
+"Language-Team: German <https://l10n.elementary.io/projects/switchboard/plug-"
+"wacom/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -99,27 +99,27 @@ msgstr "Tracking-Modus:"
 msgid "Left-handed orientation:"
 msgstr "Ausrichtung für Linkshänder:"
 
-#: src/Plug.vala:45
+#: src/Plug.vala:48
 msgid "Wacom"
 msgstr "Wacom"
 
-#: src/Plug.vala:46
+#: src/Plug.vala:49
 msgid "Configure Wacom tablet"
 msgstr "Wacom-Tablett einrichten"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:71
 msgid "Stylus"
 msgstr "Stift"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:72
 msgid "Tablet"
 msgstr "Grafiktablett"
 
-#: src/Plug.vala:87
+#: src/Plug.vala:90
 msgid "No Tablets Available"
 msgstr "Kein Grafiktablett vorhanden"
 
-#: src/Plug.vala:88
+#: src/Plug.vala:91
 msgid "Please ensure your tablet is connected and switched on"
 msgstr ""
 "Stellen Sie sicher, dass Ihr Grafiktablett angeschlossen und eingeschaltet "
