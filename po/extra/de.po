@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-24 19:12+0000\n"
 "PO-Revision-Date: 2022-07-15 22:41+0000\n"
-"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
+"Last-Translator: ActualDisaster2447 <1jbe1vkry@mozmail.com>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom-extra/de/>\n"
 "Language: de\n"
@@ -29,7 +29,7 @@ msgstr "Wacom-Grafiktabletts einrichten"
 
 #: data/io.elementary.switchboard.wacom.appdata.xml.in:12
 msgid "Minor updates:"
-msgstr ""
+msgstr "Kleinere Aktualisierungen:"
 
 #: data/io.elementary.switchboard.wacom.appdata.xml.in:14
 msgid "Updated translations"
