@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-24 19:12+0000\n"
-"PO-Revision-Date: 2022-09-21 15:36+0000\n"
+"PO-Revision-Date: 2022-09-29 18:06+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
 "switchboard/plug-wacom/ckb/>\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: src/Views/StylusView.vala:44
 msgid "No Stylus Detected"
-msgstr ""
+msgstr "هیچ ستایلەسێک نەدۆزراوەتەوە"
 
 #: src/Views/StylusView.vala:45
 msgid "Please move your stylus close to the tablet"
-msgstr ""
+msgstr "تکایە ستایلەسەکت لە نزیک تابلێتەکەتەوە دابنێ"
 
 #: src/Views/StylusView.vala:61
 msgid "Default"
@@ -33,83 +33,85 @@ msgstr "بنەڕەت"
 
 #: src/Views/StylusView.vala:62
 msgid "Middle Mouse Button Click"
-msgstr ""
+msgstr "کرتەی دوگمەی ناوەڕاستی ماوس"
 
 #: src/Views/StylusView.vala:63
 msgid "Right Mouse Button Click"
-msgstr ""
+msgstr "کرتەی لای ڕاستی ماوس"
 
 #: src/Views/StylusView.vala:64
 msgid "Back"
-msgstr ""
+msgstr "گەڕانەوە"
 
 #: src/Views/StylusView.vala:65
 msgid "Forward"
-msgstr ""
+msgstr "چوونەپێش"
 
 #: src/Views/StylusView.vala:123
 msgid "Soft"
-msgstr ""
+msgstr "سۆفت"
 
 #: src/Views/StylusView.vala:124
 msgid "Firm"
-msgstr ""
+msgstr "فیرم"
 
 #: src/Views/StylusView.vala:146
+#, fuzzy
 msgid "Eraser Pressure Feel:"
-msgstr ""
+msgstr "Eraser Pressure Feel:"
 
 #: src/Views/StylusView.vala:151
 msgid "Button Action:"
-msgstr ""
+msgstr "کاری دوگمە:"
 
 #: src/Views/StylusView.vala:154 src/Views/StylusView.vala:158
 msgid "Top Button Action:"
-msgstr ""
+msgstr "کاری دوگمەی سەرەوە:"
 
 #: src/Views/StylusView.vala:155 src/Views/StylusView.vala:160
 msgid "Bottom Button Action:"
-msgstr ""
+msgstr "کاری دوگمەی خوارەوە:"
 
 #: src/Views/StylusView.vala:159
 msgid "Middle Button Action:"
-msgstr ""
+msgstr "کاری دوگمەی ناوەڕاست:"
 
 #: src/Views/StylusView.vala:167
+#, fuzzy
 msgid "Tip Pressure Feel:"
-msgstr ""
+msgstr "Tip Pressure Feel:"
 
 #: src/Views/StylusView.vala:171
 msgid "Test Tablet Settings"
-msgstr ""
+msgstr "ڕێکخستنەکانی تابلێتی تاقیکردنەوە"
 
 #: src/Views/TabletView.vala:33
 msgid "Tablet (absolute)"
-msgstr ""
+msgstr "تابلێت (ڕەها)"
 
 #: src/Views/TabletView.vala:34
 msgid "Touchpad (relative)"
-msgstr ""
+msgstr "تەچپاد (ڕێلەتڤ)"
 
 #: src/Views/TabletView.vala:39
 msgid "Tracking mode:"
-msgstr ""
+msgstr "دۆخی تراکینگ (چاودێریکردن):"
 
 #: src/Views/TabletView.vala:41
 msgid "Left-handed orientation:"
-msgstr ""
+msgstr "ئۆرینیتەیشنی دەستە-چەپ:"
 
 #: src/Plug.vala:48
 msgid "Wacom"
-msgstr ""
+msgstr "وەیکام"
 
 #: src/Plug.vala:49
 msgid "Configure Wacom tablet"
-msgstr ""
+msgstr "ڕێکخستنی تابلێتی وەیکام"
 
 #: src/Plug.vala:71
 msgid "Stylus"
-msgstr ""
+msgstr "ستایلەس"
 
 #: src/Plug.vala:72
 msgid "Tablet"
@@ -117,8 +119,8 @@ msgstr "تابلێت"
 
 #: src/Plug.vala:90
 msgid "No Tablets Available"
-msgstr ""
+msgstr "هیچ تابلێتێک بەردەست نییە"
 
 #: src/Plug.vala:91
 msgid "Please ensure your tablet is connected and switched on"
-msgstr ""
+msgstr "تکایە دڵنیابە کە تابلێتەکە پێکراوە و پەیوەستە"
