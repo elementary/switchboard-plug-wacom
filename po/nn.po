@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-24 19:12+0000\n"
-"PO-Revision-Date: 2023-02-02 23:25+0000\n"
+"PO-Revision-Date: 2023-02-06 21:25+0000\n"
 "Last-Translator: Martin Myrvold <myrvold.martin@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <https://l10n.elementary.io/projects/"
 "switchboard/plug-wacom/nn/>\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: src/Views/StylusView.vala:44
 msgid "No Stylus Detected"
-msgstr ""
+msgstr "Fann ingen peikepenn"
 
 #: src/Views/StylusView.vala:45
 msgid "Please move your stylus close to the tablet"
-msgstr ""
+msgstr "Flytt peikepennen nærmare til brettet"
 
 #: src/Views/StylusView.vala:61
 msgid "Default"
@@ -33,11 +33,11 @@ msgstr "Standard"
 
 #: src/Views/StylusView.vala:62
 msgid "Middle Mouse Button Click"
-msgstr ""
+msgstr "Trykk med mellomknappen på musa"
 
 #: src/Views/StylusView.vala:63
 msgid "Right Mouse Button Click"
-msgstr ""
+msgstr "Trykk med høgreknappen på musa"
 
 #: src/Views/StylusView.vala:64
 msgid "Back"
@@ -45,71 +45,71 @@ msgstr "Tilbake"
 
 #: src/Views/StylusView.vala:65
 msgid "Forward"
-msgstr ""
+msgstr "Framøve"
 
 #: src/Views/StylusView.vala:123
 msgid "Soft"
-msgstr ""
+msgstr "Lett"
 
 #: src/Views/StylusView.vala:124
 msgid "Firm"
-msgstr ""
+msgstr "Hardt"
 
 #: src/Views/StylusView.vala:146
 msgid "Eraser Pressure Feel:"
-msgstr ""
+msgstr "Trykkfølelse for viskaren:"
 
 #: src/Views/StylusView.vala:151
 msgid "Button Action:"
-msgstr ""
+msgstr "Hending når knappen blir trykt på:"
 
 #: src/Views/StylusView.vala:154 src/Views/StylusView.vala:158
 msgid "Top Button Action:"
-msgstr ""
+msgstr "Hending når toppknappen blir trykt på:"
 
 #: src/Views/StylusView.vala:155 src/Views/StylusView.vala:160
 msgid "Bottom Button Action:"
-msgstr ""
+msgstr "Hending når botnknappen blir trykt på:"
 
 #: src/Views/StylusView.vala:159
 msgid "Middle Button Action:"
-msgstr ""
+msgstr "Hending når mellomknappen blir trykt på:"
 
 #: src/Views/StylusView.vala:167
 msgid "Tip Pressure Feel:"
-msgstr ""
+msgstr "Trykkfølelse på tuppen:"
 
 #: src/Views/StylusView.vala:171
 msgid "Test Tablet Settings"
-msgstr ""
+msgstr "Prøv innstillingane for brettet"
 
 #: src/Views/TabletView.vala:33
 msgid "Tablet (absolute)"
-msgstr ""
+msgstr "Brett (absolutt)"
 
 #: src/Views/TabletView.vala:34
 msgid "Touchpad (relative)"
-msgstr ""
+msgstr "Peikeplate (relativt)"
 
 #: src/Views/TabletView.vala:39
 msgid "Tracking mode:"
-msgstr ""
+msgstr "Følgemodus:"
 
 #: src/Views/TabletView.vala:41
 msgid "Left-handed orientation:"
-msgstr ""
+msgstr "Bruk med venstrehåndsinnstilling:"
 
 #: src/Plug.vala:48
 msgid "Wacom"
-msgstr ""
+msgstr "Wacom"
 
 #: src/Plug.vala:49
 msgid "Configure Wacom tablet"
-msgstr ""
+msgstr "Still inn Wacom-brett"
 
 #: src/Plug.vala:71
 msgid "Stylus"
-msgstr ""
+msgstr "Peikepenn"
 
 #: src/Plug.vala:72
 msgid "Tablet"
@@ -117,8 +117,8 @@ msgstr "Nettbrett"
 
 #: src/Plug.vala:90
 msgid "No Tablets Available"
-msgstr ""
+msgstr "Ingen brett er tilgjengelig"
 
 #: src/Plug.vala:91
 msgid "Please ensure your tablet is connected and switched on"
-msgstr ""
+msgstr "Sjekk at brettet er kopla til og slått på"
