@@ -8,13 +8,16 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-24 19:12+0000\n"
-"PO-Revision-Date: 2019-07-13 17:12+0100\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-03-11 14:25+0000\n"
+"Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
+"plug-wacom/ka/>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.2\n"
 
 #: src/Views/StylusView.vala:44
 msgid "No Stylus Detected"
@@ -26,7 +29,7 @@ msgstr ""
 
 #: src/Views/StylusView.vala:61
 msgid "Default"
-msgstr ""
+msgstr "ნაგულისხმები"
 
 #: src/Views/StylusView.vala:62
 msgid "Middle Mouse Button Click"
@@ -110,7 +113,7 @@ msgstr ""
 
 #: src/Plug.vala:72
 msgid "Tablet"
-msgstr ""
+msgstr "ტაბლეტი"
 
 #: src/Plug.vala:90
 msgid "No Tablets Available"
