@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-24 19:12+0000\n"
-"PO-Revision-Date: 2023-03-11 14:25+0000\n"
+"PO-Revision-Date: 2023-03-12 14:25+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/ka/>\n"
@@ -41,7 +41,7 @@ msgstr ""
 
 #: src/Views/StylusView.vala:64
 msgid "Back"
-msgstr ""
+msgstr "უკან"
 
 #: src/Views/StylusView.vala:65
 msgid "Forward"
