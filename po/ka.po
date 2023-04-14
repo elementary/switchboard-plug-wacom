@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-24 19:12+0000\n"
-"PO-Revision-Date: 2023-03-12 14:25+0000\n"
+"PO-Revision-Date: 2023-04-15 00:59+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/ka/>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
+"X-Generator: Weblate 4.16.4\n"
 
 #: src/Views/StylusView.vala:44
 msgid "No Stylus Detected"
-msgstr ""
+msgstr "სტილუსი აღმოჩენილი არაა"
 
 #: src/Views/StylusView.vala:45
 msgid "Please move your stylus close to the tablet"
-msgstr ""
+msgstr "გადაიტანეთ სტილუსი ტაბლეტთან ახლოს"
 
 #: src/Views/StylusView.vala:61
 msgid "Default"
@@ -33,11 +33,11 @@ msgstr "ნაგულისხმები"
 
 #: src/Views/StylusView.vala:62
 msgid "Middle Mouse Button Click"
-msgstr ""
+msgstr "თაგუნას შუა წკაპი"
 
 #: src/Views/StylusView.vala:63
 msgid "Right Mouse Button Click"
-msgstr ""
+msgstr "თაგუნას მარჯვენა წკაპი"
 
 #: src/Views/StylusView.vala:64
 msgid "Back"
@@ -45,71 +45,71 @@ msgstr "უკან"
 
 #: src/Views/StylusView.vala:65
 msgid "Forward"
-msgstr ""
+msgstr "წინ"
 
 #: src/Views/StylusView.vala:123
 msgid "Soft"
-msgstr ""
+msgstr "რბილი"
 
 #: src/Views/StylusView.vala:124
 msgid "Firm"
-msgstr ""
+msgstr "მაგრად"
 
 #: src/Views/StylusView.vala:146
 msgid "Eraser Pressure Feel:"
-msgstr ""
+msgstr "საშლელის დაწოლის გრძნობა:"
 
 #: src/Views/StylusView.vala:151
 msgid "Button Action:"
-msgstr ""
+msgstr "ღილაკის ქმედება:"
 
 #: src/Views/StylusView.vala:154 src/Views/StylusView.vala:158
 msgid "Top Button Action:"
-msgstr ""
+msgstr "ზედა ღილაკის ქმედება:"
 
 #: src/Views/StylusView.vala:155 src/Views/StylusView.vala:160
 msgid "Bottom Button Action:"
-msgstr ""
+msgstr "ქვედა ღილაკის ქმედება:"
 
 #: src/Views/StylusView.vala:159
 msgid "Middle Button Action:"
-msgstr ""
+msgstr "შუა ღილაკის ქმედება:"
 
 #: src/Views/StylusView.vala:167
 msgid "Tip Pressure Feel:"
-msgstr ""
+msgstr "თავაკის დაწოლის გრძნობა:"
 
 #: src/Views/StylusView.vala:171
 msgid "Test Tablet Settings"
-msgstr ""
+msgstr "ტაბლეტის პარამეტრების შემოწმება"
 
 #: src/Views/TabletView.vala:33
 msgid "Tablet (absolute)"
-msgstr ""
+msgstr "ტაბლეტი (აბსოლუტური)"
 
 #: src/Views/TabletView.vala:34
 msgid "Touchpad (relative)"
-msgstr ""
+msgstr "თაჩპედი (შედარებით)"
 
 #: src/Views/TabletView.vala:39
 msgid "Tracking mode:"
-msgstr ""
+msgstr "ტრეკინგის რეჟიმი:"
 
 #: src/Views/TabletView.vala:41
 msgid "Left-handed orientation:"
-msgstr ""
+msgstr "ცაცია ორიენტაცია:"
 
 #: src/Plug.vala:48
 msgid "Wacom"
-msgstr ""
+msgstr "Wacom"
 
 #: src/Plug.vala:49
 msgid "Configure Wacom tablet"
-msgstr ""
+msgstr "Wacom ტაბლეტის მორგება"
 
 #: src/Plug.vala:71
 msgid "Stylus"
-msgstr ""
+msgstr "სტილუსი"
 
 #: src/Plug.vala:72
 msgid "Tablet"
@@ -117,8 +117,8 @@ msgstr "ტაბლეტი"
 
 #: src/Plug.vala:90
 msgid "No Tablets Available"
-msgstr ""
+msgstr "ტაბლეტები აღმოჩენილი არაა"
 
 #: src/Plug.vala:91
 msgid "Please ensure your tablet is connected and switched on"
-msgstr ""
+msgstr "დარწმუნდით, რომ ტაბლეტი მიერთებული და ჩართულია"
