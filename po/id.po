@@ -8,8 +8,9 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-24 19:12+0000\n"
-"PO-Revision-Date: 2019-09-05 19:23+0000\n"
-"Last-Translator: Daniel Foré <daniel@elementary.io>\n"
+"PO-Revision-Date: 2023-05-23 18:06+0000\n"
+"Last-Translator: Faisal Rachmadin <frachmadin@users.noreply.l10n.elementary."
+"io>\n"
 "Language-Team: Indonesian <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/id/>\n"
 "Language: id\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 4.17\n"
 
 #: src/Views/StylusView.vala:44
 msgid "No Stylus Detected"
@@ -113,7 +114,7 @@ msgstr ""
 
 #: src/Plug.vala:72
 msgid "Tablet"
-msgstr ""
+msgstr "Tablet"
 
 #: src/Plug.vala:90
 msgid "No Tablets Available"
