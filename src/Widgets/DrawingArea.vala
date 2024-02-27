@@ -1,30 +1,15 @@
 /*
- * Copyright (c) 2019 elementary, Inc. (https://elementary.io)
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public
- * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public
- * License along with this program; if not, write to the
- * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
- * Boston, MA 02110-1301 USA.
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ * SPDX-FileCopyrightText: 2019-2024 elementary, Inc. (https://elementary.io)
  */
 
-public class Wacom.Widgets.DrawingArea : Gtk.EventBox {
+public class Wacom.Widgets.DrawingArea : Gtk.DrawingArea {
     private Cairo.ImageSurface? surface = null;
     private Cairo.Context? cr = null;
 
     private Gdk.Device? current_device = null;
 
     construct {
-        above_child = true;
         add_events (
             Gdk.EventMask.BUTTON_PRESS_MASK |
             Gdk.EventMask.BUTTON_RELEASE_MASK |
@@ -70,8 +55,6 @@ public class Wacom.Widgets.DrawingArea : Gtk.EventBox {
 
     public override bool draw (Cairo.Context cr) {
         Gtk.Allocation alloc;
-
-        base.draw (cr);
 
         get_allocation (out alloc);
         cr.set_source_rgb (1, 1, 1);
