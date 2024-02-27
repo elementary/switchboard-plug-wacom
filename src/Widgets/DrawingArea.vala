@@ -7,14 +7,12 @@ public class Wacom.Widgets.DrawingArea : Gtk.DrawingArea {
     private Cairo.ImageSurface? surface = null;
     private Cairo.Context? cr = null;
 
-    private Gdk.Device? current_device = null;
+    private Gtk.GestureStylus stylus_gesture;
 
     construct {
-        add_events (
-            Gdk.EventMask.BUTTON_PRESS_MASK |
-            Gdk.EventMask.BUTTON_RELEASE_MASK |
-            Gdk.EventMask.POINTER_MOTION_MASK
-        );
+        stylus_gesture = new Gtk.GestureStylus (this);
+        stylus_gesture.up.connect (on_up);
+        stylus_gesture.motion.connect (on_motion);
     }
 
     public override void size_allocate (Gtk.Allocation alloc) {
@@ -66,71 +64,31 @@ public class Wacom.Widgets.DrawingArea : Gtk.DrawingArea {
         return false;
     }
 
-    public override bool event (Gdk.Event event) {
-        var device = event.get_source_device ();
-        if (device == null) {
-            return Gdk.EVENT_PROPAGATE;
+    private void on_motion (double object, double p0) {
+        double x, y, pressure;
+
+        Gtk.get_current_event ().get_coords (out x, out y);
+        stylus_gesture.get_axis (PRESSURE, out pressure);
+
+        var tool_type = stylus_gesture.get_device_tool ().get_tool_type ();
+        if (tool_type == ERASER) {
+            cr.set_line_width (10 * pressure);
+            cr.set_operator (Cairo.Operator.DEST_OUT);
+        } else {
+            cr.set_line_width (4 * pressure);
+            cr.set_operator (Cairo.Operator.SATURATE);
         }
 
-        var source = device.get_source ();
-        var tool = event.get_device_tool ();
+        cr.set_source_rgba (0, 0, 0, pressure);
+        cr.line_to (x, y);
+        cr.stroke ();
 
-        if (source != Gdk.InputSource.PEN && source != Gdk.InputSource.ERASER) {
-            return Gdk.EVENT_PROPAGATE;
-        }
+        cr.move_to (x, y);
 
-        if (current_device != null && current_device != device) {
-            return Gdk.EVENT_PROPAGATE;
-        }
+        queue_draw ();
+    }
 
-        if (
-            event.get_event_type () == Gdk.EventType.BUTTON_PRESS
-            && event.button.button == 1
-            && current_device == null
-        ) {
-            current_device = device;
-        } else if (
-            event.get_event_type () == Gdk.EventType.BUTTON_RELEASE
-            && event.button.button == 1
-            && current_device != null
-        ) {
-            cr.new_path ();
-            current_device = null;
-        } else if (
-            event.get_event_type () == Gdk.EventType.MOTION_NOTIFY
-            && Gdk.ModifierType.BUTTON1_MASK in event.motion.state
-        ) {
-            double x, y, pressure;
-
-            event.get_coords (out x, out y);
-            event.get_axis (Gdk.AxisUse.PRESSURE, out pressure);
-
-            Gdk.DeviceToolType tool_type = Gdk.DeviceToolType.UNKNOWN;
-            if (Utils.is_wayland ()) {
-                tool_type = tool.get_tool_type ();
-            } else {
-                tool_type = Backend.DeviceManagerX11.get_tool_type (device);
-            }
-
-            if (tool_type == Gdk.DeviceToolType.ERASER) {
-                cr.set_line_width (10 * pressure);
-                cr.set_operator (Cairo.Operator.DEST_OUT);
-            } else {
-                cr.set_line_width (4 * pressure);
-                cr.set_operator (Cairo.Operator.SATURATE);
-            }
-
-            cr.set_source_rgba (0, 0, 0, pressure);
-            cr.line_to (x, y);
-            cr.stroke ();
-
-            cr.move_to (x, y);
-
-            queue_draw ();
-
-            return Gdk.EVENT_STOP;
-        }
-
-        return Gdk.EVENT_PROPAGATE;
+    private void on_up (double object, double p0) {
+        cr.new_path ();
     }
 }
