@@ -33,12 +33,22 @@ public class Wacom.TabletView : Gtk.Grid {
         tracking_mode_combo.append ("absolute", _("Tablet (absolute)"));
         tracking_mode_combo.append ("relative", _("Touchpad (relative)"));
 
+        var tracking_mode_label = new Gtk.Label (_("Tracking Mode")) {
+            mnemonic_widget = tracking_mode_combo,
+            xalign = 0
+        };
+
         left_handed_switch = new Gtk.Switch ();
         left_handed_switch.halign = Gtk.Align.START;
 
-        attach (new Widgets.SettingLabel (_("Tracking mode:")), 0, 0);
+        var left_handed_label = new Gtk.Label (_("Left Hand Orientation")) {
+            mnemonic_widget = left_handed_switch,
+            xalign = 0
+        };
+
+        attach (tracking_mode_label, 0, 0);
         attach (tracking_mode_combo, 1, 0);
-        attach (new Widgets.SettingLabel (_("Left-handed orientation:")), 0, 1);
+        attach (left_handed_label, 0, 1);
         attach (left_handed_switch, 1, 1);
     }
 

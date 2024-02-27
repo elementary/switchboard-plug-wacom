@@ -64,8 +64,13 @@ public class Wacom.StylusView : Gtk.Stack {
         button_combo.append ("back", _("Back"));
         button_combo.append ("forward", _("Forward"));
 
+        var setting_label = new Gtk.Label (label) {
+            mnemonic_widget = button_combo,
+            xalign = 0
+        };
+
         settings.bind (schema_key, button_combo, "active-id", SettingsBindFlags.DEFAULT);
-        stylus_grid.attach (new Widgets.SettingLabel (label), 0, last_grid_y_pos);
+        stylus_grid.attach (setting_label, 0, last_grid_y_pos);
         stylus_grid.attach (button_combo, 1, last_grid_y_pos);
         last_grid_y_pos++;
     }
@@ -129,7 +134,12 @@ public class Wacom.StylusView : Gtk.Stack {
             on_pressure_value_changed (scale, schema_key);
         });
 
-        stylus_grid.attach (new Widgets.SettingLabel (label), 0, last_grid_y_pos);
+        var setting_label = new Gtk.Label (label) {
+            mnemonic_widget = scale,
+            xalign = 0
+        };
+
+        stylus_grid.attach (setting_label, 0, last_grid_y_pos);
         stylus_grid.attach (scale, 1, last_grid_y_pos);
         last_grid_y_pos++;
     }
@@ -143,28 +153,28 @@ public class Wacom.StylusView : Gtk.Stack {
         settings = device.get_settings ();
 
         if (device.has_pressure_detection && device.has_eraser) {
-            build_pressure_slider (_("Eraser Pressure Feel:"), "eraser-pressure-curve");
+            build_pressure_slider (_("Eraser Pressure Feel"), "eraser-pressure-curve");
         }
 
         switch (device.num_buttons) {
             case 1:
-                build_button_settings (_("Button Action:"), "button-action");
+                build_button_settings (_("Button Action"), "button-action");
                 break;
             case 2:
-                build_button_settings (_("Top Button Action:"), "secondary-button-action");
-                build_button_settings (_("Bottom Button Action:"), "button-action");
+                build_button_settings (_("Top Button Action"), "secondary-button-action");
+                build_button_settings (_("Bottom Button Action"), "button-action");
                 break;
             case 3:
-                build_button_settings (_("Top Button Action:"), "secondary-button-action");
-                build_button_settings (_("Middle Button Action:"), "button-action");
-                build_button_settings (_("Bottom Button Action:"), "tertiary-button-action");
+                build_button_settings (_("Top Button Action"), "secondary-button-action");
+                build_button_settings (_("Middle Button Action"), "button-action");
+                build_button_settings (_("Bottom Button Action"), "tertiary-button-action");
                 break;
             default:
                 break;
         }
 
         if (device.has_pressure_detection) {
-            build_pressure_slider (_("Tip Pressure Feel:"), "pressure-curve");
+            build_pressure_slider (_("Tip Pressure Feel"), "pressure-curve");
         }
 
 
