@@ -9,7 +9,6 @@ plug_files = files(
     'Views/StylusView.vala',
     'Views/TabletView.vala',
     'Widgets/DrawingArea.vala',
-    'Widgets/SettingLabel.vala',
     'MainPage.vala',
     'Plug.vala',
     'Utils.vala'
