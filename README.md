@@ -11,8 +11,6 @@ You'll need the following dependencies:
 * libgranite-dev
 * libwacom-dev
 * libgudev-1.0-dev
-* libx11-dev
-* libxi-dev
 * meson
 * valac
 
