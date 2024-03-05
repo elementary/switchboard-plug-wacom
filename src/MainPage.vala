@@ -43,7 +43,9 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
         stylus_placeholder.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
         stylus_placeholder.show_all ();
 
-        stylus_listbox = new Gtk.ListBox ();
+        stylus_listbox = new Gtk.ListBox () {
+            selection_mode = NONE
+        };
         stylus_listbox.get_style_context ().add_class (Gtk.STYLE_CLASS_BACKGROUND);
         stylus_listbox.set_placeholder (stylus_placeholder);
 
