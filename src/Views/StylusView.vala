@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2019-2024 elementary, Inc. (https://elementary.io)
  */
 
-public class Wacom.StylusView : Gtk.Box {
+public class Wacom.StylusView : Gtk.ListBoxRow {
     public Backend.WacomTool device { get; construct; }
 
     private const int32[,] PRESSURE_CURVES = {
@@ -29,11 +29,6 @@ public class Wacom.StylusView : Gtk.Box {
     }
 
     construct {
-        orientation = VERTICAL;
-        spacing = 12;
-
-        settings = device.get_settings ();
-
         var header_label = new Granite.HeaderLabel (device.name) {
             hexpand = true
         };
@@ -65,29 +60,37 @@ public class Wacom.StylusView : Gtk.Box {
         header_box.add (header_label);
         header_box.add (test_button);
 
-        add (header_box);
+        var box = new Gtk.Box (VERTICAL, 12) {
+            margin_top = 24
+        };
+        box.add (header_box);
+
+        child = box;
+        can_focus = false;
+
+        settings = device.get_settings ();
 
         if (device.has_pressure_detection && device.has_eraser) {
-            add (pressure_setting (_("Eraser Pressure Feel"), "eraser-pressure-curve"));
+            box.add (pressure_setting (_("Eraser Pressure Feel"), "eraser-pressure-curve"));
         }
 
         switch (device.num_buttons) {
             case 1:
-                add (button_setting (_("Button Action"), "button-action"));
+                box.add (button_setting (_("Button Action"), "button-action"));
                 break;
             case 2:
-                add (button_setting (_("Top Button Action"), "secondary-button-action"));
-                add (button_setting (_("Bottom Button Action"), "button-action"));
+                box.add (button_setting (_("Top Button Action"), "secondary-button-action"));
+                box.add (button_setting (_("Bottom Button Action"), "button-action"));
                 break;
             case 3:
-                add (button_setting (_("Top Button Action"), "secondary-button-action"));
-                add (button_setting (_("Middle Button Action"), "button-action"));
-                add (button_setting (_("Bottom Button Action"), "tertiary-button-action"));
+                box.add (button_setting (_("Top Button Action"), "secondary-button-action"));
+                box.add (button_setting (_("Middle Button Action"), "button-action"));
+                box.add (button_setting (_("Bottom Button Action"), "tertiary-button-action"));
                 break;
         }
 
         if (device.has_pressure_detection) {
-            add (pressure_setting (_("Tip Pressure Feel"), "pressure-curve"));
+            box.add (pressure_setting (_("Tip Pressure Feel"), "pressure-curve"));
         }
 
         test_button.clicked.connect (() => {

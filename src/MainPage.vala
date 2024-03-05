@@ -47,7 +47,7 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
         stylus_listbox.get_style_context ().add_class (Gtk.STYLE_CLASS_BACKGROUND);
         stylus_listbox.set_placeholder (stylus_placeholder);
 
-        main_box = new Gtk.Box (VERTICAL, 24);
+        main_box = new Gtk.Box (VERTICAL, 0);
         main_box.add (tablet_view);
         main_box.add (stylus_listbox);
 
@@ -98,6 +98,10 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
         } catch (WacomException e) {
             warning ("Error initializing Wacom device: %s", e.message);
             return;
+        }
+
+        while (stylus_listbox.get_row_at_index (0) != null) {
+            stylus_listbox.remove (stylus_listbox.get_row_at_index (0));
         }
 
         var tools = tool_map.list_tools (devices[d]);
