@@ -65,12 +65,6 @@ public class Wacom.Backend.Device : GLib.Object {
             case Gdk.InputSource.TRACKPOINT:
                 return DeviceType.MOUSE;
             case Gdk.InputSource.PEN:
-            case Gdk.InputSource.ERASER:
-            case Gdk.InputSource.CURSOR:
-                if (device.name.contains ("pad")) {
-                    return DeviceType.TABLET | DeviceType.PAD;
-                }
-
                 return DeviceType.TABLET;
             case Gdk.InputSource.KEYBOARD:
                 return DeviceType.KEYBOARD;
