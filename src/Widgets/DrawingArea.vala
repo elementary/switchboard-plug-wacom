@@ -56,10 +56,8 @@ public class Wacom.Widgets.DrawingArea : Gtk.DrawingArea {
         cr.paint ();
     }
 
-    private void on_motion (double object, double p0) {
-        double x, y, pressure;
-
-        // Gtk.get_current_event ().get_coords (out x, out y);
+    private void on_motion (double x, double y) {
+        double pressure;
         stylus_gesture.get_axis (PRESSURE, out pressure);
 
         var tool_type = stylus_gesture.get_device_tool ().get_tool_type ();
@@ -80,7 +78,7 @@ public class Wacom.Widgets.DrawingArea : Gtk.DrawingArea {
         queue_draw ();
     }
 
-    private void on_up (double object, double p0) {
+    private void on_up (double x, double y) {
         cr.new_path ();
     }
 }
