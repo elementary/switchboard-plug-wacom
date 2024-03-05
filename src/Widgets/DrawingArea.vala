@@ -10,9 +10,11 @@ public class Wacom.Widgets.DrawingArea : Gtk.DrawingArea {
     private Gtk.GestureStylus stylus_gesture;
 
     construct {
-        stylus_gesture = new Gtk.GestureStylus (this);
+        stylus_gesture = new Gtk.GestureStylus ();
         stylus_gesture.up.connect (on_up);
         stylus_gesture.motion.connect (on_motion);
+
+        add_controller (stylus_gesture);
     }
 
     public override void size_allocate (Gtk.Allocation alloc) {

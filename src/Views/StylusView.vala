@@ -40,17 +40,12 @@ public class Wacom.StylusView : Gtk.Stack {
         stylus_grid.row_spacing = 12;
         stylus_grid.column_spacing = 12;
 
-        var no_stylus_view = new Granite.Widgets.AlertView (
-            _("No Stylus Detected"),
-            _("Move the stylus over this window"),
-            ""
-        );
-        no_stylus_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
+        var no_stylus_view = new Granite.Placeholder (_("No Stylus Detected")) {
+            description = _("Please move your stylus close to the tablet")
+        };
 
         add_named (stylus_grid, "stylus");
         add_named (no_stylus_view, "no_stylus");
-
-        show_all ();
 
         visible_child_name = "no_stylus";
     }
@@ -180,25 +175,25 @@ public class Wacom.StylusView : Gtk.Stack {
         }
 
         var test_button = new Gtk.Button.with_label (_("Test Tablet Settings"));
-        var test_popover = new Gtk.Popover (test_button);
-        test_popover.vexpand = true;
-        test_popover.hexpand = true;
-        test_popover.position = Gtk.PositionType.BOTTOM;
 
         var test_area = new Widgets.DrawingArea ();
         test_area.hexpand = true;
         test_area.vexpand = true;
 
-        test_popover.add (test_area);
+        var test_popover = new Gtk.Popover () {
+            child = test_area
+        };
+        test_popover.vexpand = true;
+        test_popover.hexpand = true;
+        test_popover.position = Gtk.PositionType.BOTTOM;
+
 
         test_button.clicked.connect (() => {
             test_area.clear ();
-            test_popover.show_all ();
+            test_popover.popup ();
         });
 
         stylus_grid.attach (test_button, 0, last_grid_y_pos, 2, 1);
-
-        show_all ();
 
         visible_child_name = "stylus";
     }

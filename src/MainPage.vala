@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2019-2024 elementary, Inc. (https://elementary.io)
  */
 
-public class Wacom.MainPage : Granite.SimpleSettingsPage {
+public class Wacom.MainPage : Switchboard.SettingsPage {
     private Backend.DeviceManager device_manager;
     private Backend.WacomTool? last_stylus = null;
 
@@ -19,7 +19,7 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
     public MainPage () {
         Object (
             title: _("Wacom"),
-            icon_name: "input-tablet"
+            icon: new ThemedIcon ("input-tablet")
         );
     }
 
@@ -34,16 +34,14 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
         stylus_view = new StylusView ();
 
         main_box = new Gtk.Box (VERTICAL, 24);
-        main_box.add (tablet_view);
-        main_box.add (stylus_view);
+        main_box.append (tablet_view);
+        main_box.append (stylus_view);
 
         stack = new Gtk.Stack ();
-        stack.add (main_box);
-        stack.add (placeholder);
+        stack.add_child (main_box);
+        stack.add_child (placeholder);
 
-        content_area.add (stack);
-
-        show_all ();
+        child = stack;
 
         device_manager = Backend.DeviceManager.get_default ();
         device_manager.device_added.connect (on_device_added);
