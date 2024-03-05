@@ -9,7 +9,7 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
 
     private Backend.WacomToolMap tool_map;
 
-    private Granite.Widgets.AlertView placeholder;
+    private Granite.Placeholder placeholder;
     private Gtk.Box main_box;
     private Gtk.Stack stack;
     private Gtk.GestureStylus stylus_gesture;
@@ -26,13 +26,9 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
     construct {
         tool_map = Backend.WacomToolMap.get_default ();
 
-        placeholder = new Granite.Widgets.AlertView (
-            _("No Tablets Available"),
-            _("Please ensure your tablet is connected and switched on"),
-            ""
-        );
-        placeholder.get_style_context ().remove_class ("view");
-        placeholder.show_all ();
+        placeholder = new Granite.Placeholder (_("No Tablets Available")) {
+            description = _("Please ensure your tablet is connected and switched on")
+        };
 
         tablet_view = new TabletView ();
         stylus_view = new StylusView ();
