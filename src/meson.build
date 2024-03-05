@@ -1,8 +1,6 @@
 plug_files = files(
     'Backend/Device.vala',
     'Backend/DeviceManager.vala',
-    'Backend/DeviceManagerWayland.vala',
-    'Backend/DeviceManagerX11.vala',
     'Backend/WacomDevice.vala',
     'Backend/WacomTool.vala',
     'Backend/WacomToolMap.vala',
@@ -10,8 +8,7 @@ plug_files = files(
     'Views/TabletView.vala',
     'Widgets/DrawingArea.vala',
     'MainPage.vala',
-    'Plug.vala',
-    'Utils.vala'
+    'Plug.vala'
 )
 
 switchboard_dep = dependency('switchboard-2.0')
@@ -29,7 +26,6 @@ shared_module(
         dependency('gtk+-3.0'),
         dependency('libwacom'),
         dependency('gudev-1.0'),
-        dependency('gdk-x11-3.0'),
         dependency('gdk-wayland-3.0'),
         dependency('x11'),
         dependency('xi'),
