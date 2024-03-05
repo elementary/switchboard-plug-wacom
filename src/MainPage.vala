@@ -5,16 +5,14 @@
 
 public class Wacom.MainPage : Granite.SimpleSettingsPage {
     private Backend.DeviceManager device_manager;
-    private Backend.WacomTool? last_stylus = null;
-
     private Backend.WacomToolMap tool_map;
     private Gee.HashMap<Backend.Device, Backend.WacomDevice>? devices;
 
     private Granite.Widgets.AlertView placeholder;
     private Gtk.Box main_box;
     private Gtk.Stack stack;
-    private StylusView stylus_view;
     private TabletView tablet_view;
+    private Gtk.ListBox stylus_listbox;
 
     public MainPage () {
         Object (
@@ -32,15 +30,26 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
             _("Please ensure your tablet is connected and switched on"),
             ""
         );
-        placeholder.get_style_context ().remove_class ("view");
+        placeholder.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
         placeholder.show_all ();
 
         tablet_view = new TabletView ();
-        stylus_view = new StylusView ();
+
+        var stylus_placeholder = new Granite.Widgets.AlertView (
+            _("No Stylus Detected"),
+            _("Please move your stylus close to the tablet"),
+            ""
+        );
+        stylus_placeholder.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
+        stylus_placeholder.show_all ();
+
+        stylus_listbox = new Gtk.ListBox ();
+        stylus_listbox.get_style_context ().add_class (Gtk.STYLE_CLASS_BACKGROUND);
+        stylus_listbox.set_placeholder (stylus_placeholder);
 
         main_box = new Gtk.Box (VERTICAL, 24);
         main_box.add (tablet_view);
-        main_box.add (stylus_view);
+        main_box.add (stylus_listbox);
 
         stack = new Gtk.Stack ();
         stack.add (main_box);
@@ -92,9 +101,11 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
         }
 
         var tools = tool_map.list_tools (devices[d]);
-        if (tools.size > 0) {
-            stylus_view.set_device (tools[0]);
+        foreach (var stylus in tools) {
+            stylus_listbox.add (new StylusView (stylus));
         }
+
+        stylus_listbox.show_all ();
      }
 
     private void update_current_page () {
@@ -137,11 +148,6 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
             }
 
             tool_map.add_relation (wacom_device, stylus);
-            if (stylus != last_stylus) {
-                stylus_view.set_device (stylus);
-            }
-
-            last_stylus = stylus;
         }
 
         return Gdk.EVENT_PROPAGATE;
