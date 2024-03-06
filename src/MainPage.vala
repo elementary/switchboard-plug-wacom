@@ -58,7 +58,7 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
             add_known_device (device);
         }
 
-        stack.event.connect (update_current_tool);
+        event.connect (update_current_tool);
 
         update_current_page ();
     }
