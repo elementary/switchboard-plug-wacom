@@ -10,8 +10,7 @@ plug_files = files(
     'Views/TabletView.vala',
     'Widgets/DrawingArea.vala',
     'MainPage.vala',
-    'Plug.vala',
-    'Utils.vala'
+    'Plug.vala'
 )
 
 switchboard_dep = dependency('switchboard-2.0')
