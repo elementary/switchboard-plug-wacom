@@ -8,7 +8,6 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
     private Backend.WacomTool? last_stylus = null;
 
     private Backend.WacomToolMap tool_map;
-    private Gee.HashMap<Backend.Device, Backend.WacomDevice>? devices;
 
     private Granite.Widgets.AlertView placeholder;
     private Gtk.Box main_box;
@@ -24,7 +23,6 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
     }
 
     construct {
-        devices = new Gee.HashMap<Backend.Device, Backend.WacomDevice> ();
         tool_map = Backend.WacomToolMap.get_default ();
 
         placeholder = new Granite.Widgets.AlertView (
@@ -69,7 +67,6 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
     }
 
     private void on_device_removed (Backend.Device device) {
-        devices.unset (device);
         update_current_page ();
     }
 
@@ -84,13 +81,6 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
             return;
         }
 
-        try {
-            devices[d] = new Backend.WacomDevice (d);
-        } catch (WacomException e) {
-            warning ("Error initializing Wacom device: %s", e.message);
-            return;
-        }
-
         var tools = tool_map.list_tools (d);
         if (tools.size > 0) {
             stylus_view.set_device (tools[0]);
@@ -98,9 +88,9 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
      }
 
     private void update_current_page () {
-        foreach (var device in devices.keys) {
+        foreach (var device in device_manager.list_devices (TABLET)) {
             stack.visible_child = main_box;
-            tablet_view.set_device (devices[device]);
+            tablet_view.set_device (device);
             return;
         }
 
@@ -116,11 +106,6 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
 
             var device = device_manager.lookup_gdk_device (event.get_source_device ());
             if (device == null) {
-                return Gdk.EVENT_PROPAGATE;
-            }
-
-            var wacom_device = devices[device];
-            if (wacom_device == null) {
                 return Gdk.EVENT_PROPAGATE;
             }
 

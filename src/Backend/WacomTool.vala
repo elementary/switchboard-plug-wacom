@@ -17,6 +17,10 @@
  * Boston, MA 02110-1301 USA.
  */
 
+public errordomain WacomException {
+    LIBWACOM_ERROR
+}
+
 public class Wacom.Backend.WacomTool : GLib.Object {
     public uint64 id { public get; construct; }
     public uint64 serial { public get; construct; }
