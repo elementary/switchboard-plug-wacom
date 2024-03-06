@@ -37,7 +37,7 @@ public class Wacom.Backend.DeviceManager : Object {
     private static GLib.Once<DeviceManager> instance;
     public static unowned DeviceManager get_default () {
         return instance.once (() => {
-                return new DeviceManager ();
+            return new DeviceManager ();
         });
     }
 
