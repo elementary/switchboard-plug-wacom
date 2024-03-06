@@ -102,16 +102,7 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
             return;
         }
 
-        while (stylus_listbox.get_row_at_index (0) != null) {
-            stylus_listbox.remove (stylus_listbox.get_row_at_index (0));
-        }
-
-        var tools = tool_map.list_tools (devices[d]);
-        foreach (var stylus in tools) {
-            stylus_listbox.add (new StylusView (stylus));
-        }
-
-        stylus_listbox.show_all ();
+        update_stylus_listbox (devices[d]);
      }
 
     private void update_current_page () {
@@ -154,8 +145,23 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
             }
 
             tool_map.add_relation (wacom_device, stylus);
+
+            update_stylus_listbox (wacom_device);
         }
 
         return Gdk.EVENT_PROPAGATE;
+    }
+
+    private void update_stylus_listbox (Backend.WacomDevice device) {
+        while (stylus_listbox.get_row_at_index (0) != null) {
+            stylus_listbox.remove (stylus_listbox.get_row_at_index (0));
+        }
+
+        var tools = tool_map.list_tools (device);
+        foreach (var stylus in tools) {
+            stylus_listbox.add (new StylusView (stylus));
+        }
+
+        stylus_listbox.show_all ();
     }
 }
