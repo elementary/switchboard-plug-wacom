@@ -100,7 +100,7 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
     private void update_current_page () {
         foreach (var device in devices.keys) {
             stack.visible_child = main_box;
-            tablet_view.set_device (devices[device]);
+            tablet_view.set_device (device);
             return;
         }
 

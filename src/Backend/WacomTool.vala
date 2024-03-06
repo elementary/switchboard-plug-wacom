@@ -69,7 +69,7 @@ public class Wacom.Backend.WacomTool : GLib.Object {
 
     public WacomTool (uint64 serial, uint64 id, WacomDevice? device) throws WacomException {
         if (serial == 0 && device != null) {
-            var ids = device.get_supported_tools ();
+            var ids = device.wacom_device.get_supported_styli ();
             if (ids.length > 0) {
                 id = ids[0];
             }

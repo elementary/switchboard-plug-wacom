@@ -22,24 +22,10 @@ public errordomain WacomException {
 }
 
 public class Wacom.Backend.WacomDevice : GLib.Object {
-    private const string WACOM_TABLET_SCHEMA = "org.gnome.desktop.peripherals.tablet";
-    private const string WACOM_SETTINGS_BASE = "/org/gnome/desktop/peripherals/tablets/%s:%s/";
-
     public Device device { public get; construct; }
-    private Wacom.Device? wacom_device = null;
-    private GLib.Settings? wacom_settings = null;
 
+    public unowned Wacom.Device? wacom_device { get; private set; default = null; }
     private static Wacom.DeviceDatabase? wacom_db = null;
-
-    public bool is_reversible {
-        get {
-            if (wacom_device == null) {
-                return false;
-            }
-
-            return wacom_device.is_reversible ();
-        }
-    }
 
     public WacomDevice (Device device) throws WacomException {
         Object (device: device);
@@ -53,22 +39,5 @@ public class Wacom.Backend.WacomDevice : GLib.Object {
         if (wacom_device == null) {
             throw new WacomException.LIBWACOM_ERROR (error.get_message () ?? "");
         }
-    }
-
-    public int[] get_supported_tools () {
-        if (wacom_device == null) {
-            return new int[] {};
-        }
-
-        return wacom_device.get_supported_styli ();
-    }
-
-    public GLib.Settings get_settings () {
-        if (wacom_settings == null) {
-            var path = WACOM_SETTINGS_BASE.printf (device.vendor_id, device.product_id);
-            wacom_settings = new GLib.Settings.with_path (WACOM_TABLET_SCHEMA, path);
-        }
-
-        return wacom_settings;
     }
 }
