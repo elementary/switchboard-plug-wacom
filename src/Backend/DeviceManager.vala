@@ -25,10 +25,10 @@ public abstract class Wacom.Backend.DeviceManager : GLib.Object {
     private static GLib.Once<DeviceManager> instance;
     public static unowned DeviceManager get_default () {
         return instance.once (() => {
-            if (Utils.is_wayland ()) {
-                return new DeviceManagerWayland ();
-            } else {
+            if (Gdk.Display.get_default () is Gdk.X11.Display) {
                 return new DeviceManagerX11 ();
+            } else {
+                return new DeviceManagerWayland ();
             }
         });
     }
