@@ -22,50 +22,10 @@ public class Wacom.Backend.WacomTool : GLib.Object {
     public uint64 serial { public get; construct; }
     public WacomDevice? device { public get; construct; }
 
-    private unowned Wacom.Stylus? wstylus = null;
+    public unowned Wacom.Stylus? stylus { get; private set; default = null; }
+
     private GLib.Settings? settings = null;
-
     private static Wacom.DeviceDatabase? wacom_db = null;
-
-    public string? name {
-        get {
-            if (wstylus == null) {
-                return null;
-            }
-
-            return wstylus.get_name ();
-        }
-    }
-
-    public int num_buttons {
-        get {
-            if (wstylus == null) {
-                return 0;
-            }
-
-            return wstylus.get_num_buttons ();
-        }
-    }
-
-    public bool has_pressure_detection {
-        get {
-            if (wstylus == null) {
-                return false;
-            }
-
-            return Wacom.AxisTypeFlags.PRESSURE in wstylus.get_axes ();
-        }
-    }
-
-    public bool has_eraser {
-        get {
-            if (wstylus == null) {
-                return false;
-            }
-
-            return wstylus.has_eraser ();
-        }
-    }
 
     public WacomTool (uint64 serial, uint64 id, WacomDevice? device) throws WacomException {
         if (serial == 0 && device != null) {
@@ -76,14 +36,16 @@ public class Wacom.Backend.WacomTool : GLib.Object {
         }
 
         Object (id: id, serial: serial, device: device);
+    }
 
+    construct {
         if (wacom_db == null) {
             wacom_db = new Wacom.DeviceDatabase ();
         }
 
-        wstylus = wacom_db.get_stylus_for_id ((int)this.id);
+        stylus = wacom_db.get_stylus_for_id ((int)this.id);
 
-        if (wstylus == null) {
+        if (stylus == null) {
             throw new WacomException.LIBWACOM_ERROR ("Stylus description not found");
         }
 
