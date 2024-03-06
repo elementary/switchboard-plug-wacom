@@ -42,7 +42,7 @@ public class Wacom.StylusView : Gtk.Stack {
 
         var no_stylus_view = new Granite.Widgets.AlertView (
             _("No Stylus Detected"),
-            _("Tap this window with the stylus"),
+            _("Move the stylus over this window"),
             ""
         );
         no_stylus_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
