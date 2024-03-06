@@ -60,7 +60,7 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
         }
 
         stylus_gesture = new Gtk.GestureStylus (this);
-        stylus_gesture.down.connect (on_stylus);
+        stylus_gesture.proximity.connect (on_stylus);
 
         update_current_page ();
     }
@@ -110,11 +110,6 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
     }
 
     private void on_stylus (double object, double p0) {
-        var tool = stylus_gesture.get_device_tool ();
-        if (tool == null) {
-            return;
-        }
-
         var event = Gtk.get_current_event ();
 
         var device = device_manager.lookup_gdk_device (event.get_source_device ());
@@ -124,6 +119,11 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
 
         var wacom_device = devices[device];
         if (wacom_device == null) {
+            return;
+        }
+
+        var tool = event.get_device_tool ();
+        if (tool == null) {
             return;
         }
 
