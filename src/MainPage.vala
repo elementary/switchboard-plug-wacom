@@ -91,7 +91,7 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
             return;
         }
 
-        var tools = tool_map.list_tools (devices[d]);
+        var tools = tool_map.list_tools (d);
         if (tools.size > 0) {
             stylus_view.set_device (tools[0]);
         }
@@ -126,7 +126,7 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
 
             var serial = tool.get_serial ();
 
-            var stylus = tool_map.lookup_tool (wacom_device, serial);
+            var stylus = tool_map.lookup_tool (device, serial);
             if (stylus == null) {
                 var id = tool.get_hardware_id ();
                 try {
@@ -136,7 +136,7 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
                 }
             }
 
-            tool_map.add_relation (wacom_device, stylus);
+            tool_map.add_relation (device, stylus);
             if (stylus != last_stylus) {
                 stylus_view.set_device (stylus);
             }
