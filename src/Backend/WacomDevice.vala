@@ -26,41 +26,10 @@ public class Wacom.Backend.WacomDevice : GLib.Object {
     private const string WACOM_SETTINGS_BASE = "/org/gnome/desktop/peripherals/tablets/%s:%s/";
 
     public Device device { public get; construct; }
-    private Wacom.Device? wacom_device = null;
     private GLib.Settings? wacom_settings = null;
-
-    private static Wacom.DeviceDatabase? wacom_db = null;
-
-    public bool is_reversible {
-        get {
-            if (wacom_device == null) {
-                return false;
-            }
-
-            return wacom_device.is_reversible ();
-        }
-    }
 
     public WacomDevice (Device device) throws WacomException {
         Object (device: device);
-
-        if (wacom_db == null) {
-            wacom_db = new Wacom.DeviceDatabase ();
-        }
-
-        var error = new Wacom.Error ();
-        wacom_device = wacom_db.get_device_from_path (device.device_file, Wacom.FallbackFlags.NONE, error);
-        if (wacom_device == null) {
-            throw new WacomException.LIBWACOM_ERROR (error.get_message () ?? "");
-        }
-    }
-
-    public int[] get_supported_tools () {
-        if (wacom_device == null) {
-            return new int[] {};
-        }
-
-        return wacom_device.get_supported_styli ();
     }
 
     public GLib.Settings get_settings () {

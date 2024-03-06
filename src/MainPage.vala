@@ -130,7 +130,7 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
             if (stylus == null) {
                 var id = tool.get_hardware_id ();
                 try {
-                    stylus = new Backend.WacomTool (serial, id, wacom_device);
+                    stylus = new Backend.WacomTool (serial, id, device);
                 } catch (GLib.Error e) {
                     return Gdk.EVENT_PROPAGATE;
                 }

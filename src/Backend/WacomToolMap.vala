@@ -251,7 +251,7 @@ public class Wacom.Backend.WacomToolMap : GLib.Object {
         if (no_serial_tool_map.has_key (key)) {
             var no_serial_tool = no_serial_tool_map[key];
             if (no_serial_tool == null) {
-                no_serial_tool = new WacomTool (0, 0, device);
+                no_serial_tool = new WacomTool (0, 0, device.device);
                 no_serial_tool_map[key] = no_serial_tool;
             }
 
