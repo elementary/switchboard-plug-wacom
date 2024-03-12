@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-24 19:12+0000\n"
+"POT-Creation-Date: 2024-03-12 20:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,78 +45,70 @@ msgstr ""
 msgid "Forward"
 msgstr ""
 
-#: src/Views/StylusView.vala:123
+#: src/Views/StylusView.vala:128
 msgid "Soft"
 msgstr ""
 
-#: src/Views/StylusView.vala:124
+#: src/Views/StylusView.vala:129
 msgid "Firm"
 msgstr ""
 
-#: src/Views/StylusView.vala:146
-msgid "Eraser Pressure Feel:"
+#: src/Views/StylusView.vala:156
+msgid "Eraser Pressure Feel"
 msgstr ""
 
-#: src/Views/StylusView.vala:151
-msgid "Button Action:"
+#: src/Views/StylusView.vala:161
+msgid "Button Action"
 msgstr ""
 
-#: src/Views/StylusView.vala:154 src/Views/StylusView.vala:158
-msgid "Top Button Action:"
+#: src/Views/StylusView.vala:164 src/Views/StylusView.vala:168
+msgid "Top Button Action"
 msgstr ""
 
-#: src/Views/StylusView.vala:155 src/Views/StylusView.vala:160
-msgid "Bottom Button Action:"
+#: src/Views/StylusView.vala:165 src/Views/StylusView.vala:170
+msgid "Bottom Button Action"
 msgstr ""
 
-#: src/Views/StylusView.vala:159
-msgid "Middle Button Action:"
+#: src/Views/StylusView.vala:169
+msgid "Middle Button Action"
 msgstr ""
 
-#: src/Views/StylusView.vala:167
-msgid "Tip Pressure Feel:"
+#: src/Views/StylusView.vala:177
+msgid "Tip Pressure Feel"
 msgstr ""
 
-#: src/Views/StylusView.vala:171
+#: src/Views/StylusView.vala:181
 msgid "Test Tablet Settings"
 msgstr ""
 
-#: src/Views/TabletView.vala:33
+#: src/Views/TabletView.vala:35
 msgid "Tablet (absolute)"
 msgstr ""
 
-#: src/Views/TabletView.vala:34
+#: src/Views/TabletView.vala:36
 msgid "Touchpad (relative)"
 msgstr ""
 
-#: src/Views/TabletView.vala:39
-msgid "Tracking mode:"
+#: src/Views/TabletView.vala:38
+msgid "Tracking Mode"
 msgstr ""
 
-#: src/Views/TabletView.vala:41
-msgid "Left-handed orientation:"
+#: src/Views/TabletView.vala:46
+msgid "Left Hand Orientation"
 msgstr ""
 
-#: src/Plug.vala:48
+#: src/MainPage.vala:20 src/Plug.vala:21
 msgid "Wacom"
 msgstr ""
 
-#: src/Plug.vala:49
-msgid "Configure Wacom tablet"
-msgstr ""
-
-#: src/Plug.vala:71
-msgid "Stylus"
-msgstr ""
-
-#: src/Plug.vala:72
-msgid "Tablet"
-msgstr ""
-
-#: src/Plug.vala:90
+#: src/MainPage.vala:29
 msgid "No Tablets Available"
 msgstr ""
 
-#: src/Plug.vala:91
+#: src/MainPage.vala:30
 msgid "Please ensure your tablet is connected and switched on"
+msgstr ""
+
+#: src/Plug.vala:22
+msgid "Configure Wacom tablet"
 msgstr ""
