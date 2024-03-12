@@ -1,24 +1,9 @@
 /*
- * Copyright (c) 2019 elementary, Inc. (https://elementary.io)
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public
- * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public
- * License along with this program; if not, write to the
- * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
- * Boston, MA 02110-1301 USA.
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ * SPDX-FileCopyrightText: 2019-2024 elementary, Inc. (https://elementary.io)
  */
 
 public class Wacom.StylusView : Gtk.Stack {
-
     private const int32[,] PRESSURE_CURVES = {
         { 0, 75, 25, 100 }, /* soft */
         { 0, 50, 50, 100 },
@@ -29,16 +14,18 @@ public class Wacom.StylusView : Gtk.Stack {
         { 75, 0, 100, 25 }  /* firm */
     };
 
+    private static Gtk.SizeGroup label_sizegroup;
+
     private Backend.WacomTool device;
     private GLib.Settings settings;
+    private Gtk.Box stylus_box;
 
-    private Gtk.Grid stylus_grid;
-    private int last_grid_y_pos = 0;
+    static construct {
+        label_sizegroup = new Gtk.SizeGroup (HORIZONTAL);
+    }
 
     construct {
-        stylus_grid = new Gtk.Grid ();
-        stylus_grid.row_spacing = 12;
-        stylus_grid.column_spacing = 12;
+        stylus_box = new Gtk.Box (VERTICAL, 12);
 
         var no_stylus_view = new Granite.Widgets.AlertView (
             _("No Stylus Detected"),
@@ -47,7 +34,7 @@ public class Wacom.StylusView : Gtk.Stack {
         );
         no_stylus_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
 
-        add_named (stylus_grid, "stylus");
+        add_named (stylus_box, "stylus");
         add_named (no_stylus_view, "no_stylus");
 
         show_all ();
@@ -55,9 +42,88 @@ public class Wacom.StylusView : Gtk.Stack {
         visible_child_name = "no_stylus";
     }
 
-    private void build_button_settings (string label, string schema_key) {
-        var button_combo = new Gtk.ComboBoxText ();
-        button_combo.hexpand = true;
+    public void set_device (Backend.WacomTool dev) {
+        stylus_box.@foreach ((widget) => {
+            widget.destroy ();
+        });
+
+        device = dev;
+
+        var header_label = new Granite.HeaderLabel (device.stylus.get_name ()) {
+            hexpand = true
+        };
+
+        var test_button = new Gtk.Button.with_label (_("Test Settings"));
+
+        var test_area = new Widgets.DrawingArea () {
+            hexpand = true,
+            vexpand = true
+        };
+
+        var frame = new Gtk.Frame (null) {
+            child = test_area,
+            margin_start = 10,
+            margin_end = 10
+        };
+        frame.show_all ();
+
+        var test_dialog = new Granite.Dialog () {
+            default_width = 500,
+            default_height = 400,
+            modal = true,
+            transient_for = ((Gtk.Application) Application.get_default ()).active_window
+        };
+        test_dialog.get_content_area ().add (frame);
+        test_dialog.add_button ("Close", Gtk.ResponseType.CLOSE);
+
+        var header_box = new Gtk.Box (HORIZONTAL, 12);
+        header_box.add (header_label);
+        header_box.add (test_button);
+
+        stylus_box.add (header_box);
+
+        settings = device.get_settings ();
+
+        var has_pressure_detection = Wacom.AxisTypeFlags.PRESSURE in device.stylus.get_axes ();
+
+        if (has_pressure_detection && device.stylus.has_eraser ()) {
+            stylus_box.add (pressure_setting (_("Eraser Pressure Feel"), "eraser-pressure-curve"));
+        }
+
+        switch (device.stylus.get_num_buttons ()) {
+            case 1:
+                stylus_box.add (button_setting (_("Button Action"), "button-action"));
+                break;
+            case 2:
+                stylus_box.add (button_setting (_("Top Button Action"), "secondary-button-action"));
+                stylus_box.add (button_setting (_("Bottom Button Action"), "button-action"));
+                break;
+            case 3:
+                stylus_box.add (button_setting (_("Top Button Action"), "secondary-button-action"));
+                stylus_box.add (button_setting (_("Middle Button Action"), "button-action"));
+                stylus_box.add (button_setting (_("Bottom Button Action"), "tertiary-button-action"));
+                break;
+        }
+
+        if (has_pressure_detection) {
+            stylus_box.add (pressure_setting (_("Tip Pressure Feel"), "pressure-curve"));
+        }
+
+        show_all ();
+        visible_child_name = "stylus";
+
+        test_button.clicked.connect (() => {
+            test_area.clear ();
+            test_dialog.present ();
+        });
+
+        test_dialog.response.connect (() => test_dialog.hide ());
+    }
+
+    private Gtk.Box button_setting (string label, string schema_key) {
+        var button_combo = new Gtk.ComboBoxText () {
+            hexpand = true
+        };
         button_combo.append ("default", _("Default"));
         button_combo.append ("middle", _("Middle Mouse Button Click"));
         button_combo.append ("right", _("Right Mouse Button Click"));
@@ -69,14 +135,48 @@ public class Wacom.StylusView : Gtk.Stack {
             xalign = 0
         };
 
+        label_sizegroup.add_widget (setting_label);
+
+        var box = new Gtk.Box (HORIZONTAL, 12);
+        box.add (setting_label);
+        box.add (button_combo);
+
         settings.bind (schema_key, button_combo, "active-id", SettingsBindFlags.DEFAULT);
-        stylus_grid.attach (setting_label, 0, last_grid_y_pos);
-        stylus_grid.attach (button_combo, 1, last_grid_y_pos);
-        last_grid_y_pos++;
+
+        return box;
     }
 
-    private void on_pressure_value_changed (Gtk.Scale scale, string schema_key) {
-        var new_value = (int)scale.get_value ();
+    private Gtk.Box pressure_setting (string label, string schema_key) {
+        var scale = new Gtk.Scale.with_range (HORIZONTAL, 0, 6, 1) {
+            draw_value = false,
+            has_origin = false,
+            hexpand = true,
+            round_digits = 0
+        };
+        scale.add_mark (0, BOTTOM, _("Soft"));
+        scale.add_mark (6, BOTTOM, _("Firm"));
+
+        set_pressure_scale_value_from_settings (scale, schema_key);
+
+        scale.value_changed.connect (() => {
+            on_pressure_value_changed ((int) scale.get_value (), schema_key);
+        });
+
+        var setting_label = new Gtk.Label (label) {
+            mnemonic_widget = scale,
+            xalign = 0
+        };
+
+        label_sizegroup.add_widget (setting_label);
+
+        var box = new Gtk.Box (HORIZONTAL, 12);
+        box.add (setting_label);
+        box.add (scale);
+
+        return (box);
+    }
+
+    private void on_pressure_value_changed (int new_value, string schema_key) {
         if (new_value < 0 || new_value > 6) {
             return;
         }
@@ -118,88 +218,5 @@ public class Wacom.StylusView : Gtk.Stack {
                 break;
             }
         }
-    }
-
-    private void build_pressure_slider (string label, string schema_key) {
-        var scale = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 0, 6, 1);
-        scale.draw_value = false;
-        scale.has_origin = false;
-        scale.round_digits = 0;
-        scale.add_mark (0, Gtk.PositionType.BOTTOM, _("Soft"));
-        scale.add_mark (6, Gtk.PositionType.BOTTOM, _("Firm"));
-
-        set_pressure_scale_value_from_settings (scale, schema_key);
-
-        scale.value_changed.connect (() => {
-            on_pressure_value_changed (scale, schema_key);
-        });
-
-        var setting_label = new Gtk.Label (label) {
-            mnemonic_widget = scale,
-            xalign = 0
-        };
-
-        stylus_grid.attach (setting_label, 0, last_grid_y_pos);
-        stylus_grid.attach (scale, 1, last_grid_y_pos);
-        last_grid_y_pos++;
-    }
-
-    public void set_device (Backend.WacomTool dev) {
-        stylus_grid.@foreach ((widget) => {
-            widget.destroy ();
-        });
-
-        device = dev;
-        settings = device.get_settings ();
-
-        var has_pressure_detection = Wacom.AxisTypeFlags.PRESSURE in device.stylus.get_axes ();
-
-        if (has_pressure_detection && device.stylus.has_eraser ()) {
-            build_pressure_slider (_("Eraser Pressure Feel"), "eraser-pressure-curve");
-        }
-
-        switch (device.stylus.get_num_buttons ()) {
-            case 1:
-                build_button_settings (_("Button Action"), "button-action");
-                break;
-            case 2:
-                build_button_settings (_("Top Button Action"), "secondary-button-action");
-                build_button_settings (_("Bottom Button Action"), "button-action");
-                break;
-            case 3:
-                build_button_settings (_("Top Button Action"), "secondary-button-action");
-                build_button_settings (_("Middle Button Action"), "button-action");
-                build_button_settings (_("Bottom Button Action"), "tertiary-button-action");
-                break;
-            default:
-                break;
-        }
-
-        if (has_pressure_detection) {
-            build_pressure_slider (_("Tip Pressure Feel"), "pressure-curve");
-        }
-
-        var test_button = new Gtk.Button.with_label (_("Test Tablet Settings"));
-        var test_popover = new Gtk.Popover (test_button);
-        test_popover.vexpand = true;
-        test_popover.hexpand = true;
-        test_popover.position = Gtk.PositionType.BOTTOM;
-
-        var test_area = new Widgets.DrawingArea ();
-        test_area.hexpand = true;
-        test_area.vexpand = true;
-
-        test_popover.add (test_area);
-
-        test_button.clicked.connect (() => {
-            test_area.clear ();
-            test_popover.show_all ();
-        });
-
-        stylus_grid.attach (test_button, 0, last_grid_y_pos, 2, 1);
-
-        show_all ();
-
-        visible_child_name = "stylus";
     }
 }
