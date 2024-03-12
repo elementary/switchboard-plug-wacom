@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-12 20:47+0000\n"
+"POT-Creation-Date: 2024-03-12 20:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "No Stylus Detected"
 msgstr ""
 
 #: src/Views/StylusView.vala:45
-msgid "Please move your stylus close to the tablet"
+msgid "Move the stylus over this window"
 msgstr ""
 
 #: src/Views/StylusView.vala:61
@@ -97,15 +97,15 @@ msgstr ""
 msgid "Left Hand Orientation"
 msgstr ""
 
-#: src/MainPage.vala:20 src/Plug.vala:21
+#: src/MainPage.vala:21 src/Plug.vala:21
 msgid "Wacom"
 msgstr ""
 
-#: src/MainPage.vala:29
+#: src/MainPage.vala:30
 msgid "No Tablets Available"
 msgstr ""
 
-#: src/MainPage.vala:30
+#: src/MainPage.vala:31
 msgid "Please ensure your tablet is connected and switched on"
 msgstr ""
 
