@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-12 20:56+0000\n"
+"POT-Creation-Date: 2024-03-12 22:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,68 +17,68 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/Views/StylusView.vala:44
+#: src/Views/StylusView.vala:31
 msgid "No Stylus Detected"
 msgstr ""
 
-#: src/Views/StylusView.vala:45
+#: src/Views/StylusView.vala:32
 msgid "Move the stylus over this window"
 msgstr ""
 
-#: src/Views/StylusView.vala:61
-msgid "Default"
+#: src/Views/StylusView.vala:56
+msgid "Test Settings"
 msgstr ""
 
-#: src/Views/StylusView.vala:62
-msgid "Middle Mouse Button Click"
-msgstr ""
-
-#: src/Views/StylusView.vala:63
-msgid "Right Mouse Button Click"
-msgstr ""
-
-#: src/Views/StylusView.vala:64
-msgid "Back"
-msgstr ""
-
-#: src/Views/StylusView.vala:65
-msgid "Forward"
-msgstr ""
-
-#: src/Views/StylusView.vala:128
-msgid "Soft"
-msgstr ""
-
-#: src/Views/StylusView.vala:129
-msgid "Firm"
-msgstr ""
-
-#: src/Views/StylusView.vala:156
+#: src/Views/StylusView.vala:90
 msgid "Eraser Pressure Feel"
 msgstr ""
 
-#: src/Views/StylusView.vala:161
+#: src/Views/StylusView.vala:95
 msgid "Button Action"
 msgstr ""
 
-#: src/Views/StylusView.vala:164 src/Views/StylusView.vala:168
+#: src/Views/StylusView.vala:98 src/Views/StylusView.vala:102
 msgid "Top Button Action"
 msgstr ""
 
-#: src/Views/StylusView.vala:165 src/Views/StylusView.vala:170
+#: src/Views/StylusView.vala:99 src/Views/StylusView.vala:104
 msgid "Bottom Button Action"
 msgstr ""
 
-#: src/Views/StylusView.vala:169
+#: src/Views/StylusView.vala:103
 msgid "Middle Button Action"
 msgstr ""
 
-#: src/Views/StylusView.vala:177
+#: src/Views/StylusView.vala:109
 msgid "Tip Pressure Feel"
 msgstr ""
 
-#: src/Views/StylusView.vala:181
-msgid "Test Tablet Settings"
+#: src/Views/StylusView.vala:127
+msgid "Default"
+msgstr ""
+
+#: src/Views/StylusView.vala:128
+msgid "Middle Mouse Button Click"
+msgstr ""
+
+#: src/Views/StylusView.vala:129
+msgid "Right Mouse Button Click"
+msgstr ""
+
+#: src/Views/StylusView.vala:130
+msgid "Back"
+msgstr ""
+
+#: src/Views/StylusView.vala:131
+msgid "Forward"
+msgstr ""
+
+#: src/Views/StylusView.vala:156
+msgid "Soft"
+msgstr ""
+
+#: src/Views/StylusView.vala:157
+msgid "Firm"
 msgstr ""
 
 #: src/Views/TabletView.vala:35
