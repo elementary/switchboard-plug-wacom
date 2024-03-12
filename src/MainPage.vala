@@ -12,6 +12,7 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
     private Granite.Widgets.AlertView placeholder;
     private Gtk.Box main_box;
     private Gtk.Stack stack;
+    private Gtk.Stack stylus_stack;
     private Gtk.GestureStylus stylus_gesture;
     private StylusView stylus_view;
     private TabletView tablet_view;
@@ -31,15 +32,27 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
             _("Please ensure your tablet is connected and switched on"),
             ""
         );
-        placeholder.get_style_context ().remove_class ("view");
+        placeholder.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
         placeholder.show_all ();
+
+        var stylus_placeholder = new Granite.Widgets.AlertView (
+            _("No Stylus Detected"),
+            _("Move the stylus over this window"),
+            ""
+        );
+        stylus_placeholder.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
+        stylus_placeholder.show_all ();
 
         tablet_view = new TabletView ();
         stylus_view = new StylusView ();
 
+        stylus_stack = new Gtk.Stack ();
+        stylus_stack.add (stylus_view);
+        stylus_stack.add_named (stylus_placeholder, "placeholder");
+
         main_box = new Gtk.Box (VERTICAL, 24);
         main_box.add (tablet_view);
-        main_box.add (stylus_view);
+        main_box.add (stylus_stack);
 
         stack = new Gtk.Stack ();
         stack.add (main_box);
@@ -127,6 +140,7 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
         tool_map.add_relation (device, stylus);
         if (stylus != last_stylus) {
             stylus_view.set_device (stylus);
+            stylus_stack.visible_child = stylus_view;
         }
 
         last_stylus = stylus;

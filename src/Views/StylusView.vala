@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2019-2024 elementary, Inc. (https://elementary.io)
  */
 
-public class Wacom.StylusView : Gtk.Stack {
+public class Wacom.StylusView : Gtk.Box {
     private const int32[,] PRESSURE_CURVES = {
         { 0, 75, 25, 100 }, /* soft */
         { 0, 50, 50, 100 },
@@ -27,19 +27,7 @@ public class Wacom.StylusView : Gtk.Stack {
     construct {
         stylus_box = new Gtk.Box (VERTICAL, 12);
 
-        var no_stylus_view = new Granite.Widgets.AlertView (
-            _("No Stylus Detected"),
-            _("Move the stylus over this window"),
-            ""
-        );
-        no_stylus_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
-
-        add_named (stylus_box, "stylus");
-        add_named (no_stylus_view, "no_stylus");
-
-        show_all ();
-
-        visible_child_name = "no_stylus";
+        add (stylus_box);
     }
 
     public void set_device (Backend.WacomTool dev) {
@@ -110,7 +98,6 @@ public class Wacom.StylusView : Gtk.Stack {
         }
 
         show_all ();
-        visible_child_name = "stylus";
 
         test_button.clicked.connect (() => {
             test_area.clear ();
