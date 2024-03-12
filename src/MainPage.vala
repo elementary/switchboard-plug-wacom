@@ -48,7 +48,7 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
 
         stylus_stack = new Gtk.Stack ();
         stylus_stack.add (stylus_view);
-        stylus_stack.add_named (stylus_placeholder, "placeholder");
+        stylus_stack.add (stylus_placeholder);
 
         main_box = new Gtk.Box (VERTICAL, 24);
         main_box.add (tablet_view);
