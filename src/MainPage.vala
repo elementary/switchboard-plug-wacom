@@ -12,6 +12,7 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
     private Granite.Widgets.AlertView placeholder;
     private Gtk.Box main_box;
     private Gtk.Stack stack;
+    private Gtk.GestureStylus stylus_gesture;
     private StylusView stylus_view;
     private TabletView tablet_view;
 
@@ -56,7 +57,8 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
             add_known_device (device);
         }
 
-        event.connect (update_current_tool);
+        stylus_gesture = new Gtk.GestureStylus (this);
+        stylus_gesture.proximity.connect (on_stylus);
 
         update_current_page ();
     }
@@ -97,38 +99,36 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
         stack.visible_child = placeholder;
     }
 
-    private bool update_current_tool (Gdk.Event event) {
-        if (event.get_event_type () == Gdk.EventType.MOTION_NOTIFY) {
-            var tool = event.get_device_tool ();
-            if (tool == null) {
-                return Gdk.EVENT_PROPAGATE;
-            }
+    private void on_stylus (double object, double p0) {
+        var event = Gtk.get_current_event ();
 
-            var device = device_manager.lookup_gdk_device (event.get_source_device ());
-            if (device == null) {
-                return Gdk.EVENT_PROPAGATE;
-            }
-
-            var serial = tool.get_serial ();
-
-            var stylus = tool_map.lookup_tool (device, serial);
-            if (stylus == null) {
-                var id = tool.get_hardware_id ();
-                try {
-                    stylus = new Backend.WacomTool (serial, id, device);
-                } catch (GLib.Error e) {
-                    return Gdk.EVENT_PROPAGATE;
-                }
-            }
-
-            tool_map.add_relation (device, stylus);
-            if (stylus != last_stylus) {
-                stylus_view.set_device (stylus);
-            }
-
-            last_stylus = stylus;
+        var tool = event.get_device_tool ();
+        if (tool == null) {
+            return;
         }
 
-        return Gdk.EVENT_PROPAGATE;
+        var device = device_manager.lookup_gdk_device (event.get_source_device ());
+        if (device == null) {
+            return;
+        }
+
+        var serial = tool.get_serial ();
+
+        var stylus = tool_map.lookup_tool (device, serial);
+        if (stylus == null) {
+            var id = tool.get_hardware_id ();
+            try {
+                stylus = new Backend.WacomTool (serial, id, device);
+            } catch (GLib.Error e) {
+                return;
+            }
+        }
+
+        tool_map.add_relation (device, stylus);
+        if (stylus != last_stylus) {
+            stylus_view.set_device (stylus);
+        }
+
+        last_stylus = stylus;
     }
 }
