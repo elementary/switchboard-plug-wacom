@@ -42,7 +42,7 @@ public class Wacom.StylusView : Gtk.Stack {
 
         var no_stylus_view = new Granite.Widgets.AlertView (
             _("No Stylus Detected"),
-            _("Please move your stylus close to the tablet"),
+            _("Move the stylus over this window"),
             ""
         );
         no_stylus_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
@@ -152,11 +152,13 @@ public class Wacom.StylusView : Gtk.Stack {
         device = dev;
         settings = device.get_settings ();
 
-        if (device.has_pressure_detection && device.has_eraser) {
+        var has_pressure_detection = Wacom.AxisTypeFlags.PRESSURE in device.stylus.get_axes ();
+
+        if (has_pressure_detection && device.stylus.has_eraser ()) {
             build_pressure_slider (_("Eraser Pressure Feel"), "eraser-pressure-curve");
         }
 
-        switch (device.num_buttons) {
+        switch (device.stylus.get_num_buttons ()) {
             case 1:
                 build_button_settings (_("Button Action"), "button-action");
                 break;
@@ -173,10 +175,9 @@ public class Wacom.StylusView : Gtk.Stack {
                 break;
         }
 
-        if (device.has_pressure_detection) {
+        if (has_pressure_detection) {
             build_pressure_slider (_("Tip Pressure Feel"), "pressure-curve");
         }
-
 
         var test_button = new Gtk.Button.with_label (_("Test Tablet Settings"));
         var test_popover = new Gtk.Popover (test_button);

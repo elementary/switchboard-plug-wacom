@@ -1,7 +1,6 @@
 plug_files = files(
     'Backend/Device.vala',
     'Backend/DeviceManager.vala',
-    'Backend/WacomDevice.vala',
     'Backend/WacomTool.vala',
     'Backend/WacomToolMap.vala',
     'Views/StylusView.vala',
