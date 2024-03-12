@@ -12,6 +12,7 @@ public class Wacom.MainPage : Switchboard.SettingsPage {
     private Granite.Placeholder placeholder;
     private Gtk.Box main_box;
     private Gtk.Stack stack;
+    private Gtk.Stack stylus_stack;
     private Gtk.GestureStylus stylus_gesture;
     private StylusView stylus_view;
     private TabletView tablet_view;
@@ -30,12 +31,20 @@ public class Wacom.MainPage : Switchboard.SettingsPage {
             description = _("Please ensure your tablet is connected and switched on")
         };
 
+        var stylus_placeholder = new Granite.Placeholder (_("No Stylus Detected")) {
+            description = _("Move the stylus over this window")
+        };
+
         tablet_view = new TabletView ();
         stylus_view = new StylusView ();
 
+        stylus_stack = new Gtk.Stack ();
+        stylus_stack.add_child (stylus_view);
+        stylus_stack.add_child (stylus_placeholder);
+
         main_box = new Gtk.Box (VERTICAL, 24);
         main_box.append (tablet_view);
-        main_box.append (stylus_view);
+        main_box.append (stylus_stack);
 
         stack = new Gtk.Stack ();
         stack.add_child (main_box);
@@ -121,6 +130,7 @@ public class Wacom.MainPage : Switchboard.SettingsPage {
         tool_map.add_relation (device, stylus);
         if (stylus != last_stylus) {
             stylus_view.set_device (stylus);
+            stylus_stack.visible_child = stylus_view;
         }
 
         last_stylus = stylus;
