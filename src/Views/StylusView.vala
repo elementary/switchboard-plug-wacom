@@ -41,7 +41,7 @@ public class Wacom.StylusView : Gtk.Stack {
         stylus_grid.column_spacing = 12;
 
         var no_stylus_view = new Granite.Placeholder (_("No Stylus Detected")) {
-            description = _("Please move your stylus close to the tablet")
+            description = _("Move the stylus over this window")
         };
 
         add_named (stylus_grid, "stylus");
