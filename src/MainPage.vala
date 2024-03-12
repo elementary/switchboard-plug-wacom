@@ -6,11 +6,11 @@
 public class Wacom.MainPage : Granite.SimpleSettingsPage {
     private Backend.DeviceManager device_manager;
     private Backend.WacomToolMap tool_map;
-    private Gee.HashMap<Backend.Device, Backend.WacomDevice>? devices;
 
     private Granite.Widgets.AlertView placeholder;
     private Gtk.Box main_box;
     private Gtk.Stack stack;
+    private Gtk.GestureStylus stylus_gesture;
     private TabletView tablet_view;
     private Gtk.ListBox stylus_listbox;
 
@@ -22,7 +22,6 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
     }
 
     construct {
-        devices = new Gee.HashMap<Backend.Device, Backend.WacomDevice> ();
         tool_map = Backend.WacomToolMap.get_default ();
 
         placeholder = new Granite.Widgets.AlertView (
@@ -69,7 +68,8 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
             add_known_device (device);
         }
 
-        event.connect (update_current_tool);
+        stylus_gesture = new Gtk.GestureStylus (this);
+        stylus_gesture.proximity.connect (on_stylus);
 
         update_current_page ();
     }
@@ -80,7 +80,6 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
     }
 
     private void on_device_removed (Backend.Device device) {
-        devices.unset (device);
         update_current_page ();
     }
 
@@ -95,64 +94,49 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
             return;
         }
 
-        try {
-            devices[d] = new Backend.WacomDevice (d);
-        } catch (WacomException e) {
-            warning ("Error initializing Wacom device: %s", e.message);
-            return;
-        }
-
-        update_stylus_listbox (devices[d]);
+        update_stylus_listbox (d);
      }
 
     private void update_current_page () {
-        foreach (var device in devices.keys) {
+        foreach (var device in device_manager.list_devices (TABLET)) {
             stack.visible_child = main_box;
-            tablet_view.set_device (devices[device]);
+            tablet_view.set_device (device);
             return;
         }
 
         stack.visible_child = placeholder;
     }
 
-    private bool update_current_tool (Gdk.Event event) {
-        if (event.get_event_type () == Gdk.EventType.MOTION_NOTIFY) {
-            var tool = event.get_device_tool ();
-            if (tool == null) {
-                return Gdk.EVENT_PROPAGATE;
-            }
+    private void on_stylus (double object, double p0) {
+        var event = Gtk.get_current_event ();
 
-            var device = device_manager.lookup_gdk_device (event.get_source_device ());
-            if (device == null) {
-                return Gdk.EVENT_PROPAGATE;
-            }
-
-            var wacom_device = devices[device];
-            if (wacom_device == null) {
-                return Gdk.EVENT_PROPAGATE;
-            }
-
-            var serial = tool.get_serial ();
-
-            var stylus = tool_map.lookup_tool (wacom_device, serial);
-            if (stylus == null) {
-                var id = tool.get_hardware_id ();
-                try {
-                    stylus = new Backend.WacomTool (serial, id, wacom_device);
-                } catch (GLib.Error e) {
-                    return Gdk.EVENT_PROPAGATE;
-                }
-            }
-
-            tool_map.add_relation (wacom_device, stylus);
-
-            update_stylus_listbox (wacom_device);
+        var tool = event.get_device_tool ();
+        if (tool == null) {
+            return;
         }
 
-        return Gdk.EVENT_PROPAGATE;
+        var device = device_manager.lookup_gdk_device (event.get_source_device ());
+        if (device == null) {
+            return;
+        }
+
+        var serial = tool.get_serial ();
+
+        var stylus = tool_map.lookup_tool (device, serial);
+        if (stylus == null) {
+            var id = tool.get_hardware_id ();
+            try {
+                stylus = new Backend.WacomTool (serial, id, device);
+            } catch (GLib.Error e) {
+                return;
+            }
+        }
+
+        tool_map.add_relation (device, stylus);
+        update_stylus_listbox (device);
     }
 
-    private void update_stylus_listbox (Backend.WacomDevice device) {
+    private void update_stylus_listbox (Backend.Device device) {
         while (stylus_listbox.get_row_at_index (0) != null) {
             stylus_listbox.remove (stylus_listbox.get_row_at_index (0));
         }

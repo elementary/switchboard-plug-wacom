@@ -29,7 +29,7 @@ public class Wacom.StylusView : Gtk.ListBoxRow {
     }
 
     construct {
-        var header_label = new Granite.HeaderLabel (device.name) {
+        var header_label = new Granite.HeaderLabel (device.stylus.get_name ()) {
             hexpand = true
         };
 
@@ -70,11 +70,13 @@ public class Wacom.StylusView : Gtk.ListBoxRow {
 
         settings = device.get_settings ();
 
-        if (device.has_pressure_detection && device.has_eraser) {
+        var has_pressure_detection = Wacom.AxisTypeFlags.PRESSURE in device.stylus.get_axes ();
+
+        if (has_pressure_detection && device.stylus.has_eraser ()) {
             box.add (pressure_setting (_("Eraser Pressure Feel"), "eraser-pressure-curve"));
         }
 
-        switch (device.num_buttons) {
+        switch (device.stylus.get_num_buttons ()) {
             case 1:
                 box.add (button_setting (_("Button Action"), "button-action"));
                 break;
@@ -89,7 +91,7 @@ public class Wacom.StylusView : Gtk.ListBoxRow {
                 break;
         }
 
-        if (device.has_pressure_detection) {
+        if (has_pressure_detection) {
             box.add (pressure_setting (_("Tip Pressure Feel"), "pressure-curve"));
         }
 

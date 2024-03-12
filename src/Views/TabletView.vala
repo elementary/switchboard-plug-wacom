@@ -18,7 +18,9 @@
  */
 
 public class Wacom.TabletView : Gtk.Grid {
-    private Backend.WacomDevice device;
+    private const string WACOM_TABLET_SCHEMA = "org.gnome.desktop.peripherals.tablet";
+    private const string WACOM_SETTINGS_BASE = "/org/gnome/desktop/peripherals/tablets/%s:%s/";
+
     private GLib.Settings settings;
 
     private Gtk.ComboBoxText tracking_mode_combo;
@@ -52,10 +54,10 @@ public class Wacom.TabletView : Gtk.Grid {
         attach (left_handed_switch, 1, 1);
     }
 
-    public void set_device (Backend.WacomDevice dev) {
-        device = dev;
-        settings = device.get_settings ();
+    public void set_device (Backend.Device dev) {
+        var path = WACOM_SETTINGS_BASE.printf (dev.vendor_id, dev.product_id);
 
+        settings = new Settings.with_path (WACOM_TABLET_SCHEMA, path);
         settings.bind ("mapping", tracking_mode_combo, "active-id", SettingsBindFlags.DEFAULT);
         settings.bind ("left-handed", left_handed_switch, "active", SettingsBindFlags.DEFAULT);
     }
