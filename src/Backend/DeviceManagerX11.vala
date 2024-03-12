@@ -168,8 +168,8 @@ public class Wacom.Backend.DeviceManagerX11 : DeviceManager {
         //     id = Gdk.X11.device_get_id ((Gdk.X11.DeviceCore)device);
         // }
 
-        // var display = device.get_display () as Gdk.X11.Display;
-        // display.error_trap_push ();
+        var display = device.get_display () as Gdk.X11.Display;
+        display.error_trap_push ();
 
         var ret = XI2.get_property (
             display.get_xdisplay (),
