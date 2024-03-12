@@ -96,14 +96,12 @@ public class Wacom.MainPage : Switchboard.SettingsPage {
     }
 
     private void on_stylus (double object, double p0) {
-        var event = Gtk.get_current_event ();
-
-        var tool = event.get_device_tool ();
+        var tool = stylus_gesture.get_device_tool ();
         if (tool == null) {
             return;
         }
 
-        var device = device_manager.lookup_gdk_device (event.get_source_device ());
+        var device = device_manager.lookup_gdk_device (stylus_gesture.get_current_event_device ());
         if (device == null) {
             return;
         }
