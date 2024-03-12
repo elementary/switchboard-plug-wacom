@@ -51,8 +51,10 @@ public class Wacom.MainPage : Switchboard.SettingsPage {
             add_known_device (device);
         }
 
-        stylus_gesture = new Gtk.GestureStylus (this);
+        stylus_gesture = new Gtk.GestureStylus ();
         stylus_gesture.proximity.connect (on_stylus);
+
+        add_controller (stylus_gesture);
 
         update_current_page ();
     }
