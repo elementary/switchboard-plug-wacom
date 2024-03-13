@@ -127,17 +127,7 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
 
         var stylus = tool_map.lookup_tool (gdk_device, serial);
         if (stylus == null) {
-            var id = tool.get_hardware_id ();
-            try {
-                var device = device_manager.lookup_gdk_device (gdk_device);
-                if (device == null) {
-                    return;
-                }
-
-                stylus = new Backend.WacomTool (serial, id, device);
-            } catch (GLib.Error e) {
-                return;
-            }
+            stylus = new Backend.WacomTool (serial, tool.get_hardware_id ());
         }
 
         tool_map.add_relation (gdk_device, stylus);

@@ -107,11 +107,7 @@ public class Wacom.Backend.WacomToolMap : GLib.Object {
                 continue;
             }
 
-            try {
-                tool_map[serials[i]] = new WacomTool (serial, id, null);
-            } catch (GLib.Error e) {
-                continue;
-            }
+            tool_map[serials[i]] = new WacomTool (serial, id);
         }
     }
 
@@ -255,7 +251,7 @@ public class Wacom.Backend.WacomToolMap : GLib.Object {
         if (no_serial_tool_map.has_key (key)) {
             var no_serial_tool = no_serial_tool_map[key];
             if (no_serial_tool == null) {
-                no_serial_tool = new WacomTool (0, 0, device);
+                no_serial_tool = new WacomTool.from_device (device);
                 no_serial_tool_map[key] = no_serial_tool;
             }
 
