@@ -145,11 +145,11 @@ public class Wacom.Backend.DeviceManagerWayland : DeviceManager {
     }
 
     public override Device? lookup_gdk_device (Gdk.Device device) {
-        if (!(device is GdkWayland.Device)) {
+        if (!(device is Gdk.Wayland.Device)) {
             return null;
         }
 
-        var node_path = (device as GdkWayland.Device).get_node_path ();
+        var node_path = (device as Gdk.Wayland.Device).get_node_path ();
         if (node_path == null) {
             return null;
         }

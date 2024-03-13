@@ -3,13 +3,13 @@
  * SPDX-FileCopyrightText: 2019-2024 elementary, Inc. (https://elementary.io)
  */
 
-public class Wacom.MainPage : Granite.SimpleSettingsPage {
+public class Wacom.MainPage : Switchboard.SettingsPage {
     private Backend.DeviceManager device_manager;
     private Backend.WacomTool? last_stylus = null;
 
     private Backend.WacomToolMap tool_map;
 
-    private Granite.Widgets.AlertView placeholder;
+    private Granite.Placeholder placeholder;
     private Gtk.Box main_box;
     private Gtk.Stack stack;
     private Gtk.Stack stylus_stack;
@@ -20,47 +20,37 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
     public MainPage () {
         Object (
             title: _("Wacom"),
-            icon_name: "input-tablet"
+            icon: new ThemedIcon ("input-tablet")
         );
     }
 
     construct {
         tool_map = Backend.WacomToolMap.get_default ();
 
-        placeholder = new Granite.Widgets.AlertView (
-            _("No Tablets Available"),
-            _("Please ensure your tablet is connected and switched on"),
-            ""
-        );
-        placeholder.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
-        placeholder.show_all ();
+        placeholder = new Granite.Placeholder (_("No Tablets Available")) {
+            description = _("Please ensure your tablet is connected and switched on")
+        };
 
-        var stylus_placeholder = new Granite.Widgets.AlertView (
-            _("No Stylus Detected"),
-            _("Move the stylus over this window"),
-            ""
-        );
-        stylus_placeholder.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
-        stylus_placeholder.show_all ();
+        var stylus_placeholder = new Granite.Placeholder (_("No Stylus Detected")) {
+            description = _("Move the stylus over this window")
+        };
 
         tablet_view = new TabletView ();
         stylus_view = new StylusView ();
 
         stylus_stack = new Gtk.Stack ();
-        stylus_stack.add (stylus_view);
-        stylus_stack.add (stylus_placeholder);
+        stylus_stack.add_child (stylus_placeholder);
+        stylus_stack.add_child (stylus_view);
 
         main_box = new Gtk.Box (VERTICAL, 24);
-        main_box.add (tablet_view);
-        main_box.add (stylus_stack);
+        main_box.append (tablet_view);
+        main_box.append (stylus_stack);
 
         stack = new Gtk.Stack ();
-        stack.add (main_box);
-        stack.add (placeholder);
+        stack.add_child (main_box);
+        stack.add_child (placeholder);
 
-        content_area.add (stack);
-
-        show_all ();
+        child = stack;
 
         device_manager = Backend.DeviceManager.get_default ();
         device_manager.device_added.connect (on_device_added);
@@ -70,8 +60,10 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
             add_known_device (device);
         }
 
-        stylus_gesture = new Gtk.GestureStylus (this);
+        stylus_gesture = new Gtk.GestureStylus ();
         stylus_gesture.proximity.connect (on_stylus);
+
+        add_controller (stylus_gesture);
 
         update_current_page ();
     }
@@ -117,9 +109,7 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
     }
 
     private void on_stylus (double object, double p0) {
-        var event = Gtk.get_current_event ();
-        var tool = event.get_device_tool ();
-
+        var tool = stylus_gesture.get_device_tool ();
         if (tool == null) {
             critical ("DeviceTool not found");
             return;

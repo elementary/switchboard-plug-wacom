@@ -27,22 +27,16 @@ public class Wacom.Backend.DeviceManagerX11 : DeviceManager {
         seat.device_added.connect (add_device);
         seat.device_removed.connect (remove_device);
 
-        var devices = seat.get_slaves (Gdk.SeatCapabilities.ALL);
+        var devices = seat.get_devices (Gdk.SeatCapabilities.ALL);
         foreach (var device in devices) {
             add_device (device);
         }
     }
 
     private void add_device (Gdk.Device gdk_device) {
-        if (gdk_device.type == Gdk.DeviceType.MASTER) {
-            return;
-        }
-
         int id = -1;
         if (gdk_device is Gdk.X11.DeviceXI2) {
-            id = (gdk_device as Gdk.X11.DeviceXI2).device_id;
-        } else {
-            id = Gdk.X11.device_get_id ((Gdk.X11.DeviceCore)gdk_device);
+            id = ((Gdk.X11.DeviceXI2) gdk_device).device_id;
         }
 
         if (id == -1) {
@@ -82,8 +76,6 @@ public class Wacom.Backend.DeviceManagerX11 : DeviceManager {
             case Gdk.InputSource.TRACKPOINT:
                 return Wacom.Backend.Device.DeviceType.MOUSE;
             case Gdk.InputSource.PEN:
-            case Gdk.InputSource.ERASER:
-            case Gdk.InputSource.CURSOR:
                 if (device.name.contains ("pad")) {
                     return Wacom.Backend.Device.DeviceType.TABLET | Wacom.Backend.Device.DeviceType.PAD;
                 }
@@ -114,18 +106,18 @@ public class Wacom.Backend.DeviceManagerX11 : DeviceManager {
     private static string? get_xdevice_node (int id) {
         Gdk.Display.get_default ().sync ();
 
-        unowned X.Display display = Gdk.X11.get_default_xdisplay ();
-        var prop = display.intern_atom ("Device Node", false);
+        unowned var display = (Gdk.X11.Display) Gdk.Display.get_default ();
+        var prop = display.get_xatom_by_name ("Device Node");
 
         X.Atom act_type;
         int act_format;
         ulong n_items, bytes_after;
         void* data;
 
-        Gdk.error_trap_push ();
+        display.error_trap_push ();
 
         var ret = XI2.get_property (
-            display,
+            display.get_xdisplay (),
             id,
             prop,
             0,
@@ -140,11 +132,11 @@ public class Wacom.Backend.DeviceManagerX11 : DeviceManager {
         );
 
         if (ret != X.Success) {
-            Gdk.error_trap_pop_ignored ();
+            display.error_trap_pop_ignored ();
             return null;
         }
 
-        if (Gdk.error_trap_pop () != 0) {
+        if (display.error_trap_pop () != 0) {
             return null;
         }
 
@@ -188,9 +180,7 @@ public class Wacom.Backend.DeviceManagerX11 : DeviceManager {
 
         int id = -1;
         if (device is Gdk.X11.DeviceXI2) {
-            id = (device as Gdk.X11.DeviceXI2).device_id;
-        } else {
-            id = Gdk.X11.device_get_id ((Gdk.X11.DeviceCore)device);
+            id = ((Gdk.X11.DeviceXI2) device).device_id;
         }
 
         var display = device.get_display () as Gdk.X11.Display;
@@ -199,7 +189,7 @@ public class Wacom.Backend.DeviceManagerX11 : DeviceManager {
         var ret = XI2.get_property (
             display.get_xdisplay (),
             id,
-            Gdk.X11.get_xatom_by_name_for_display (display, "Wacom Tool Type"),
+            display.get_xatom_by_name ("Wacom Tool Type"),
             0,
             1,
             false,

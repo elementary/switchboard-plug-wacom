@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="addon">
-  <id>io.elementary.switchboard.wacom</id>
-  <extends>io.elementary.switchboard</extends>
+  <id>io.elementary.settings.wacom</id>
+  <extends>io.elementary.settings</extends>
   <name>Wacom Settings</name>
   <summary>Configure Wacom tablets</summary>
   <icon type="stock">input-tablet</icon>
-  <translation type="gettext">wacom</translation>
+  <translation type="gettext">io.elementary.settings.wacom</translation>
   <releases>
     <release version="1.0.1" date="2022-07-03" urgency="medium">
       <description>
@@ -23,7 +23,7 @@
   </releases>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-wacom/master/data/screenshot-general.png</image>
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-wacom/main/data/screenshot-general.png</image>
     </screenshot>
   </screenshots>
   <url type="homepage">https://elementary.io</url>

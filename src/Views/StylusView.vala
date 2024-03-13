@@ -28,13 +28,13 @@ public class Wacom.StylusView : Gtk.Box {
     construct {
         stylus_box = new Gtk.Box (VERTICAL, 12);
 
-        add (stylus_box);
+        append (stylus_box);
     }
 
     public void set_device (Backend.WacomTool wacom_tool) {
-        stylus_box.@foreach ((widget) => {
-            widget.destroy ();
-        });
+        while (stylus_box.get_first_child () != null) {
+            stylus_box.remove (stylus_box.get_first_child ());
+        }
 
         unowned var stylus = wacom_db.get_stylus_for_id ((int) wacom_tool.id);
 
@@ -48,13 +48,7 @@ public class Wacom.StylusView : Gtk.Box {
             hexpand = true,
             vexpand = true
         };
-
-        var frame = new Gtk.Frame (null) {
-            child = test_area,
-            margin_start = 10,
-            margin_end = 10
-        };
-        frame.show_all ();
+        test_area.add_css_class (Granite.STYLE_CLASS_FRAME);
 
         var test_dialog = new Granite.Dialog () {
             default_width = 500,
@@ -62,14 +56,14 @@ public class Wacom.StylusView : Gtk.Box {
             modal = true,
             transient_for = ((Gtk.Application) Application.get_default ()).active_window
         };
-        test_dialog.get_content_area ().add (frame);
+        test_dialog.get_content_area ().append (test_area);
         test_dialog.add_button ("Close", Gtk.ResponseType.CLOSE);
 
         var header_box = new Gtk.Box (HORIZONTAL, 12);
-        header_box.add (header_label);
-        header_box.add (test_button);
+        header_box.append (header_label);
+        header_box.append (test_button);
 
-        stylus_box.add (header_box);
+        stylus_box.append (header_box);
 
         settings = new Settings.with_path (
             "org.gnome.desktop.peripherals.tablet.stylus",
@@ -79,29 +73,27 @@ public class Wacom.StylusView : Gtk.Box {
         var has_pressure_detection = Wacom.AxisTypeFlags.PRESSURE in stylus.get_axes ();
 
         if (has_pressure_detection && stylus.has_eraser ()) {
-            stylus_box.add (pressure_setting (_("Eraser Pressure Feel"), "eraser-pressure-curve"));
+            stylus_box.append (pressure_setting (_("Eraser Pressure Feel"), "eraser-pressure-curve"));
         }
 
         switch (stylus.get_num_buttons ()) {
             case 1:
-                stylus_box.add (button_setting (_("Button Action"), "button-action"));
+                stylus_box.append (button_setting (_("Button Action"), "button-action"));
                 break;
             case 2:
-                stylus_box.add (button_setting (_("Top Button Action"), "secondary-button-action"));
-                stylus_box.add (button_setting (_("Bottom Button Action"), "button-action"));
+                stylus_box.append (button_setting (_("Top Button Action"), "secondary-button-action"));
+                stylus_box.append (button_setting (_("Bottom Button Action"), "button-action"));
                 break;
             case 3:
-                stylus_box.add (button_setting (_("Top Button Action"), "secondary-button-action"));
-                stylus_box.add (button_setting (_("Middle Button Action"), "button-action"));
-                stylus_box.add (button_setting (_("Bottom Button Action"), "tertiary-button-action"));
+                stylus_box.append (button_setting (_("Top Button Action"), "secondary-button-action"));
+                stylus_box.append (button_setting (_("Middle Button Action"), "button-action"));
+                stylus_box.append (button_setting (_("Bottom Button Action"), "tertiary-button-action"));
                 break;
         }
 
         if (has_pressure_detection) {
-            stylus_box.add (pressure_setting (_("Tip Pressure Feel"), "pressure-curve"));
+            stylus_box.append (pressure_setting (_("Tip Pressure Feel"), "pressure-curve"));
         }
-
-        show_all ();
 
         test_button.clicked.connect (() => {
             test_area.clear ();
@@ -129,8 +121,8 @@ public class Wacom.StylusView : Gtk.Box {
         label_sizegroup.add_widget (setting_label);
 
         var box = new Gtk.Box (HORIZONTAL, 12);
-        box.add (setting_label);
-        box.add (button_combo);
+        box.append (setting_label);
+        box.append (button_combo);
 
         settings.bind (schema_key, button_combo, "active-id", SettingsBindFlags.DEFAULT);
 
@@ -161,8 +153,8 @@ public class Wacom.StylusView : Gtk.Box {
         label_sizegroup.add_widget (setting_label);
 
         var box = new Gtk.Box (HORIZONTAL, 12);
-        box.add (setting_label);
-        box.add (scale);
+        box.append (setting_label);
+        box.append (scale);
 
         return (box);
     }

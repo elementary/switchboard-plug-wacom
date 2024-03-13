@@ -1,4 +1,4 @@
-# Switchboard Wacom Plug
+# Wacom Settings
 [![Translation status](https://l10n.elementary.io/widgets/switchboard/-/plug-wacom/svg-badge.svg)](https://l10n.elementary.io/engage/switchboard/?utm_source=widget)
 
 ![screenshot](data/screenshot.png?raw=true)
@@ -7,8 +7,8 @@
 
 You'll need the following dependencies:
 
-* libswitchboard-2.0-dev
-* libgranite-dev
+* libswitchboard-3-dev
+* libgranite-7-dev
 * libwacom-dev
 * libgudev-1.0-dev
 * libx11-dev

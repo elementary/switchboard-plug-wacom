@@ -10,30 +10,27 @@ public class Wacom.Widgets.DrawingArea : Gtk.DrawingArea {
     private Gtk.GestureStylus stylus_gesture;
 
     construct {
-        stylus_gesture = new Gtk.GestureStylus (this);
+        stylus_gesture = new Gtk.GestureStylus ();
         stylus_gesture.up.connect (on_up);
         stylus_gesture.motion.connect (on_motion);
+
+        add_controller (stylus_gesture);
     }
 
-    public override void size_allocate (Gtk.Allocation alloc) {
-        ensure_drawing_surface (alloc.width, alloc.height);
-        base.size_allocate (alloc);
+    public override void size_allocate (int width, int height, int baseline) {
+        ensure_drawing_surface (width, height);
+        base.size_allocate (width, height, baseline);
     }
 
     public override void map () {
         base.map ();
 
-        Gtk.Allocation allocation;
-        get_allocation (out allocation);
-
-        ensure_drawing_surface (allocation.width, allocation.height);
+        ensure_drawing_surface (get_width (), get_height ());
+        set_draw_func (draw_func);
     }
 
     public void clear () {
-        Gtk.Allocation allocation;
-        get_allocation (out allocation);
-
-        ensure_drawing_surface (allocation.width, allocation.height, true);
+        ensure_drawing_surface (get_width (), get_height (), true);
     }
 
     private void ensure_drawing_surface (int width, int height, bool force = false) {
@@ -51,23 +48,16 @@ public class Wacom.Widgets.DrawingArea : Gtk.DrawingArea {
         }
     }
 
-    public override bool draw (Cairo.Context cr) {
-        Gtk.Allocation alloc;
-
-        get_allocation (out alloc);
+    private void draw_func (Gtk.DrawingArea drawing_area, Cairo.Context cr, int width, int height) {
         cr.set_source_rgb (1, 1, 1);
         cr.paint ();
 
         cr.set_source_surface (surface, 0, 0);
         cr.paint ();
-
-        return false;
     }
 
-    private void on_motion (double object, double p0) {
-        double x, y, pressure;
-
-        Gtk.get_current_event ().get_coords (out x, out y);
+    private void on_motion (double x, double y) {
+        double pressure;
         stylus_gesture.get_axis (PRESSURE, out pressure);
 
         var tool_type = stylus_gesture.get_device_tool ().get_tool_type ();
@@ -88,7 +78,7 @@ public class Wacom.Widgets.DrawingArea : Gtk.DrawingArea {
         queue_draw ();
     }
 
-    private void on_up (double object, double p0) {
+    private void on_up (double x, double y) {
         cr.new_path ();
     }
 }
