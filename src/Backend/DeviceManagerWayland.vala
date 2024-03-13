@@ -124,14 +124,13 @@ public class Wacom.Backend.DeviceManagerWayland : DeviceManager {
             product = udev_device.get_sysfs_attr ("device/id/product");
         }
 
-        Device device = (Device)GLib.Object.@new (
-            typeof (Device),
-            "name", name,
-            "device-file", udev_device.get_device_file (),
-            "vendor-id", vendor,
-            "product-id", product,
-            "dev-type", type
-        );
+        var device = new Backend.Device () {
+            name = name,
+            device_file = udev_device.get_device_file (),
+            vendor_id = vendor,
+            product_id = product,
+            dev_type = type
+        };
 
         return device;
     }
