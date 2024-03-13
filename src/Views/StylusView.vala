@@ -17,7 +17,6 @@ public class Wacom.StylusView : Gtk.Box {
     private static Gtk.SizeGroup label_sizegroup;
     private static Wacom.DeviceDatabase wacom_db;
 
-    private Backend.WacomTool device;
     private GLib.Settings settings;
     private Gtk.Box stylus_box;
 
@@ -32,14 +31,12 @@ public class Wacom.StylusView : Gtk.Box {
         add (stylus_box);
     }
 
-    public void set_device (Backend.WacomTool dev) {
+    public void set_device (Backend.WacomTool wacom_tool) {
         stylus_box.@foreach ((widget) => {
             widget.destroy ();
         });
 
-        device = dev;
-
-        unowned var stylus = wacom_db.get_stylus_for_id ((int) device.id);
+        unowned var stylus = wacom_db.get_stylus_for_id ((int) wacom_tool.id);
 
         var header_label = new Granite.HeaderLabel (stylus.get_name ()) {
             hexpand = true
@@ -76,7 +73,7 @@ public class Wacom.StylusView : Gtk.Box {
 
         settings = new Settings.with_path (
             "org.gnome.desktop.peripherals.tablet.stylus",
-            device.settings_path
+            wacom_tool.settings_path
         );
 
         var has_pressure_detection = Wacom.AxisTypeFlags.PRESSURE in stylus.get_axes ();
