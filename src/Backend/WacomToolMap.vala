@@ -107,11 +107,7 @@ public class Wacom.Backend.WacomToolMap : GLib.Object {
                 continue;
             }
 
-            try {
-                tool_map[serials[i]] = new WacomTool (serial, id, null);
-            } catch (GLib.Error e) {
-                continue;
-            }
+            tool_map[serials[i]] = new WacomTool (serial, id);
         }
     }
 
@@ -145,19 +141,19 @@ public class Wacom.Backend.WacomToolMap : GLib.Object {
         }
     }
 
-    private static string get_device_key (Backend.Device device) {
-        return "%s:%s".printf (device.vendor_id, device.product_id);
-    }
-
     private static string get_tool_key (uint64 serial) {
         return "%llx".printf (serial);
     }
 
-    public void add_relation (Backend.Device device, WacomTool tool) {
+    public void add_relation (Gdk.Device gdk_device, WacomTool tool) {
         string tool_key;
         bool tools_changed = false, tablets_changed = false;
 
-        var device_key = get_device_key (device);
+        var device_key = "%s:%s".printf (
+            gdk_device.get_vendor_id (),
+            gdk_device.get_product_id ()
+        );
+
         var serial = tool.serial;
 
         if (serial == 0) {
@@ -224,12 +220,16 @@ public class Wacom.Backend.WacomToolMap : GLib.Object {
         tools.set_string (tool_key, KEY_TOOL_ID, str);
     }
 
-    public WacomTool? lookup_tool (Backend.Device device, uint64 serial) {
+    public WacomTool? lookup_tool (Gdk.Device device, uint64 serial) {
         string key;
         WacomTool? tool = null;
 
         if (serial == 0) {
-            key = get_device_key (device);
+            key = "%s:%s".printf (
+                device.get_vendor_id (),
+                device.get_product_id ()
+            );
+
             tool = no_serial_tool_map[key];
         } else {
             key = get_tool_key (serial);
@@ -242,7 +242,7 @@ public class Wacom.Backend.WacomToolMap : GLib.Object {
     public Gee.ArrayList<WacomTool> list_tools (Backend.Device device) {
         var styli = new Gee.ArrayList<WacomTool> ();
 
-        var key = get_device_key (device);
+        var key = "%s:%s".printf (device.vendor_id, device.product_id);
         var tablet_tools = tablet_map[key];
         if (tablet_tools != null) {
             styli.add_all (tablet_map[key]);
@@ -251,7 +251,7 @@ public class Wacom.Backend.WacomToolMap : GLib.Object {
         if (no_serial_tool_map.has_key (key)) {
             var no_serial_tool = no_serial_tool_map[key];
             if (no_serial_tool == null) {
-                no_serial_tool = new WacomTool (0, 0, device);
+                no_serial_tool = new WacomTool.from_device (device);
                 no_serial_tool_map[key] = no_serial_tool;
             }
 
