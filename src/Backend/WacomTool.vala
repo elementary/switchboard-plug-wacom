@@ -36,13 +36,13 @@ public class Wacom.Backend.WacomTool : GLib.Object {
             wacom_db = new Wacom.DeviceDatabase ();
         }
 
-        var error = new Wacom.Error ();
-        var wacom_device = wacom_db.get_device_from_path (device.device_file, Wacom.FallbackFlags.NONE, error);
-        if (wacom_device == null) {
-            throw new WacomException.LIBWACOM_ERROR (error.get_message () ?? "");
-        }
-
         if (serial == 0 && device != null) {
+            var error = new Wacom.Error ();
+            var wacom_device = wacom_db.get_device_from_path (device.device_file, Wacom.FallbackFlags.NONE, error);
+            if (wacom_device == null) {
+                throw new WacomException.LIBWACOM_ERROR (error.get_message () ?? "");
+            }
+
             var supported_styli = wacom_device.get_supported_styli ();
             if (supported_styli.length > 0) {
                 id = supported_styli[0];
