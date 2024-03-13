@@ -125,17 +125,17 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
 
         var serial = tool.get_serial ();
 
-        var stylus = tool_map.lookup_tool (gdk_device, serial);
-        if (stylus == null) {
-            stylus = new Backend.WacomTool (serial, tool.get_hardware_id ());
-            tool_map.add_relation (gdk_device, stylus);
+        var wacom_tool = tool_map.lookup_tool (gdk_device, serial);
+        if (wacom_tool == null) {
+            wacom_tool = new Backend.WacomTool (serial, tool.get_hardware_id ());
+            tool_map.add_relation (gdk_device, wacom_tool);
         }
 
-        if (stylus != last_stylus) {
-            stylus_view.set_device (stylus);
+        if (wacom_tool != last_stylus) {
+            stylus_view.set_device (wacom_tool);
             stylus_stack.visible_child = stylus_view;
         }
 
-        last_stylus = stylus;
+        last_stylus = wacom_tool;
     }
 }

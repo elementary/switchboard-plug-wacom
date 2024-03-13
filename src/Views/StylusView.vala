@@ -15,13 +15,14 @@ public class Wacom.StylusView : Gtk.Box {
     };
 
     private static Gtk.SizeGroup label_sizegroup;
+    private static Wacom.DeviceDatabase wacom_db;
 
-    private Backend.WacomTool device;
     private GLib.Settings settings;
     private Gtk.Box stylus_box;
 
     static construct {
         label_sizegroup = new Gtk.SizeGroup (HORIZONTAL);
+        wacom_db = new Wacom.DeviceDatabase ();
     }
 
     construct {
@@ -30,14 +31,14 @@ public class Wacom.StylusView : Gtk.Box {
         add (stylus_box);
     }
 
-    public void set_device (Backend.WacomTool dev) {
+    public void set_device (Backend.WacomTool wacom_tool) {
         stylus_box.@foreach ((widget) => {
             widget.destroy ();
         });
 
-        device = dev;
+        unowned var stylus = wacom_db.get_stylus_for_id ((int) wacom_tool.id);
 
-        var header_label = new Granite.HeaderLabel (device.stylus.get_name ()) {
+        var header_label = new Granite.HeaderLabel (stylus.get_name ()) {
             hexpand = true
         };
 
@@ -72,16 +73,16 @@ public class Wacom.StylusView : Gtk.Box {
 
         settings = new Settings.with_path (
             "org.gnome.desktop.peripherals.tablet.stylus",
-            device.settings_path
+            wacom_tool.settings_path
         );
 
-        var has_pressure_detection = Wacom.AxisTypeFlags.PRESSURE in device.stylus.get_axes ();
+        var has_pressure_detection = Wacom.AxisTypeFlags.PRESSURE in stylus.get_axes ();
 
-        if (has_pressure_detection && device.stylus.has_eraser ()) {
+        if (has_pressure_detection && stylus.has_eraser ()) {
             stylus_box.add (pressure_setting (_("Eraser Pressure Feel"), "eraser-pressure-curve"));
         }
 
-        switch (device.stylus.get_num_buttons ()) {
+        switch (stylus.get_num_buttons ()) {
             case 1:
                 stylus_box.add (button_setting (_("Button Action"), "button-action"));
                 break;
