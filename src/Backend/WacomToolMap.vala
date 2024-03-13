@@ -147,14 +147,9 @@ public class Wacom.Backend.WacomToolMap : GLib.Object {
         return "%llx".printf (serial);
     }
 
-    public void add_relation (Gdk.Device gdk_device, WacomTool tool) {
+    public void add_relation (string device_key, WacomTool tool) {
         string tool_key;
         bool tools_changed = false, tablets_changed = false;
-
-        var device_key = "%s:%s".printf (
-            gdk_device.get_vendor_id (),
-            gdk_device.get_product_id ()
-        );
 
         var serial = tool.serial;
 
@@ -222,23 +217,12 @@ public class Wacom.Backend.WacomToolMap : GLib.Object {
         tools.set_string (tool_key, KEY_TOOL_ID, str);
     }
 
-    public WacomTool? lookup_tool (Gdk.Device device, uint64 serial) {
-        string key;
-        WacomTool? tool = null;
-
+    public WacomTool? lookup_tool (uint64 serial, string device_key) {
         if (serial == 0) {
-            key = "%s:%s".printf (
-                device.get_vendor_id (),
-                device.get_product_id ()
-            );
-
-            tool = no_serial_tool_map[key];
+            return no_serial_tool_map[device_key];
         } else {
-            key = get_tool_key (serial);
-            tool = tool_map[key];
+            return tool_map[get_tool_key (serial)];
         }
-
-        return tool;
     }
 
     public Gee.ArrayList<WacomTool> list_tools (Backend.Device device) {
