@@ -82,8 +82,6 @@ public class Wacom.Backend.DeviceManagerX11 : DeviceManager {
             case Gdk.InputSource.TRACKPOINT:
                 return Wacom.Backend.Device.DeviceType.MOUSE;
             case Gdk.InputSource.PEN:
-            case Gdk.InputSource.ERASER:
-            case Gdk.InputSource.CURSOR:
                 if (device.name.contains ("pad")) {
                     return Wacom.Backend.Device.DeviceType.TABLET | Wacom.Backend.Device.DeviceType.PAD;
                 }
