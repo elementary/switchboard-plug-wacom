@@ -34,15 +34,9 @@ public class Wacom.Backend.DeviceManagerX11 : DeviceManager {
     }
 
     private void add_device (Gdk.Device gdk_device) {
-        // if (gdk_device.type == Gdk.X11.DeviceType.LOGICAL) {
-        //     return;
-        // }
-
         int id = -1;
         if (gdk_device is Gdk.X11.DeviceXI2) {
-            id = (gdk_device as Gdk.X11.DeviceXI2).device_id;
-        } else {
-            // id = Gdk.X11.device_get_id ((Gdk.X11.DeviceCore)gdk_device);
+            id = ((Gdk.X11.DeviceXI2) gdk_device).device_id;
         }
 
         if (id == -1) {
@@ -186,9 +180,7 @@ public class Wacom.Backend.DeviceManagerX11 : DeviceManager {
 
         int id = -1;
         if (device is Gdk.X11.DeviceXI2) {
-            id = (device as Gdk.X11.DeviceXI2).device_id;
-        } else {
-            // id = Gdk.X11.device_get_id ((Gdk.X11.DeviceCore)device);
+            id = ((Gdk.X11.DeviceXI2) device).device_id;
         }
 
         var display = device.get_display () as Gdk.X11.Display;
