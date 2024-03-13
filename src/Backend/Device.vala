@@ -28,11 +28,11 @@ public class Wacom.Backend.Device : GLib.Object {
         PAD = 1 << 5
     }
 
-    public string name { get; construct; }
-    public string device_file { get; construct; }
-    public string vendor_id { get; construct; }
-    public string product_id { get; construct; }
-    public DeviceType dev_type { get; construct; }
+    public string name { get; set; }
+    public string device_file { get; set; }
+    public string vendor_id { get; set; }
+    public string product_id { get; set; }
+    public DeviceType dev_type { get; set; }
 
     public GLib.Settings? get_settings () {
         string? schema = null, path = null;
