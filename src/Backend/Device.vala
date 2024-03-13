@@ -28,7 +28,6 @@ public class Wacom.Backend.Device : GLib.Object {
         PAD = 1 << 5
     }
 
-    public string name { get; set; }
     public string device_file { get; set; }
     public string vendor_id { get; set; }
     public string product_id { get; set; }
@@ -55,33 +54,6 @@ public class Wacom.Backend.Device : GLib.Object {
             return new GLib.Settings.with_path (schema, path);
         } else {
             return new GLib.Settings (schema);
-        }
-    }
-
-    public static DeviceType get_device_type (Gdk.Device device) {
-        var source = device.get_source ();
-        switch (source) {
-            case Gdk.InputSource.MOUSE:
-            case Gdk.InputSource.TRACKPOINT:
-                return DeviceType.MOUSE;
-            case Gdk.InputSource.PEN:
-            case Gdk.InputSource.ERASER:
-            case Gdk.InputSource.CURSOR:
-                if (device.name.contains ("pad")) {
-                    return DeviceType.TABLET | DeviceType.PAD;
-                }
-
-                return DeviceType.TABLET;
-            case Gdk.InputSource.KEYBOARD:
-                return DeviceType.KEYBOARD;
-            case Gdk.InputSource.TOUCHSCREEN:
-                return DeviceType.TOUCHSCREEN;
-            case Gdk.InputSource.TOUCHPAD:
-                return DeviceType.TOUCHPAD;
-            case Gdk.InputSource.TABLET_PAD:
-                return DeviceType.TABLET | DeviceType.PAD;
-            default:
-                return 0;
         }
     }
 }

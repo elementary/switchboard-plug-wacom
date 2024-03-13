@@ -115,7 +115,6 @@ public class Wacom.Backend.DeviceManagerWayland : DeviceManager {
             return null;
         }
 
-        var name = udev_device.get_sysfs_attr ("name");
         var vendor = udev_device.get_property ("ID_VENDOR_ID");
         var product = udev_device.get_property ("ID_PRODUCT_ID");
 
@@ -125,7 +124,6 @@ public class Wacom.Backend.DeviceManagerWayland : DeviceManager {
         }
 
         var device = new Backend.Device () {
-            name = name,
             device_file = udev_device.get_device_file (),
             vendor_id = vendor,
             product_id = product,
