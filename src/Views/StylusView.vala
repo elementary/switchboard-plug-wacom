@@ -70,7 +70,10 @@ public class Wacom.StylusView : Gtk.Box {
 
         stylus_box.add (header_box);
 
-        settings = device.get_settings ();
+        settings = new Settings.with_path (
+            "org.gnome.desktop.peripherals.tablet.stylus",
+            device.settings_path
+        );
 
         var has_pressure_detection = Wacom.AxisTypeFlags.PRESSURE in device.stylus.get_axes ();
 
