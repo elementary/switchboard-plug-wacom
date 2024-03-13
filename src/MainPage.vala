@@ -99,6 +99,7 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
         var tools = tool_map.list_tools (d);
         if (tools.size > 0) {
             stylus_view.set_device (tools[0]);
+            stylus_stack.visible_child = stylus_view;
         }
      }
 
