@@ -106,7 +106,10 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
     private void update_current_page () {
         foreach (var device in device_manager.list_devices (TABLET)) {
             stack.visible_child = main_box;
-            tablet_view.set_device (device);
+            tablet_view.device_key = "%s:%s".printf (
+                device.vendor_id,
+                device.product_id
+            );
             return;
         }
 
@@ -115,20 +118,19 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
 
     private void on_stylus (double object, double p0) {
         var event = Gtk.get_current_event ();
-        var gdk_device = event.get_source_device ();
         var tool = event.get_device_tool ();
 
-        if (gdk_device == null || tool == null) {
-            critical ("Gdk.Device or DeviceTool not found");
+        if (tool == null) {
+            critical ("DeviceTool not found");
             return;
         }
 
         var serial = tool.get_serial ();
 
-        var wacom_tool = tool_map.lookup_tool (gdk_device, serial);
+        var wacom_tool = tool_map.lookup_tool (serial, tablet_view.device_key);
         if (wacom_tool == null) {
             wacom_tool = new Backend.WacomTool (serial, tool.get_hardware_id ());
-            tool_map.add_relation (gdk_device, wacom_tool);
+            tool_map.add_relation (tablet_view.device_key, wacom_tool);
         }
 
         if (wacom_tool != last_stylus) {
