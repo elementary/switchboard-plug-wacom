@@ -65,16 +65,41 @@ public class Wacom.Backend.DeviceManagerX11 : DeviceManager {
     }
 
     private static Device create_device (Gdk.Device gdk_device, string device_file) {
-        Device device = (Device)GLib.Object.@new (
-            typeof (Device),
-            "name", gdk_device.name,
-            "device-file", device_file,
-            "vendor-id", gdk_device.get_vendor_id (),
-            "product-id", gdk_device.get_product_id (),
-            "dev-type", Device.get_device_type (gdk_device)
-        );
+        var device = new Backend.Device () {
+            device_file = device_file,
+            vendor_id = gdk_device.get_vendor_id (),
+            product_id = gdk_device.get_product_id (),
+            dev_type = get_device_type (gdk_device)
+        };
 
         return device;
+    }
+
+    private static Wacom.Backend.Device.DeviceType get_device_type (Gdk.Device device) {
+        var source = device.get_source ();
+        switch (source) {
+            case Gdk.InputSource.MOUSE:
+            case Gdk.InputSource.TRACKPOINT:
+                return Wacom.Backend.Device.DeviceType.MOUSE;
+            case Gdk.InputSource.PEN:
+            case Gdk.InputSource.ERASER:
+            case Gdk.InputSource.CURSOR:
+                if (device.name.contains ("pad")) {
+                    return Wacom.Backend.Device.DeviceType.TABLET | Wacom.Backend.Device.DeviceType.PAD;
+                }
+
+                return Wacom.Backend.Device.DeviceType.TABLET;
+            case Gdk.InputSource.KEYBOARD:
+                return Wacom.Backend.Device.DeviceType.KEYBOARD;
+            case Gdk.InputSource.TOUCHSCREEN:
+                return Wacom.Backend.Device.DeviceType.TOUCHSCREEN;
+            case Gdk.InputSource.TOUCHPAD:
+                return Wacom.Backend.Device.DeviceType.TOUCHPAD;
+            case Gdk.InputSource.TABLET_PAD:
+                return Wacom.Backend.Device.DeviceType.TABLET | Wacom.Backend.Device.DeviceType.PAD;
+            default:
+                return 0;
+        }
     }
 
     private void remove_device (Gdk.Device gdk_device) {

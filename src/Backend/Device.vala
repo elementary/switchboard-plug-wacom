@@ -28,54 +28,8 @@ public class Wacom.Backend.Device : GLib.Object {
         PAD = 1 << 5
     }
 
-    public string name { get; construct; }
-    public string device_file { get; construct; }
-    public string vendor_id { get; construct; }
-    public string product_id { get; construct; }
-    public DeviceType dev_type { get; construct; }
-
-    public GLib.Settings? get_settings () {
-        string? schema = null, path = null;
-
-        if (DeviceType.TOUCHSCREEN in dev_type) {
-            schema = "org.gnome.desktop.peripherals.touchscreen";
-            path = "/org/gnome/desktop/peripherals/touchscreens/%s:%s/".printf (vendor_id, product_id);
-        } else if (DeviceType.TABLET in dev_type) {
-            schema = "org.gnome.desktop.peripherals.tablet";
-            path = "/org/gnome/desktop/peripherals/tablets/%s:%s/".printf (vendor_id, product_id);
-        } else if (DeviceType.MOUSE in dev_type || DeviceType.TOUCHPAD in dev_type) {
-            schema = "org.gnome.desktop.peripherals.mouse";
-        } else if (DeviceType.KEYBOARD in dev_type) {
-            schema = "org.gnome.desktop.peripherals.keyboard";
-        } else {
-            return null;
-        }
-
-        if (path != null) {
-            return new GLib.Settings.with_path (schema, path);
-        } else {
-            return new GLib.Settings (schema);
-        }
-    }
-
-    public static DeviceType get_device_type (Gdk.Device device) {
-        var source = device.get_source ();
-        switch (source) {
-            case Gdk.InputSource.MOUSE:
-            case Gdk.InputSource.TRACKPOINT:
-                return DeviceType.MOUSE;
-            case Gdk.InputSource.PEN:
-                return DeviceType.TABLET;
-            case Gdk.InputSource.KEYBOARD:
-                return DeviceType.KEYBOARD;
-            case Gdk.InputSource.TOUCHSCREEN:
-                return DeviceType.TOUCHSCREEN;
-            case Gdk.InputSource.TOUCHPAD:
-                return DeviceType.TOUCHPAD;
-            case Gdk.InputSource.TABLET_PAD:
-                return DeviceType.TABLET | DeviceType.PAD;
-            default:
-                return 0;
-        }
-    }
+    public string device_file { get; set; }
+    public string vendor_id { get; set; }
+    public string product_id { get; set; }
+    public DeviceType dev_type { get; set; }
 }
