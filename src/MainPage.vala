@@ -121,24 +121,26 @@ public class Wacom.MainPage : Granite.SimpleSettingsPage {
             return;
         }
 
-        var device = device_manager.lookup_gdk_device (event.get_source_device ());
-        if (device == null) {
-            return;
-        }
-
         var serial = tool.get_serial ();
 
-        var stylus = tool_map.lookup_tool (device, serial);
+        var gdk_device = event.get_source_device ();
+
+        var stylus = tool_map.lookup_tool (gdk_device, serial);
         if (stylus == null) {
             var id = tool.get_hardware_id ();
             try {
+                var device = device_manager.lookup_gdk_device (gdk_device);
+                if (device == null) {
+                    return;
+                }
+
                 stylus = new Backend.WacomTool (serial, id, device);
             } catch (GLib.Error e) {
                 return;
             }
         }
 
-        tool_map.add_relation (device, stylus);
+        tool_map.add_relation (gdk_device, stylus);
         if (stylus != last_stylus) {
             stylus_view.set_device (stylus);
             stylus_stack.visible_child = stylus_view;
