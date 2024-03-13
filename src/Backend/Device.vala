@@ -32,28 +32,4 @@ public class Wacom.Backend.Device : GLib.Object {
     public string vendor_id { get; set; }
     public string product_id { get; set; }
     public DeviceType dev_type { get; set; }
-
-    public GLib.Settings? get_settings () {
-        string? schema = null, path = null;
-
-        if (DeviceType.TOUCHSCREEN in dev_type) {
-            schema = "org.gnome.desktop.peripherals.touchscreen";
-            path = "/org/gnome/desktop/peripherals/touchscreens/%s:%s/".printf (vendor_id, product_id);
-        } else if (DeviceType.TABLET in dev_type) {
-            schema = "org.gnome.desktop.peripherals.tablet";
-            path = "/org/gnome/desktop/peripherals/tablets/%s:%s/".printf (vendor_id, product_id);
-        } else if (DeviceType.MOUSE in dev_type || DeviceType.TOUCHPAD in dev_type) {
-            schema = "org.gnome.desktop.peripherals.mouse";
-        } else if (DeviceType.KEYBOARD in dev_type) {
-            schema = "org.gnome.desktop.peripherals.keyboard";
-        } else {
-            return null;
-        }
-
-        if (path != null) {
-            return new GLib.Settings.with_path (schema, path);
-        } else {
-            return new GLib.Settings (schema);
-        }
-    }
 }
