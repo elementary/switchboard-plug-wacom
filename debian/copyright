@@ -1,6 +1,6 @@
 This work was packaged for Debian by:
 
-    Daniel Foré <daniel@elementary.io>
+    Danielle Foré <danielle@elementary.io>
 
 Upstream Author(s):
 
@@ -8,7 +8,7 @@ Upstream Author(s):
 
 Copyright:
 
-    Copyright 2019 elementary, Inc. (https://elementary.io)
+    Copyright 2019-2024 elementary, Inc. (https://elementary.io)
 
 License:
 
@@ -30,6 +30,6 @@ Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
 
 The Debian packaging is:
 
-    Copyright 2019 elementary, Inc. (https://elementary.io)
+    Copyright 2019-2024 elementary, Inc. (https://elementary.io)
 
 and is licensed under the GPL version 3, see above.

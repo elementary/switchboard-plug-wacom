@@ -1,12 +1,12 @@
-Source: io.elementary.switchboard.wacom
+Source: io.elementary.settings.wacom
 Section: x11
 Priority: optional
-Maintainer: elementary OS Team <builds@elementary.io>
+Maintainer: elementary, Inc. <builds@elementary.io>
 Build-Depends: debhelper (>= 10.5.1),
                gettext,
-               libgranite-dev,
+               libgranite-7-dev,
                libgudev-1.0-dev,
-               libswitchboard-2.0-dev,
+               libswitchboard-3-dev,
                libwacom-dev,
                libx11-dev,
                libxi-dev,
@@ -15,9 +15,9 @@ Build-Depends: debhelper (>= 10.5.1),
 Standards-Version: 4.1.1
 Homepage: https://github.com/elementary/switchboard-plug-wacom
 
-Package: io.elementary.switchboard.wacom
+Package: io.elementary.settings.wacom
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Enhances: switchboard
-Description: Wacom plug for Switchboard
+Enhances: io.elementary.settings
+Description: Wacom plugin for Switchboard
  This plug configures wacom devices.

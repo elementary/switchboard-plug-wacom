@@ -1,4 +1,4 @@
-io.elementary.switchboard.wacom (1.0.1) focal; urgency=medium
+io.elementary.settings.wacom (1.0.1) focal; urgency=medium
 
   * Release 1.0.1 (#32)
   * Update translation files
@@ -8,14 +8,14 @@ io.elementary.switchboard.wacom (1.0.1) focal; urgency=medium
 
  -- elementary OS Team <builds@elementary.io>  Sun, 03 Jul 2022 15:33:33 +0000
 
-io.elementary.switchboard.wacom (1.0.0) focal; urgency=medium
+io.elementary.settings.wacom (1.0.0) focal; urgency=medium
 
   * New upstream release,
 
- -- Daniel Foré <daniel@elementary.io>  Tue, 27 Jul 2021 12:18:46 -0700
+ -- Danielle Foré <daniel@elementary.io>  Tue, 27 Jul 2021 12:18:46 -0700
 
-io.elementary.switchboard.wacom (1.0.0) bionic; urgency=medium
+io.elementary.settings.wacom (1.0.0) bionic; urgency=medium
 
   * Initial release.
 
- -- Daniel Foré <daniel@elementary>  Tue, 03 Sep 2019 13:48:35 -0700
+ -- Danielle Foré <daniel@elementary>  Tue, 03 Sep 2019 13:48:35 -0700
