@@ -24,18 +24,17 @@ public errordomain WacomException {
 public class Wacom.Backend.WacomTool : GLib.Object {
     public uint64 id { get; construct; default = 0; }
     public uint64 serial { get; construct; default = 0; }
-    public string vendor_id { get; construct; }
-    public string product_id { get; construct; }
+    public string settings_path { get; construct; }
 
     public unowned Wacom.Stylus? stylus { get; private set; default = null; }
 
-    private GLib.Settings? settings = null;
     private static Wacom.DeviceDatabase? wacom_db = null;
 
     public WacomTool (uint64 serial, uint64 id) {
         Object (
             id: id,
-            serial: serial
+            serial: serial,
+            settings_path: "/org/gnome/desktop/peripherals/stylus/%llx/".printf (serial)
         );
     }
 
@@ -58,8 +57,9 @@ public class Wacom.Backend.WacomTool : GLib.Object {
 
         Object (
             id: _id,
-            vendor_id: device.vendor_id,
-            product_id: device.product_id
+            settings_path: "/org/gnome/desktop/peripherals/stylus/default-%s:%s/".printf (
+                device.vendor_id, device.product_id
+            )
         );
     }
 
@@ -73,22 +73,5 @@ public class Wacom.Backend.WacomTool : GLib.Object {
         if (stylus == null) {
             throw new WacomException.LIBWACOM_ERROR ("Stylus description not found");
         }
-    }
-
-    public GLib.Settings get_settings () {
-        if (settings == null) {
-            string settings_path;
-            if (serial == 0) {
-                settings_path = "/org/gnome/desktop/peripherals/stylus/default-%s:%s/".printf (
-                    vendor_id, product_id
-                );
-            } else {
-                settings_path = "/org/gnome/desktop/peripherals/stylus/%llx/".printf (serial);
-            }
-
-            settings = new GLib.Settings.with_path ("org.gnome.desktop.peripherals.tablet.stylus", settings_path);
-        }
-
-        return settings;
     }
 }
