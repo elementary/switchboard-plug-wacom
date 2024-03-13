@@ -32,6 +32,8 @@ public class Wacom.Backend.WacomToolMap : GLib.Object {
     private Gee.HashMap<string, WacomTool> tool_map;
     private Gee.HashMap<string, WacomTool?> no_serial_tool_map;
 
+    private static Wacom.DeviceDatabase wacom_db;
+
     private static GLib.Once<WacomToolMap> instance;
     public static unowned WacomToolMap get_default () {
         return instance.once (() => {
@@ -145,14 +147,9 @@ public class Wacom.Backend.WacomToolMap : GLib.Object {
         return "%llx".printf (serial);
     }
 
-    public void add_relation (Gdk.Device gdk_device, WacomTool tool) {
+    public void add_relation (string device_key, WacomTool tool) {
         string tool_key;
         bool tools_changed = false, tablets_changed = false;
-
-        var device_key = "%s:%s".printf (
-            gdk_device.get_vendor_id (),
-            gdk_device.get_product_id ()
-        );
 
         var serial = tool.serial;
 
@@ -220,23 +217,12 @@ public class Wacom.Backend.WacomToolMap : GLib.Object {
         tools.set_string (tool_key, KEY_TOOL_ID, str);
     }
 
-    public WacomTool? lookup_tool (Gdk.Device device, uint64 serial) {
-        string key;
-        WacomTool? tool = null;
-
+    public WacomTool? lookup_tool (uint64 serial, string device_key) {
         if (serial == 0) {
-            key = "%s:%s".printf (
-                device.get_vendor_id (),
-                device.get_product_id ()
-            );
-
-            tool = no_serial_tool_map[key];
+            return no_serial_tool_map[device_key];
         } else {
-            key = get_tool_key (serial);
-            tool = tool_map[key];
+            return tool_map[get_tool_key (serial)];
         }
-
-        return tool;
     }
 
     public Gee.ArrayList<WacomTool> list_tools (Backend.Device device) {
@@ -251,7 +237,27 @@ public class Wacom.Backend.WacomToolMap : GLib.Object {
         if (no_serial_tool_map.has_key (key)) {
             var no_serial_tool = no_serial_tool_map[key];
             if (no_serial_tool == null) {
-                no_serial_tool = new WacomTool.from_device (device);
+                if (wacom_db == null) {
+                    wacom_db = new Wacom.DeviceDatabase ();
+                }
+
+                var error = new Wacom.Error ();
+                var wacom_device = wacom_db.get_device_from_path (device.device_file, Wacom.FallbackFlags.NONE, error);
+                if (wacom_device == null) {
+                    throw new WacomException.LIBWACOM_ERROR (error.get_message () ?? "");
+                }
+
+                var id = 0;
+                var supported_styli = wacom_device.get_supported_styli ();
+                if (supported_styli.length > 0) {
+                    id = supported_styli[0];
+                }
+
+                var settings_path = "/org/gnome/desktop/peripherals/stylus/default-%s:%s/".printf (
+                    device.vendor_id, device.product_id
+                );
+
+                no_serial_tool = new WacomTool (0, id, settings_path);
                 no_serial_tool_map[key] = no_serial_tool;
             }
 
