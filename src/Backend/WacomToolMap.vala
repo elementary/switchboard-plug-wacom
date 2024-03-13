@@ -55,7 +55,7 @@ public class Wacom.Backend.WacomToolMap : GLib.Object {
     }
 
     private void load_keyfiles () {
-        var dir = Path.build_filename (Environment.get_user_cache_dir (), "io.elementary.switchboard", "wacom");
+        var dir = Path.build_filename (Environment.get_user_cache_dir (), "io.elementary.settings", "wacom");
 
         if (DirUtils.create_with_parents (dir, 0700) < 0) {
             warning ("Could not create directory '%s', stylus mapping may not work well", dir);
