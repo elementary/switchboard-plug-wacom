@@ -106,21 +106,23 @@ public class Wacom.MainPage : Switchboard.SettingsPage {
     }
 
     private void on_stylus (double object, double p0) {
+        var event = Gtk.get_current_event ();
+        var gdk_device = event.get_source_device ();
         var tool = stylus_gesture.get_device_tool ();
-        if (tool == null) {
+
+        if (gdk_device == null || tool == null) {
+            critical ("Gdk.Device or DeviceTool not found");
             return;
         }
 
         var serial = tool.get_serial ();
 
-        var gdk_device = stylus_gesture.get_current_event_device ();
-
         var stylus = tool_map.lookup_tool (gdk_device, serial);
         if (stylus == null) {
             stylus = new Backend.WacomTool (serial, tool.get_hardware_id ());
+            tool_map.add_relation (gdk_device, stylus);
         }
 
-        tool_map.add_relation (gdk_device, stylus);
         if (stylus != last_stylus) {
             stylus_view.set_device (stylus);
             stylus_stack.visible_child = stylus_view;
