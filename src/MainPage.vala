@@ -39,8 +39,8 @@ public class Wacom.MainPage : Switchboard.SettingsPage {
         stylus_view = new StylusView ();
 
         stylus_stack = new Gtk.Stack ();
-        stylus_stack.add_child (stylus_view);
         stylus_stack.add_child (stylus_placeholder);
+        stylus_stack.add_child (stylus_view);
 
         main_box = new Gtk.Box (VERTICAL, 24);
         main_box.append (tablet_view);
