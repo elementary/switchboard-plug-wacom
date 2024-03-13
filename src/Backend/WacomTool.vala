@@ -26,8 +26,6 @@ public class Wacom.Backend.WacomTool : GLib.Object {
     public uint64 serial { get; construct; default = 0; }
     public string settings_path { get; construct; }
 
-    public unowned Wacom.Stylus? stylus { get; private set; default = null; }
-
     private static Wacom.DeviceDatabase? wacom_db = null;
 
     public WacomTool (uint64 serial, uint64 id) {
@@ -61,17 +59,5 @@ public class Wacom.Backend.WacomTool : GLib.Object {
                 device.vendor_id, device.product_id
             )
         );
-    }
-
-    construct {
-        if (wacom_db == null) {
-            wacom_db = new Wacom.DeviceDatabase ();
-        }
-
-        stylus = wacom_db.get_stylus_for_id ((int) id);
-
-        if (stylus == null) {
-            throw new WacomException.LIBWACOM_ERROR ("Stylus description not found");
-        }
     }
 }
