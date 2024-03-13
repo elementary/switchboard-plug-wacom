@@ -48,12 +48,7 @@ public class Wacom.StylusView : Gtk.Box {
             hexpand = true,
             vexpand = true
         };
-
-        var frame = new Gtk.Frame (null) {
-            child = test_area,
-            margin_start = 10,
-            margin_end = 10
-        };
+        test_area.add_css_class (Granite.STYLE_CLASS_FRAME);
 
         var test_dialog = new Granite.Dialog () {
             default_width = 500,
@@ -61,7 +56,7 @@ public class Wacom.StylusView : Gtk.Box {
             modal = true,
             transient_for = ((Gtk.Application) Application.get_default ()).active_window
         };
-        test_dialog.get_content_area ().append (frame);
+        test_dialog.get_content_area ().append (test_area);
         test_dialog.add_button ("Close", Gtk.ResponseType.CLOSE);
 
         var header_box = new Gtk.Box (HORIZONTAL, 12);
