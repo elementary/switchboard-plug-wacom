@@ -37,6 +37,7 @@ shared_module(
         dependency('gobject-2.0'),
         dependency('granite-7'),
         dependency('gtk4'),
+        dependency('libadwaita-1'),
         dependency('libwacom'),
         dependency('gudev-1.0'),
         dependency('x11'),
