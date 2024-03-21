@@ -4,7 +4,7 @@
  */
 
 public class Wacom.Plug : Switchboard.Plug {
-    private MainPage main_page;
+    private Gtk.Box box;
 
     public Plug () {
         GLib.Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
@@ -26,11 +26,23 @@ public class Wacom.Plug : Switchboard.Plug {
     }
 
     public override Gtk.Widget get_widget () {
-        if (main_page == null) {
-            main_page = new MainPage ();
+        if (box == null) {
+            var headerbar = new Adw.HeaderBar () {
+                show_title = false
+            };
+            headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
+
+            var main_page = new MainPage () {
+                vexpand = true
+            };
+
+            box = new Gtk.Box (VERTICAL, 0);
+            box.append (headerbar);
+            box.append (main_page);
+
         }
 
-        return main_page;
+        return box;
     }
 
     public override void shown () {

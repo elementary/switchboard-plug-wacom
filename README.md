@@ -7,6 +7,7 @@
 
 You'll need the following dependencies:
 
+* libadwaita-1-dev
 * libswitchboard-3-dev
 * libgranite-7-dev
 * libwacom-dev
