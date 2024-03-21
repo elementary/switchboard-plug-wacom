@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-24 19:12+0000\n"
-"PO-Revision-Date: 2021-08-27 17:04+0000\n"
+"PO-Revision-Date: 2024-03-18 23:13+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/hu/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.0.2\n"
 
 #: src/Views/StylusView.vala:44
 msgid "No Stylus Detected"
@@ -25,7 +25,7 @@ msgstr "Nem található ceruza"
 
 #: src/Views/StylusView.vala:45
 msgid "Please move your stylus close to the tablet"
-msgstr "Tartsa közelebb a ceruzát a tablethez"
+msgstr "Tartsa közelebb a ceruzát a táblagéphez"
 
 #: src/Views/StylusView.vala:61
 msgid "Default"
@@ -81,11 +81,11 @@ msgstr "A hegy nyomásának érzése:"
 
 #: src/Views/StylusView.vala:171
 msgid "Test Tablet Settings"
-msgstr "Tabletbeállítások tesztelése"
+msgstr "Táblagép beállításainak tesztelése"
 
 #: src/Views/TabletView.vala:33
 msgid "Tablet (absolute)"
-msgstr "Tablet (abszolút)"
+msgstr "Táblagép (abszolút)"
 
 #: src/Views/TabletView.vala:34
 msgid "Touchpad (relative)"
@@ -105,7 +105,7 @@ msgstr "Wacom"
 
 #: src/Plug.vala:49
 msgid "Configure Wacom tablet"
-msgstr "Wacom tablet beállítása"
+msgstr "Wacom táblagép beállítása"
 
 #: src/Plug.vala:71
 msgid "Stylus"
@@ -113,13 +113,13 @@ msgstr "Ceruza"
 
 #: src/Plug.vala:72
 msgid "Tablet"
-msgstr "Tablet"
+msgstr "Táblagép"
 
 #: src/Plug.vala:90
 msgid "No Tablets Available"
-msgstr "Nincs elérhető tablet"
+msgstr "Nincs elérhető táblagép"
 
 #: src/Plug.vala:91
 msgid "Please ensure your tablet is connected and switched on"
 msgstr ""
-"Győződjön meg róla, hogy a tablet csatlakoztatva van és be van kapcsolva"
+"Győződjön meg róla, hogy a táblagép csatlakoztatva van és be van kapcsolva"
