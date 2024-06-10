@@ -2,10 +2,34 @@
 <component type="addon">
   <id>io.elementary.settings.wacom</id>
   <extends>io.elementary.settings</extends>
+  <translation type="gettext">io.elementary.settings.wacom</translation>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+
+  <icon type="stock">input-tablet</icon>
   <name>Wacom Settings</name>
   <summary>Configure Wacom tablets</summary>
-  <icon type="stock">input-tablet</icon>
-  <translation type="gettext">io.elementary.settings.wacom</translation>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-wacom/main/data/screenshot.png</image>
+    </screenshot>
+  </screenshots>
+
+  <content_rating type="oars-1.1" />
+
+  <url type="bugtracker">https://github.com/elementary/switchboard-plug-wacom/issues</url>
+  <url type="donation">https://elementary.io/get-involved#funding</url>
+  <url type="help">https://github.com/elementary/switchboard-plug-wacom/discussions</url>
+  <url type="homepage">https://elementary.io/</url>
+  <url type="translate">https://l10n.elementary.io/engage/switchboard/</url>
+
+  <developer id="org.elementaryos">
+    <name>elementary, Inc.</name>
+  </developer>
+  <project_group>elementary</project_group>
+  <update_contact>contact_at_elementary.io</update_contact>
+
   <releases>
     <release version="1.0.1" date="2022-07-03" urgency="medium">
       <description>
@@ -15,20 +39,12 @@
         </ul>
       </description>
     </release>
+
     <release version="1.0.0" date="2021-07-27" urgency="medium">
       <description>
         <p>Initial Release!</p>
       </description>
     </release>
   </releases>
-  <screenshots>
-    <screenshot type="default">
-      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-wacom/main/data/screenshot-general.png</image>
-    </screenshot>
-  </screenshots>
-  <url type="homepage">https://elementary.io</url>
-  <url type="bugtracker">https://github.com/elementary/switchboard-plug-wacom/issues</url>
-  <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-3.0+</project_license>
 </component>
 
