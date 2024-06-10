@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-13 21:55+0000\n"
+"POT-Creation-Date: 2024-06-10 19:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,22 +17,26 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/wacom.metainfo.xml.in:5
+#: data/wacom.metainfo.xml.in:10
 msgid "Wacom Settings"
 msgstr ""
 
-#: data/wacom.metainfo.xml.in:6
+#: data/wacom.metainfo.xml.in:11
 msgid "Configure Wacom tablets"
 msgstr ""
 
-#: data/wacom.metainfo.xml.in:12
+#: data/wacom.metainfo.xml.in:28
+msgid "elementary, Inc."
+msgstr ""
+
+#: data/wacom.metainfo.xml.in:36
 msgid "Minor updates:"
 msgstr ""
 
-#: data/wacom.metainfo.xml.in:14
+#: data/wacom.metainfo.xml.in:38
 msgid "Updated translations"
 msgstr ""
 
-#: data/wacom.metainfo.xml.in:20
+#: data/wacom.metainfo.xml.in:45
 msgid "Initial Release!"
 msgstr ""
