@@ -31,6 +31,17 @@
   <update_contact>contact_at_elementary.io</update_contact>
 
   <releases>
+    <release version="8.0.0" date="2024-06-09" urgency="medium">
+      <description>
+        <p>A Big Redesign!</p>
+        <ul>
+          <li>See all settings in a single page</li>
+          <li>Show pen names</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="1.0.1" date="2022-07-03" urgency="medium">
       <description>
         <p>Minor updates:</p>
