@@ -8,24 +8,24 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-24 19:12+0000\n"
-"PO-Revision-Date: 2019-09-18 13:23+0000\n"
-"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
-"Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/plug-"
-"wacom/es/>\n"
+"PO-Revision-Date: 2024-06-13 17:16+0000\n"
+"Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
+"Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
+"plug-wacom/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: src/Views/StylusView.vala:44
 msgid "No Stylus Detected"
-msgstr "No se detectó ningún estilete"
+msgstr "No se detectó ningún lápiz"
 
 #: src/Views/StylusView.vala:45
 msgid "Please move your stylus close to the tablet"
-msgstr "Acerque el estilete a la tableta"
+msgstr "Acerque el lápiz a la tableta"
 
 #: src/Views/StylusView.vala:61
 msgid "Default"
@@ -33,11 +33,11 @@ msgstr "Predeterminado"
 
 #: src/Views/StylusView.vala:62
 msgid "Middle Mouse Button Click"
-msgstr "Pulsación del botón central del ratón"
+msgstr "Clic del botón central del ratón"
 
 #: src/Views/StylusView.vala:63
 msgid "Right Mouse Button Click"
-msgstr "Pulsación del botón secundario del ratón"
+msgstr "Clic del botón secundario del ratón"
 
 #: src/Views/StylusView.vala:64
 msgid "Back"
