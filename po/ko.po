@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-24 19:12+0000\n"
+"POT-Creation-Date: 2024-06-10 20:07+0000\n"
 "PO-Revision-Date: 2022-08-06 22:53+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
-"Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
-"plug-wacom/ko/>\n"
+"Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/plug-"
+"wacom/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,106 +19,125 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.4.2\n"
 
-#: src/Views/StylusView.vala:44
-msgid "No Stylus Detected"
-msgstr "스타일러스가 감지되지 않음"
-
 #: src/Views/StylusView.vala:45
-msgid "Please move your stylus close to the tablet"
-msgstr "스타일러스를 태블릿 가까이로 이동해 주세요"
+#, fuzzy
+#| msgid "Test Tablet Settings"
+msgid "Test Settings"
+msgstr "태블릿 설정 테스트"
 
-#: src/Views/StylusView.vala:61
+#: src/Views/StylusView.vala:76
+#, fuzzy
+#| msgid "Eraser Pressure Feel:"
+msgid "Eraser Pressure Feel"
+msgstr "지우개 압력 느낌:"
+
+#: src/Views/StylusView.vala:81
+#, fuzzy
+#| msgid "Button Action:"
+msgid "Button Action"
+msgstr "버튼 동작:"
+
+#: src/Views/StylusView.vala:84 src/Views/StylusView.vala:88
+#, fuzzy
+#| msgid "Top Button Action:"
+msgid "Top Button Action"
+msgstr "위 버튼 동작:"
+
+#: src/Views/StylusView.vala:85 src/Views/StylusView.vala:90
+#, fuzzy
+#| msgid "Bottom Button Action:"
+msgid "Bottom Button Action"
+msgstr "아래 버튼 동작:"
+
+#: src/Views/StylusView.vala:89
+#, fuzzy
+#| msgid "Middle Button Action:"
+msgid "Middle Button Action"
+msgstr "가운데 버튼 동작:"
+
+#: src/Views/StylusView.vala:95
+#, fuzzy
+#| msgid "Tip Pressure Feel:"
+msgid "Tip Pressure Feel"
+msgstr "팁 압력 느낌:"
+
+#: src/Views/StylusView.vala:110
 msgid "Default"
 msgstr "기본"
 
-#: src/Views/StylusView.vala:62
+#: src/Views/StylusView.vala:111
 msgid "Middle Mouse Button Click"
 msgstr "마우스 가운데 버튼 클릭"
 
-#: src/Views/StylusView.vala:63
+#: src/Views/StylusView.vala:112
 msgid "Right Mouse Button Click"
 msgstr "마우스 오른쪽 버튼 클릭"
 
-#: src/Views/StylusView.vala:64
+#: src/Views/StylusView.vala:113
 msgid "Back"
 msgstr "뒤로"
 
-#: src/Views/StylusView.vala:65
+#: src/Views/StylusView.vala:114
 msgid "Forward"
 msgstr "앞으로"
 
-#: src/Views/StylusView.vala:123
+#: src/Views/StylusView.vala:139
 msgid "Soft"
 msgstr "부드러운"
 
-#: src/Views/StylusView.vala:124
+#: src/Views/StylusView.vala:140
 msgid "Firm"
 msgstr "단단한"
 
-#: src/Views/StylusView.vala:146
-msgid "Eraser Pressure Feel:"
-msgstr "지우개 압력 느낌:"
-
-#: src/Views/StylusView.vala:151
-msgid "Button Action:"
-msgstr "버튼 동작:"
-
-#: src/Views/StylusView.vala:154 src/Views/StylusView.vala:158
-msgid "Top Button Action:"
-msgstr "위 버튼 동작:"
-
-#: src/Views/StylusView.vala:155 src/Views/StylusView.vala:160
-msgid "Bottom Button Action:"
-msgstr "아래 버튼 동작:"
-
-#: src/Views/StylusView.vala:159
-msgid "Middle Button Action:"
-msgstr "가운데 버튼 동작:"
-
-#: src/Views/StylusView.vala:167
-msgid "Tip Pressure Feel:"
-msgstr "팁 압력 느낌:"
-
-#: src/Views/StylusView.vala:171
-msgid "Test Tablet Settings"
-msgstr "태블릿 설정 테스트"
-
-#: src/Views/TabletView.vala:33
+#: src/Views/TabletView.vala:52
 msgid "Tablet (absolute)"
 msgstr "태블릿 (absolute)"
 
-#: src/Views/TabletView.vala:34
+#: src/Views/TabletView.vala:53
 msgid "Touchpad (relative)"
 msgstr "터치패드 (relative)"
 
-#: src/Views/TabletView.vala:39
-msgid "Tracking mode:"
+#: src/Views/TabletView.vala:55
+#, fuzzy
+#| msgid "Tracking mode:"
+msgid "Tracking Mode"
 msgstr "트랙 모드:"
 
-#: src/Views/TabletView.vala:41
-msgid "Left-handed orientation:"
+#: src/Views/TabletView.vala:63
+#, fuzzy
+#| msgid "Left-handed orientation:"
+msgid "Left Hand Orientation"
 msgstr "왼손잡이 방향:"
 
-#: src/Plug.vala:48
+#: src/MainPage.vala:22 src/Plug.vala:21
 msgid "Wacom"
 msgstr "Wacom"
 
-#: src/Plug.vala:49
-msgid "Configure Wacom tablet"
-msgstr "Wacom 태블릿 설정"
-
-#: src/Plug.vala:71
-msgid "Stylus"
-msgstr "스타일러스"
-
-#: src/Plug.vala:72
-msgid "Tablet"
-msgstr "태블릿"
-
-#: src/Plug.vala:90
+#: src/MainPage.vala:30
 msgid "No Tablets Available"
 msgstr "사용 가능한 태블릿 없음"
 
-#: src/Plug.vala:91
+#: src/MainPage.vala:31
 msgid "Please ensure your tablet is connected and switched on"
 msgstr "태블릿이 연결되어 있고 켜져 있는지 확인해 주세요"
+
+#: src/MainPage.vala:34
+msgid "No Stylus Detected"
+msgstr "스타일러스가 감지되지 않음"
+
+#: src/MainPage.vala:35
+msgid "Move the stylus over this window"
+msgstr ""
+
+#: src/Plug.vala:22
+msgid "Configure Wacom tablet"
+msgstr "Wacom 태블릿 설정"
+
+#~ msgid "Please move your stylus close to the tablet"
+#~ msgstr "스타일러스를 태블릿 가까이로 이동해 주세요"
+
+#~ msgid "Stylus"
+#~ msgstr "스타일러스"
+
+#~ msgid "Tablet"
+#~ msgstr "태블릿"

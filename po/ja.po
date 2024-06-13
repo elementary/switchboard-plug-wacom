@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-24 19:12+0000\n"
+"POT-Creation-Date: 2024-06-10 20:07+0000\n"
 "PO-Revision-Date: 2024-02-19 12:12+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -19,107 +19,126 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.0.2\n"
 
-#: src/Views/StylusView.vala:44
-msgid "No Stylus Detected"
-msgstr "スタイラスが見つかりません"
-
 #: src/Views/StylusView.vala:45
-msgid "Please move your stylus close to the tablet"
-msgstr "お使いのスタイラスをタブレットに近づけてください"
+#, fuzzy
+#| msgid "Test Tablet Settings"
+msgid "Test Settings"
+msgstr "タブレット設定を確認"
 
-#: src/Views/StylusView.vala:61
+#: src/Views/StylusView.vala:76
+#, fuzzy
+#| msgid "Eraser Pressure Feel:"
+msgid "Eraser Pressure Feel"
+msgstr "消しゴムの感触:"
+
+#: src/Views/StylusView.vala:81
+#, fuzzy
+#| msgid "Button Action:"
+msgid "Button Action"
+msgstr "ボタンのアクション:"
+
+#: src/Views/StylusView.vala:84 src/Views/StylusView.vala:88
+#, fuzzy
+#| msgid "Top Button Action:"
+msgid "Top Button Action"
+msgstr "上のサンドスイッチのアクション:"
+
+#: src/Views/StylusView.vala:85 src/Views/StylusView.vala:90
+#, fuzzy
+#| msgid "Bottom Button Action:"
+msgid "Bottom Button Action"
+msgstr "下のサンドスイッチのアクション:"
+
+#: src/Views/StylusView.vala:89
+#, fuzzy
+#| msgid "Middle Button Action:"
+msgid "Middle Button Action"
+msgstr "中央のサンドスイッチのアクション:"
+
+#: src/Views/StylusView.vala:95
+#, fuzzy
+#| msgid "Tip Pressure Feel:"
+msgid "Tip Pressure Feel"
+msgstr "ペン先の感触:"
+
+#: src/Views/StylusView.vala:110
 msgid "Default"
 msgstr "デフォルト"
 
-#: src/Views/StylusView.vala:62
+#: src/Views/StylusView.vala:111
 msgid "Middle Mouse Button Click"
 msgstr "マウスの中クリック"
 
-#: src/Views/StylusView.vala:63
+#: src/Views/StylusView.vala:112
 msgid "Right Mouse Button Click"
 msgstr "マウスの右クリック"
 
-#: src/Views/StylusView.vala:64
+#: src/Views/StylusView.vala:113
 msgid "Back"
 msgstr "戻る"
 
-#: src/Views/StylusView.vala:65
+#: src/Views/StylusView.vala:114
 msgid "Forward"
 msgstr "進む"
 
-#: src/Views/StylusView.vala:123
+#: src/Views/StylusView.vala:139
 msgid "Soft"
 msgstr "柔らかい"
 
-#: src/Views/StylusView.vala:124
+#: src/Views/StylusView.vala:140
 msgid "Firm"
 msgstr "硬い"
 
-#: src/Views/StylusView.vala:146
-msgid "Eraser Pressure Feel:"
-msgstr "消しゴムの感触:"
-
-#: src/Views/StylusView.vala:151
-msgid "Button Action:"
-msgstr "ボタンのアクション:"
-
-#: src/Views/StylusView.vala:154 src/Views/StylusView.vala:158
-msgid "Top Button Action:"
-msgstr "上のサンドスイッチのアクション:"
-
-#: src/Views/StylusView.vala:155 src/Views/StylusView.vala:160
-msgid "Bottom Button Action:"
-msgstr "下のサンドスイッチのアクション:"
-
-#: src/Views/StylusView.vala:159
-msgid "Middle Button Action:"
-msgstr "中央のサンドスイッチのアクション:"
-
-#: src/Views/StylusView.vala:167
-msgid "Tip Pressure Feel:"
-msgstr "ペン先の感触:"
-
-#: src/Views/StylusView.vala:171
-msgid "Test Tablet Settings"
-msgstr "タブレット設定を確認"
-
-#: src/Views/TabletView.vala:33
+#: src/Views/TabletView.vala:52
 msgid "Tablet (absolute)"
 msgstr "タブレット (絶対座標)"
 
-#: src/Views/TabletView.vala:34
+#: src/Views/TabletView.vala:53
 msgid "Touchpad (relative)"
 msgstr "タッチパッド (相対座標)"
 
-#: src/Views/TabletView.vala:39
-msgid "Tracking mode:"
+#: src/Views/TabletView.vala:55
+#, fuzzy
+#| msgid "Tracking mode:"
+msgid "Tracking Mode"
 msgstr "検出モード:"
 
-#: src/Views/TabletView.vala:41
-msgid "Left-handed orientation:"
+#: src/Views/TabletView.vala:63
+#, fuzzy
+#| msgid "Left-handed orientation:"
+msgid "Left Hand Orientation"
 msgstr "左手用:"
 
-#: src/Plug.vala:48
+#: src/MainPage.vala:22 src/Plug.vala:21
 msgid "Wacom"
 msgstr "ワコム"
 
-#: src/Plug.vala:49
-msgid "Configure Wacom tablet"
-msgstr "ワコムタブレットを設定します"
-
-#: src/Plug.vala:71
-msgid "Stylus"
-msgstr "スタイラス"
-
-#: src/Plug.vala:72
-msgid "Tablet"
-msgstr "タブレット"
-
-#: src/Plug.vala:90
+#: src/MainPage.vala:30
 msgid "No Tablets Available"
 msgstr "利用可能なタブレットなし"
 
-#: src/Plug.vala:91
+#: src/MainPage.vala:31
 msgid "Please ensure your tablet is connected and switched on"
 msgstr ""
 "お使いのタブレットが接続され、電源がオンになっていることを確認してください"
+
+#: src/MainPage.vala:34
+msgid "No Stylus Detected"
+msgstr "スタイラスが見つかりません"
+
+#: src/MainPage.vala:35
+msgid "Move the stylus over this window"
+msgstr ""
+
+#: src/Plug.vala:22
+msgid "Configure Wacom tablet"
+msgstr "ワコムタブレットを設定します"
+
+#~ msgid "Please move your stylus close to the tablet"
+#~ msgstr "お使いのスタイラスをタブレットに近づけてください"
+
+#~ msgid "Stylus"
+#~ msgstr "スタイラス"
+
+#~ msgid "Tablet"
+#~ msgstr "タブレット"
