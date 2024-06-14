@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-10 20:07+0000\n"
-"PO-Revision-Date: 2024-06-14 11:56+0000\n"
+"PO-Revision-Date: 2024-06-14 12:18+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom-extra/ca/>\n"
@@ -37,11 +37,11 @@ msgstr "Un fort redisseny!"
 
 #: data/wacom.metainfo.xml.in:38
 msgid "See all settings in a single page"
-msgstr ""
+msgstr "Tots els paràmetres en una sola pàgina"
 
 #: data/wacom.metainfo.xml.in:39
 msgid "Show pen names"
-msgstr ""
+msgstr "Mostra els noms dels bolígrafs"
 
 #: data/wacom.metainfo.xml.in:40 data/wacom.metainfo.xml.in:49
 msgid "Updated translations"
