@@ -8,46 +8,36 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-10 20:07+0000\n"
-"PO-Revision-Date: 2019-09-12 19:23+0000\n"
+"PO-Revision-Date: 2024-06-14 11:56+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/plug-"
-"wacom/ca/>\n"
+"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
+"plug-wacom/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: src/Views/StylusView.vala:45
-#, fuzzy
-#| msgid "Test Tablet Settings"
 msgid "Test Settings"
-msgstr "Prova dels paràmetres de la tauleta"
+msgstr "Prova dels paràmetres"
 
 #: src/Views/StylusView.vala:76
-#, fuzzy
-#| msgid "Eraser Pressure Feel:"
 msgid "Eraser Pressure Feel"
-msgstr "Sensació de pressió de la goma d'esborrar:"
+msgstr "Sensació de la pressió de l'esborrador"
 
 #: src/Views/StylusView.vala:81
-#, fuzzy
-#| msgid "Button Action:"
 msgid "Button Action"
-msgstr "Acció del botó:"
+msgstr "Acció del botó"
 
 #: src/Views/StylusView.vala:84 src/Views/StylusView.vala:88
-#, fuzzy
-#| msgid "Top Button Action:"
 msgid "Top Button Action"
-msgstr "Acció del botó superior:"
+msgstr "Acció del botó superior"
 
 #: src/Views/StylusView.vala:85 src/Views/StylusView.vala:90
-#, fuzzy
-#| msgid "Bottom Button Action:"
 msgid "Bottom Button Action"
-msgstr "Acció del botó inferior:"
+msgstr "Acció del botó inferior"
 
 #: src/Views/StylusView.vala:89
 #, fuzzy
