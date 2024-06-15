@@ -8,62 +8,48 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-10 20:07+0000\n"
-"PO-Revision-Date: 2020-03-26 23:09+0000\n"
+"PO-Revision-Date: 2024-06-15 16:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/plug-"
-"wacom/he/>\n"
+"Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
+"plug-wacom/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: src/Views/StylusView.vala:45
-#, fuzzy
-#| msgid "Test Tablet Settings"
 msgid "Test Settings"
-msgstr "בדיקת הגדרות לוח"
+msgstr "בדיקת הגדרות"
 
 #: src/Views/StylusView.vala:76
-#, fuzzy
-#| msgid "Eraser Pressure Feel:"
 msgid "Eraser Pressure Feel"
-msgstr "תחושת עצמת מחיקה:"
+msgstr "תחושת לחץ מחיקה"
 
 #: src/Views/StylusView.vala:81
-#, fuzzy
-#| msgid "Button Action:"
 msgid "Button Action"
-msgstr "פעולת כפתור:"
+msgstr "פעולת כפתור"
 
 #: src/Views/StylusView.vala:84 src/Views/StylusView.vala:88
-#, fuzzy
-#| msgid "Top Button Action:"
 msgid "Top Button Action"
-msgstr "פעולת כפתור עליון:"
+msgstr "פעולת כפתור עליון"
 
 #: src/Views/StylusView.vala:85 src/Views/StylusView.vala:90
-#, fuzzy
-#| msgid "Bottom Button Action:"
 msgid "Bottom Button Action"
-msgstr "פעולת כפתור תחתון:"
+msgstr "פעולת כפתור תחתון"
 
 #: src/Views/StylusView.vala:89
-#, fuzzy
-#| msgid "Middle Button Action:"
 msgid "Middle Button Action"
-msgstr "פעולת כפתור אמצעי:"
+msgstr "פעולת כפתור אמצעי"
 
 #: src/Views/StylusView.vala:95
-#, fuzzy
-#| msgid "Tip Pressure Feel:"
 msgid "Tip Pressure Feel"
-msgstr "תחושת עצמת חוד:"
+msgstr "תחושת לחץ חוד"
 
 #: src/Views/StylusView.vala:110
 msgid "Default"
-msgstr "בררת מחדל"
+msgstr "ברירת מחדל"
 
 #: src/Views/StylusView.vala:111
 msgid "Middle Mouse Button Click"
@@ -98,16 +84,12 @@ msgid "Touchpad (relative)"
 msgstr "משטח מגע (יחסי)"
 
 #: src/Views/TabletView.vala:55
-#, fuzzy
-#| msgid "Tracking mode:"
 msgid "Tracking Mode"
-msgstr "מצב מעקב:"
+msgstr "מצב מעקב"
 
 #: src/Views/TabletView.vala:63
-#, fuzzy
-#| msgid "Left-handed orientation:"
 msgid "Left Hand Orientation"
-msgstr "כיווניות לשמאליים:"
+msgstr "כיווניות לשמאליים"
 
 #: src/MainPage.vala:22 src/Plug.vala:21
 msgid "Wacom"
@@ -127,7 +109,7 @@ msgstr "לא זוהה עט"
 
 #: src/MainPage.vala:35
 msgid "Move the stylus over this window"
-msgstr ""
+msgstr "העברת עט המגע על פני החלון הזה"
 
 #: src/Plug.vala:22
 msgid "Configure Wacom tablet"
