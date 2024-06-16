@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-10 20:07+0000\n"
-"PO-Revision-Date: 2024-06-15 16:16+0000\n"
+"PO-Revision-Date: 2024-06-16 21:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom-extra/he/>\n"
@@ -33,7 +33,7 @@ msgstr "elementary בע״מ."
 
 #: data/wacom.metainfo.xml.in:36
 msgid "A Big Redesign!"
-msgstr ""
+msgstr "עיצוב מחדש לחלוטין!"
 
 #: data/wacom.metainfo.xml.in:38
 msgid "See all settings in a single page"
@@ -41,7 +41,7 @@ msgstr ""
 
 #: data/wacom.metainfo.xml.in:39
 msgid "Show pen names"
-msgstr ""
+msgstr "הצגת שמות העטים"
 
 #: data/wacom.metainfo.xml.in:40 data/wacom.metainfo.xml.in:49
 msgid "Updated translations"
