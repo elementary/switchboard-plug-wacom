@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-24 19:12+0000\n"
+"POT-Creation-Date: 2024-06-10 20:07+0000\n"
 "PO-Revision-Date: 2019-09-05 19:23+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Amharic <https://l10n.elementary.io/projects/switchboard/plug-"
@@ -19,106 +19,98 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.7.1\n"
 
-#: src/Views/StylusView.vala:44
-msgid "No Stylus Detected"
-msgstr ""
-
 #: src/Views/StylusView.vala:45
-msgid "Please move your stylus close to the tablet"
+msgid "Test Settings"
 msgstr ""
 
-#: src/Views/StylusView.vala:61
+#: src/Views/StylusView.vala:76
+msgid "Eraser Pressure Feel"
+msgstr ""
+
+#: src/Views/StylusView.vala:81
+msgid "Button Action"
+msgstr ""
+
+#: src/Views/StylusView.vala:84 src/Views/StylusView.vala:88
+msgid "Top Button Action"
+msgstr ""
+
+#: src/Views/StylusView.vala:85 src/Views/StylusView.vala:90
+msgid "Bottom Button Action"
+msgstr ""
+
+#: src/Views/StylusView.vala:89
+msgid "Middle Button Action"
+msgstr ""
+
+#: src/Views/StylusView.vala:95
+msgid "Tip Pressure Feel"
+msgstr ""
+
+#: src/Views/StylusView.vala:110
 msgid "Default"
 msgstr "ነባር"
 
-#: src/Views/StylusView.vala:62
+#: src/Views/StylusView.vala:111
 msgid "Middle Mouse Button Click"
 msgstr ""
 
-#: src/Views/StylusView.vala:63
+#: src/Views/StylusView.vala:112
 msgid "Right Mouse Button Click"
 msgstr ""
 
-#: src/Views/StylusView.vala:64
+#: src/Views/StylusView.vala:113
 msgid "Back"
 msgstr ""
 
-#: src/Views/StylusView.vala:65
+#: src/Views/StylusView.vala:114
 msgid "Forward"
 msgstr ""
 
-#: src/Views/StylusView.vala:123
+#: src/Views/StylusView.vala:139
 msgid "Soft"
 msgstr ""
 
-#: src/Views/StylusView.vala:124
+#: src/Views/StylusView.vala:140
 msgid "Firm"
 msgstr ""
 
-#: src/Views/StylusView.vala:146
-msgid "Eraser Pressure Feel:"
-msgstr ""
-
-#: src/Views/StylusView.vala:151
-msgid "Button Action:"
-msgstr ""
-
-#: src/Views/StylusView.vala:154 src/Views/StylusView.vala:158
-msgid "Top Button Action:"
-msgstr ""
-
-#: src/Views/StylusView.vala:155 src/Views/StylusView.vala:160
-msgid "Bottom Button Action:"
-msgstr ""
-
-#: src/Views/StylusView.vala:159
-msgid "Middle Button Action:"
-msgstr ""
-
-#: src/Views/StylusView.vala:167
-msgid "Tip Pressure Feel:"
-msgstr ""
-
-#: src/Views/StylusView.vala:171
-msgid "Test Tablet Settings"
-msgstr ""
-
-#: src/Views/TabletView.vala:33
+#: src/Views/TabletView.vala:52
 msgid "Tablet (absolute)"
 msgstr ""
 
-#: src/Views/TabletView.vala:34
+#: src/Views/TabletView.vala:53
 msgid "Touchpad (relative)"
 msgstr ""
 
-#: src/Views/TabletView.vala:39
-msgid "Tracking mode:"
+#: src/Views/TabletView.vala:55
+msgid "Tracking Mode"
 msgstr ""
 
-#: src/Views/TabletView.vala:41
-msgid "Left-handed orientation:"
+#: src/Views/TabletView.vala:63
+msgid "Left Hand Orientation"
 msgstr ""
 
-#: src/Plug.vala:48
+#: src/MainPage.vala:22 src/Plug.vala:21
 msgid "Wacom"
 msgstr ""
 
-#: src/Plug.vala:49
-msgid "Configure Wacom tablet"
-msgstr ""
-
-#: src/Plug.vala:71
-msgid "Stylus"
-msgstr ""
-
-#: src/Plug.vala:72
-msgid "Tablet"
-msgstr ""
-
-#: src/Plug.vala:90
+#: src/MainPage.vala:30
 msgid "No Tablets Available"
 msgstr ""
 
-#: src/Plug.vala:91
+#: src/MainPage.vala:31
 msgid "Please ensure your tablet is connected and switched on"
+msgstr ""
+
+#: src/MainPage.vala:34
+msgid "No Stylus Detected"
+msgstr ""
+
+#: src/MainPage.vala:35
+msgid "Move the stylus over this window"
+msgstr ""
+
+#: src/Plug.vala:22
+msgid "Configure Wacom tablet"
 msgstr ""

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-24 19:12+0000\n"
-"PO-Revision-Date: 2024-02-11 21:05+0000\n"
+"POT-Creation-Date: 2024-06-10 20:07+0000\n"
+"PO-Revision-Date: 2024-06-13 22:29+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom-extra/ja/>\n"
@@ -17,24 +17,40 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5.5\n"
 
-#: data/io.elementary.switchboard.wacom.appdata.xml.in:5
+#: data/wacom.metainfo.xml.in:10
 msgid "Wacom Settings"
 msgstr "ワコムの設定"
 
-#: data/io.elementary.switchboard.wacom.appdata.xml.in:6
+#: data/wacom.metainfo.xml.in:11
 msgid "Configure Wacom tablets"
 msgstr "ワコム社製のタブレットを設定します"
 
-#: data/io.elementary.switchboard.wacom.appdata.xml.in:12
-msgid "Minor updates:"
-msgstr "そのほかのアップデート:"
+#: data/wacom.metainfo.xml.in:28
+msgid "elementary, Inc."
+msgstr "elementary, Inc."
 
-#: data/io.elementary.switchboard.wacom.appdata.xml.in:14
+#: data/wacom.metainfo.xml.in:36
+msgid "A Big Redesign!"
+msgstr "大幅なデザイン変更!"
+
+#: data/wacom.metainfo.xml.in:38
+msgid "See all settings in a single page"
+msgstr "すべての設定項目をひとつのページで確認できるように変更"
+
+#: data/wacom.metainfo.xml.in:39
+msgid "Show pen names"
+msgstr "ペンの名前を表示する機能を追加"
+
+#: data/wacom.metainfo.xml.in:40 data/wacom.metainfo.xml.in:49
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
-#: data/io.elementary.switchboard.wacom.appdata.xml.in:20
+#: data/wacom.metainfo.xml.in:47
+msgid "Minor updates:"
+msgstr "そのほかのアップデート:"
+
+#: data/wacom.metainfo.xml.in:56
 msgid "Initial Release!"
 msgstr "初リリース!"

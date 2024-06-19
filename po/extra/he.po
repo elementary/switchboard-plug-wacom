@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-24 19:12+0000\n"
-"PO-Revision-Date: 2022-05-31 18:30+0000\n"
+"POT-Creation-Date: 2024-06-10 20:07+0000\n"
+"PO-Revision-Date: 2024-06-16 21:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom-extra/he/>\n"
@@ -17,24 +17,40 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.5.5\n"
 
-#: data/io.elementary.switchboard.wacom.appdata.xml.in:5
+#: data/wacom.metainfo.xml.in:10
 msgid "Wacom Settings"
 msgstr "הגדרות לוח ציור"
 
-#: data/io.elementary.switchboard.wacom.appdata.xml.in:6
+#: data/wacom.metainfo.xml.in:11
 msgid "Configure Wacom tablets"
 msgstr "הגדרת לוחות ציור"
 
-#: data/io.elementary.switchboard.wacom.appdata.xml.in:12
-msgid "Minor updates:"
-msgstr "עדכונים משניים:"
+#: data/wacom.metainfo.xml.in:28
+msgid "elementary, Inc."
+msgstr "elementary בע״מ."
 
-#: data/io.elementary.switchboard.wacom.appdata.xml.in:14
+#: data/wacom.metainfo.xml.in:36
+msgid "A Big Redesign!"
+msgstr "עיצוב מחדש לחלוטין!"
+
+#: data/wacom.metainfo.xml.in:38
+msgid "See all settings in a single page"
+msgstr ""
+
+#: data/wacom.metainfo.xml.in:39
+msgid "Show pen names"
+msgstr "הצגת שמות העטים"
+
+#: data/wacom.metainfo.xml.in:40 data/wacom.metainfo.xml.in:49
 msgid "Updated translations"
 msgstr "תרגומים עודכנו"
 
-#: data/io.elementary.switchboard.wacom.appdata.xml.in:20
+#: data/wacom.metainfo.xml.in:47
+msgid "Minor updates:"
+msgstr "עדכונים משניים:"
+
+#: data/wacom.metainfo.xml.in:56
 msgid "Initial Release!"
 msgstr "מהדורה ראשונית!"
