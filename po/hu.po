@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-10 20:07+0000\n"
-"PO-Revision-Date: 2024-03-18 23:13+0000\n"
+"PO-Revision-Date: 2024-06-19 02:57+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom/hu/>\n"
@@ -17,49 +17,35 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: src/Views/StylusView.vala:45
-#, fuzzy
-#| msgid "Test Tablet Settings"
 msgid "Test Settings"
-msgstr "Táblagép beállításainak tesztelése"
+msgstr "Beállítások tesztelése"
 
 #: src/Views/StylusView.vala:76
-#, fuzzy
-#| msgid "Eraser Pressure Feel:"
 msgid "Eraser Pressure Feel"
-msgstr "A törlés nyomásának érzése:"
+msgstr "A törlés nyomásának érzése"
 
 #: src/Views/StylusView.vala:81
-#, fuzzy
-#| msgid "Button Action:"
 msgid "Button Action"
-msgstr "A gomb viselkedése:"
+msgstr "A gomb viselkedése"
 
 #: src/Views/StylusView.vala:84 src/Views/StylusView.vala:88
-#, fuzzy
-#| msgid "Top Button Action:"
 msgid "Top Button Action"
-msgstr "A felső gomb viselkedése:"
+msgstr "A felső gomb viselkedése"
 
 #: src/Views/StylusView.vala:85 src/Views/StylusView.vala:90
-#, fuzzy
-#| msgid "Bottom Button Action:"
 msgid "Bottom Button Action"
-msgstr "Az alsó gomb viselkedése:"
+msgstr "Az alsó gomb viselkedése"
 
 #: src/Views/StylusView.vala:89
-#, fuzzy
-#| msgid "Middle Button Action:"
 msgid "Middle Button Action"
-msgstr "A középső gomb viselkedése:"
+msgstr "A középső gomb viselkedése"
 
 #: src/Views/StylusView.vala:95
-#, fuzzy
-#| msgid "Tip Pressure Feel:"
 msgid "Tip Pressure Feel"
-msgstr "A hegy nyomásának érzése:"
+msgstr "A hegy nyomásának érzése"
 
 #: src/Views/StylusView.vala:110
 msgid "Default"
@@ -98,16 +84,12 @@ msgid "Touchpad (relative)"
 msgstr "Touchpad (relatív)"
 
 #: src/Views/TabletView.vala:55
-#, fuzzy
-#| msgid "Tracking mode:"
 msgid "Tracking Mode"
-msgstr "Követési mód:"
+msgstr "Követési mód"
 
 #: src/Views/TabletView.vala:63
-#, fuzzy
-#| msgid "Left-handed orientation:"
 msgid "Left Hand Orientation"
-msgstr "Balkezes elrendezés:"
+msgstr "Balkezes elrendezés"
 
 #: src/MainPage.vala:22 src/Plug.vala:21
 msgid "Wacom"
@@ -128,7 +110,7 @@ msgstr "Nem található ceruza"
 
 #: src/MainPage.vala:35
 msgid "Move the stylus over this window"
-msgstr ""
+msgstr "Mozgassa a tollat az ablak fölé"
 
 #: src/Plug.vala:22
 msgid "Configure Wacom tablet"
