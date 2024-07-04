@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-10 20:07+0000\n"
-"PO-Revision-Date: 2023-03-13 22:25+0000\n"
+"PO-Revision-Date: 2024-07-05 21:16+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom-extra/ka/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/wacom.metainfo.xml.in:10
 msgid "Wacom Settings"
@@ -29,19 +29,19 @@ msgstr "Wacom-ის ტაბლეტების მორგება"
 
 #: data/wacom.metainfo.xml.in:28
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/wacom.metainfo.xml.in:36
 msgid "A Big Redesign!"
-msgstr ""
+msgstr "დიდი რედიზაინი!"
 
 #: data/wacom.metainfo.xml.in:38
 msgid "See all settings in a single page"
-msgstr ""
+msgstr "იხილეთ ყველა პარამეტრი ერთ გვერდზე"
 
 #: data/wacom.metainfo.xml.in:39
 msgid "Show pen names"
-msgstr ""
+msgstr "კალმების სახელის ჩვენება"
 
 #: data/wacom.metainfo.xml.in:40 data/wacom.metainfo.xml.in:49
 msgid "Updated translations"
