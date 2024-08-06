@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-10 20:07+0000\n"
-"PO-Revision-Date: 2021-08-23 19:38+0000\n"
-"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
-"Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/plug-"
-"wacom-extra/fi/>\n"
+"PO-Revision-Date: 2024-08-07 18:16+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
+"plug-wacom-extra/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/wacom.metainfo.xml.in:10
 msgid "Wacom Settings"
@@ -29,7 +29,7 @@ msgstr "Määritä Wacom-piirtopöydät"
 
 #: data/wacom.metainfo.xml.in:28
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/wacom.metainfo.xml.in:36
 msgid "A Big Redesign!"
@@ -45,11 +45,11 @@ msgstr ""
 
 #: data/wacom.metainfo.xml.in:40 data/wacom.metainfo.xml.in:49
 msgid "Updated translations"
-msgstr ""
+msgstr "Päivityksiä kielikäännöksiin"
 
 #: data/wacom.metainfo.xml.in:47
 msgid "Minor updates:"
-msgstr ""
+msgstr "Pienet päivitykset:"
 
 #: data/wacom.metainfo.xml.in:56
 msgid "Initial Release!"
