@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-10 20:07+0000\n"
-"PO-Revision-Date: 2022-01-10 21:58+0000\n"
-"Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
-"Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/plug-"
-"wacom-extra/cs/>\n"
+"PO-Revision-Date: 2024-08-07 18:16+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
+"plug-wacom-extra/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/wacom.metainfo.xml.in:10
 msgid "Wacom Settings"
@@ -29,7 +29,7 @@ msgstr "Nastavit tablety Wacom"
 
 #: data/wacom.metainfo.xml.in:28
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/wacom.metainfo.xml.in:36
 msgid "A Big Redesign!"
@@ -45,11 +45,11 @@ msgstr ""
 
 #: data/wacom.metainfo.xml.in:40 data/wacom.metainfo.xml.in:49
 msgid "Updated translations"
-msgstr ""
+msgstr "Aktualizovány překlady"
 
 #: data/wacom.metainfo.xml.in:47
 msgid "Minor updates:"
-msgstr ""
+msgstr "Drobné aktualizace:"
 
 #: data/wacom.metainfo.xml.in:56
 msgid "Initial Release!"
