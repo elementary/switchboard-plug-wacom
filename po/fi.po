@@ -8,58 +8,44 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-10 20:07+0000\n"
-"PO-Revision-Date: 2021-06-27 08:22+0000\n"
+"PO-Revision-Date: 2024-12-02 14:16+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
-"Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/plug-"
-"wacom/fi/>\n"
+"Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
+"plug-wacom/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: src/Views/StylusView.vala:45
-#, fuzzy
-#| msgid "Test Tablet Settings"
 msgid "Test Settings"
-msgstr "Testaa piirtopöydän asetuksia"
+msgstr "Testaa asetuksia"
 
 #: src/Views/StylusView.vala:76
-#, fuzzy
-#| msgid "Eraser Pressure Feel:"
 msgid "Eraser Pressure Feel"
-msgstr "Pyyhekumin paineen tunne:"
+msgstr "Pyyhekumin paineen tunne"
 
 #: src/Views/StylusView.vala:81
-#, fuzzy
-#| msgid "Button Action:"
 msgid "Button Action"
-msgstr "Painiketoiminto:"
+msgstr "Painiketoiminto"
 
 #: src/Views/StylusView.vala:84 src/Views/StylusView.vala:88
-#, fuzzy
-#| msgid "Top Button Action:"
 msgid "Top Button Action"
-msgstr "Yläpainikkeen toiminto:"
+msgstr "Yläpainikkeen toiminto"
 
 #: src/Views/StylusView.vala:85 src/Views/StylusView.vala:90
-#, fuzzy
-#| msgid "Bottom Button Action:"
 msgid "Bottom Button Action"
-msgstr "Alapainikkeen toiminto:"
+msgstr "Alapainikkeen toiminto"
 
 #: src/Views/StylusView.vala:89
-#, fuzzy
-#| msgid "Middle Button Action:"
 msgid "Middle Button Action"
-msgstr "Keskipainikkeen toiminto:"
+msgstr "Keskipainikkeen toiminto"
 
 #: src/Views/StylusView.vala:95
-#, fuzzy
-#| msgid "Tip Pressure Feel:"
 msgid "Tip Pressure Feel"
-msgstr "Kärjen paineen tunne:"
+msgstr "Kärjen paineen tunne"
 
 #: src/Views/StylusView.vala:110
 msgid "Default"
@@ -98,16 +84,12 @@ msgid "Touchpad (relative)"
 msgstr "Kosketuslevy (suhteellinen)"
 
 #: src/Views/TabletView.vala:55
-#, fuzzy
-#| msgid "Tracking mode:"
 msgid "Tracking Mode"
-msgstr "Seurantatila:"
+msgstr "Seurantatila"
 
 #: src/Views/TabletView.vala:63
-#, fuzzy
-#| msgid "Left-handed orientation:"
 msgid "Left Hand Orientation"
-msgstr "Vasenkätinen suuntaus:"
+msgstr "Vasenkätinen suuntaus"
 
 #: src/MainPage.vala:22 src/Plug.vala:21
 msgid "Wacom"
@@ -127,7 +109,7 @@ msgstr "Stylusta ei havaittu"
 
 #: src/MainPage.vala:35
 msgid "Move the stylus over this window"
-msgstr ""
+msgstr "Siirrä kynä tämän ikkunan yläpuolelle"
 
 #: src/Plug.vala:22
 msgid "Configure Wacom tablet"
