@@ -32,10 +32,8 @@ public class Wacom.StylusView : Gtk.Box {
     }
 
     public bool is_stylus_supported (Backend.WacomTool wacom_tool) {
-        debug ("%d", (int) wacom_tool.id);
         unowned var stylus = wacom_db.get_stylus_for_id ((int) wacom_tool.id);
-        if (stylus == null) return false;
-        return true;
+        return stylus != null;
     }
 
     public void set_device (Backend.WacomTool wacom_tool) {
