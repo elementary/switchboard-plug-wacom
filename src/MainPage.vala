@@ -88,7 +88,14 @@ public class Wacom.MainPage : Switchboard.SettingsPage {
             return;
         }
 
-        var tools = tool_map.list_tools (d);
+        Gee.ArrayList<Backend.WacomTool> tools;
+        try {
+            tools = tool_map.list_tools (d);
+        } catch (WacomException e) {
+            warning ("Failed to list tools: %s", e.message);
+            return;
+        }
+
         if (tools.size > 0) {
             stylus_view.set_device (tools[0]);
             stylus_stack.visible_child = stylus_view;

@@ -225,7 +225,7 @@ public class Wacom.Backend.WacomToolMap : GLib.Object {
         }
     }
 
-    public Gee.ArrayList<WacomTool> list_tools (Backend.Device device) {
+    public Gee.ArrayList<WacomTool> list_tools (Backend.Device device) throws WacomException {
         var styli = new Gee.ArrayList<WacomTool> ();
 
         var key = "%s:%s".printf (device.vendor_id, device.product_id);

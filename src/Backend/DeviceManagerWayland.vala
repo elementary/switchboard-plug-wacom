@@ -21,14 +21,17 @@ public class Wacom.Backend.DeviceManagerWayland : DeviceManager {
     private Gee.HashMap<GUdev.Device, Device>? devices = null;
     private GUdev.Client? client = null;
 
-    // Keep in same order as types in Device.vala
-    const string[] UDEV_IDS = {
-        "ID_INPUT_MOUSE",
-        "ID_INPUT_KEYBOARD",
-        "ID_INPUT_TOUCHPAD",
-        "ID_INPUT_TABLET",
-        "ID_INPUT_TOUCHSCREEN",
-        "ID_INPUT_TABLET_PAD",
+    private struct UdevIDTable {
+        string udev_id;
+        Device.DeviceType device_type;
+    }
+    const UdevIDTable[] UDEV_ID_TABLE = {
+        { "ID_INPUT_MOUSE", Device.DeviceType.MOUSE },
+        { "ID_INPUT_KEYBOARD", Device.DeviceType.KEYBOARD },
+        { "ID_INPUT_TOUCHPAD", Device.DeviceType.TOUCHPAD },
+        { "ID_INPUT_TABLET", Device.DeviceType.TABLET },
+        { "ID_INPUT_TOUCHSCREEN", Device.DeviceType.TOUCHSCREEN },
+        { "ID_INPUT_TABLET_PAD", Device.DeviceType.PAD },
     };
 
     public DeviceManagerWayland () {
@@ -95,9 +98,9 @@ public class Wacom.Backend.DeviceManagerWayland : DeviceManager {
 
     private static Device.DeviceType get_udev_device_type (GUdev.Device device) {
         Device.DeviceType type = 0;
-        for (int i = 0; i < UDEV_IDS.length; i++) {
-            if (device.get_property_as_boolean (UDEV_IDS[i])) {
-                type |= (1 << i);
+        for (int i = 0; i < UDEV_ID_TABLE.length; i++) {
+            if (device.get_property_as_boolean (UDEV_ID_TABLE[i].udev_id)) {
+                type |= UDEV_ID_TABLE[i].device_type;
             }
         }
 
@@ -145,11 +148,12 @@ public class Wacom.Backend.DeviceManagerWayland : DeviceManager {
     }
 
     public override Device? lookup_gdk_device (Gdk.Device device) {
-        if (!(device is Gdk.Wayland.Device)) {
+        Gdk.Wayland.Device? wayland_device = (device as Gdk.Wayland.Device);
+        if (wayland_device == null) {
             return null;
         }
 
-        var node_path = (device as Gdk.Wayland.Device).get_node_path ();
+        var node_path = wayland_device.get_node_path ();
         if (node_path == null) {
             return null;
         }
