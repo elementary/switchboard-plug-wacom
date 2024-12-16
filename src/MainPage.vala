@@ -92,7 +92,7 @@ public class Wacom.MainPage : Switchboard.SettingsPage {
         try {
             tools = tool_map.list_tools (d);
         } catch (WacomException e) {
-            warning (e.message);
+            warning ("Failed to list tools: %s", e.message);
             return;
         }
 
