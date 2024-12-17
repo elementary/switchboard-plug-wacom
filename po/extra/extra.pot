@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-10 20:07+0000\n"
+"POT-Creation-Date: 2024-12-17 19:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,25 +30,30 @@ msgid "elementary, Inc."
 msgstr ""
 
 #: data/wacom.metainfo.xml.in:36
-msgid "A Big Redesign!"
+msgid "Updates:"
 msgstr ""
 
-#: data/wacom.metainfo.xml.in:38
-msgid "See all settings in a single page"
-msgstr ""
-
-#: data/wacom.metainfo.xml.in:39
-msgid "Show pen names"
-msgstr ""
-
-#: data/wacom.metainfo.xml.in:40 data/wacom.metainfo.xml.in:49
+#: data/wacom.metainfo.xml.in:38 data/wacom.metainfo.xml.in:52
+#: data/wacom.metainfo.xml.in:61
 msgid "Updated translations"
 msgstr ""
 
-#: data/wacom.metainfo.xml.in:47
+#: data/wacom.metainfo.xml.in:48
+msgid "A Big Redesign!"
+msgstr ""
+
+#: data/wacom.metainfo.xml.in:50
+msgid "See all settings in a single page"
+msgstr ""
+
+#: data/wacom.metainfo.xml.in:51
+msgid "Show pen names"
+msgstr ""
+
+#: data/wacom.metainfo.xml.in:59
 msgid "Minor updates:"
 msgstr ""
 
-#: data/wacom.metainfo.xml.in:56
+#: data/wacom.metainfo.xml.in:68
 msgid "Initial Release!"
 msgstr ""
