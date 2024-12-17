@@ -96,7 +96,7 @@ public class Wacom.MainPage : Switchboard.SettingsPage {
             return;
         }
 
-        if (tools.size > 0) {
+        if (tools.size > 0 && stylus_view.is_stylus_supported (tools[0])) {
             stylus_view.set_device (tools[0]);
             stylus_stack.visible_child = stylus_view;
         }
@@ -131,8 +131,10 @@ public class Wacom.MainPage : Switchboard.SettingsPage {
         }
 
         if (wacom_tool != last_stylus) {
-            stylus_view.set_device (wacom_tool);
-            stylus_stack.visible_child = stylus_view;
+            if (stylus_view.is_stylus_supported (wacom_tool)) {
+                stylus_view.set_device (wacom_tool);
+                stylus_stack.visible_child = stylus_view;
+            }
         }
 
         last_stylus = wacom_tool;

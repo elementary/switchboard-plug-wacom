@@ -31,6 +31,11 @@ public class Wacom.StylusView : Gtk.Box {
         append (stylus_box);
     }
 
+    public bool is_stylus_supported (Backend.WacomTool wacom_tool) {
+        unowned var stylus = wacom_db.get_stylus_for_id ((int) wacom_tool.id);
+        return stylus != null;
+    }
+
     public void set_device (Backend.WacomTool wacom_tool) {
         while (stylus_box.get_first_child () != null) {
             stylus_box.remove (stylus_box.get_first_child ());
