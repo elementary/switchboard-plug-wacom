@@ -33,10 +33,11 @@
   <releases>
     <release version="8.0.1" date="2024-12-17" urgency="medium">
       <description>
-        <ul>
-          <li>A fix for a crush that occured when stylus is not detected by libwacom</li>
-        </ul>
+        <p>Updated translations</p>
       </description>
+      <issues>
+        <issue url="https://github.com/elementary/switchboard-plug-wacom/issues/69">A fix for a crush of Settings that occured when stylus is not detected by libwacom.</issue>
+      </issues>
     </release>
 
     <release version="8.0.0" date="2024-07-02" urgency="medium">
