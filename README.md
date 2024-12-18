@@ -26,3 +26,9 @@ Run `meson` to configure the build environment and then `ninja` to build
 To install, use `ninja install`
 
     ninja install
+
+To test Wacom plug without a tablet or pen use [hid-replay](https://github.com/hidutils/hid-replay/). The `hid-replay` repository releases page contains prebuilt binaries.
+Remember to also clone [wacom-recordings](https://github.com/whot/wacom-recordings).
+```
+sudo hid-replay wacom-recordings/Wacom\ Intuos\ Pro\ M/pen.pen-light-horizontal.hid
+```
