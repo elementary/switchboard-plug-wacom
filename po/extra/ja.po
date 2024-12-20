@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-17 19:11+0000\n"
-"PO-Revision-Date: 2024-12-12 05:36+0000\n"
+"PO-Revision-Date: 2024-12-21 09:16+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom-extra/ja/>\n"
@@ -32,10 +32,8 @@ msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
 #: data/wacom.metainfo.xml.in:36
-#, fuzzy
-#| msgid "Minor updates:"
 msgid "Updates:"
-msgstr "マイナーアップデート:"
+msgstr "アップデート:"
 
 #: data/wacom.metainfo.xml.in:38 data/wacom.metainfo.xml.in:52
 #: data/wacom.metainfo.xml.in:61
