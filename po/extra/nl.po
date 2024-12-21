@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-17 19:11+0000\n"
-"PO-Revision-Date: 2024-12-20 08:28+0000\n"
+"PO-Revision-Date: 2024-12-22 12:16+0000\n"
 "Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
-"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/plug-"
-"wacom-extra/nl/>\n"
+"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
+"plug-wacom-extra/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,10 +32,8 @@ msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
 #: data/wacom.metainfo.xml.in:36
-#, fuzzy
-#| msgid "Minor updates:"
 msgid "Updates:"
-msgstr "Kleine updates:"
+msgstr "Updates:"
 
 #: data/wacom.metainfo.xml.in:38 data/wacom.metainfo.xml.in:52
 #: data/wacom.metainfo.xml.in:61
@@ -48,11 +46,11 @@ msgstr "Een groots nieuw ontwerp!"
 
 #: data/wacom.metainfo.xml.in:50
 msgid "See all settings in a single page"
-msgstr ""
+msgstr "Bekijk alle instellingen op een enkele pagina"
 
 #: data/wacom.metainfo.xml.in:51
 msgid "Show pen names"
-msgstr ""
+msgstr "Geef pennamen weer"
 
 #: data/wacom.metainfo.xml.in:59
 msgid "Minor updates:"
