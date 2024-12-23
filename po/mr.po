@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-10 20:07+0000\n"
+"POT-Creation-Date: 2024-12-17 19:11+0000\n"
 "PO-Revision-Date: 2019-09-22 19:23+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/plug-"
@@ -19,73 +19,73 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.7.1\n"
 
-#: src/Views/StylusView.vala:45
+#: src/Views/StylusView.vala:50
 #, fuzzy
 #| msgid "Test Tablet Settings"
 msgid "Test Settings"
 msgstr "टॅब्लेट सेटिंग्ज चाचणी"
 
-#: src/Views/StylusView.vala:76
+#: src/Views/StylusView.vala:81
 #, fuzzy
 #| msgid "Eraser Pressure Feel:"
 msgid "Eraser Pressure Feel"
 msgstr "इरेझर दबाव:"
 
-#: src/Views/StylusView.vala:81
+#: src/Views/StylusView.vala:86
 #, fuzzy
 #| msgid "Button Action:"
 msgid "Button Action"
 msgstr "बटण क्रिया:"
 
-#: src/Views/StylusView.vala:84 src/Views/StylusView.vala:88
+#: src/Views/StylusView.vala:89 src/Views/StylusView.vala:93
 #, fuzzy
 #| msgid "Top Button Action:"
 msgid "Top Button Action"
 msgstr "शीर्ष बटण क्रिया:"
 
-#: src/Views/StylusView.vala:85 src/Views/StylusView.vala:90
+#: src/Views/StylusView.vala:90 src/Views/StylusView.vala:95
 #, fuzzy
 #| msgid "Bottom Button Action:"
 msgid "Bottom Button Action"
 msgstr "तळाच्या बटणाची क्रिया:"
 
-#: src/Views/StylusView.vala:89
+#: src/Views/StylusView.vala:94
 #, fuzzy
 #| msgid "Middle Button Action:"
 msgid "Middle Button Action"
 msgstr "मध्यम बटण क्रिया:"
 
-#: src/Views/StylusView.vala:95
+#: src/Views/StylusView.vala:100
 #, fuzzy
 #| msgid "Tip Pressure Feel:"
 msgid "Tip Pressure Feel"
 msgstr "टीप दबाव भावना:"
 
-#: src/Views/StylusView.vala:110
+#: src/Views/StylusView.vala:115
 msgid "Default"
 msgstr "डिफॉल्ट"
 
-#: src/Views/StylusView.vala:111
+#: src/Views/StylusView.vala:116
 msgid "Middle Mouse Button Click"
 msgstr "माउस माध्यम बटण क्लिक करा"
 
-#: src/Views/StylusView.vala:112
+#: src/Views/StylusView.vala:117
 msgid "Right Mouse Button Click"
 msgstr "राइट माउस बटण क्लिक"
 
-#: src/Views/StylusView.vala:113
+#: src/Views/StylusView.vala:118
 msgid "Back"
 msgstr "मागे"
 
-#: src/Views/StylusView.vala:114
+#: src/Views/StylusView.vala:119
 msgid "Forward"
 msgstr "पुढे पाठवा"
 
-#: src/Views/StylusView.vala:139
+#: src/Views/StylusView.vala:144
 msgid "Soft"
 msgstr "सॉफ्ट"
 
-#: src/Views/StylusView.vala:140
+#: src/Views/StylusView.vala:145
 msgid "Firm"
 msgstr "फर्म"
 

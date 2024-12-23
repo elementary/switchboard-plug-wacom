@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-10 20:07+0000\n"
+"POT-Creation-Date: 2024-12-17 19:11+0000\n"
 "PO-Revision-Date: 2019-07-13 17:12+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,59 +17,59 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n==2 ? 1 : 2;\n"
 
-#: src/Views/StylusView.vala:45
+#: src/Views/StylusView.vala:50
 msgid "Test Settings"
 msgstr ""
 
-#: src/Views/StylusView.vala:76
+#: src/Views/StylusView.vala:81
 msgid "Eraser Pressure Feel"
 msgstr ""
 
-#: src/Views/StylusView.vala:81
+#: src/Views/StylusView.vala:86
 msgid "Button Action"
 msgstr ""
 
-#: src/Views/StylusView.vala:84 src/Views/StylusView.vala:88
+#: src/Views/StylusView.vala:89 src/Views/StylusView.vala:93
 msgid "Top Button Action"
 msgstr ""
 
-#: src/Views/StylusView.vala:85 src/Views/StylusView.vala:90
+#: src/Views/StylusView.vala:90 src/Views/StylusView.vala:95
 msgid "Bottom Button Action"
 msgstr ""
 
-#: src/Views/StylusView.vala:89
+#: src/Views/StylusView.vala:94
 msgid "Middle Button Action"
 msgstr ""
 
-#: src/Views/StylusView.vala:95
+#: src/Views/StylusView.vala:100
 msgid "Tip Pressure Feel"
 msgstr ""
 
-#: src/Views/StylusView.vala:110
+#: src/Views/StylusView.vala:115
 msgid "Default"
 msgstr ""
 
-#: src/Views/StylusView.vala:111
+#: src/Views/StylusView.vala:116
 msgid "Middle Mouse Button Click"
 msgstr ""
 
-#: src/Views/StylusView.vala:112
+#: src/Views/StylusView.vala:117
 msgid "Right Mouse Button Click"
 msgstr ""
 
-#: src/Views/StylusView.vala:113
+#: src/Views/StylusView.vala:118
 msgid "Back"
 msgstr ""
 
-#: src/Views/StylusView.vala:114
+#: src/Views/StylusView.vala:119
 msgid "Forward"
 msgstr ""
 
-#: src/Views/StylusView.vala:139
+#: src/Views/StylusView.vala:144
 msgid "Soft"
 msgstr ""
 
-#: src/Views/StylusView.vala:140
+#: src/Views/StylusView.vala:145
 msgid "Firm"
 msgstr ""
 

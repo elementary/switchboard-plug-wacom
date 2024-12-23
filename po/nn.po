@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-10 20:07+0000\n"
+"POT-Creation-Date: 2024-12-17 19:11+0000\n"
 "PO-Revision-Date: 2023-02-06 21:25+0000\n"
 "Last-Translator: Martin Myrvold <myrvold.martin@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <https://l10n.elementary.io/projects/"
@@ -19,73 +19,73 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.14.2\n"
 
-#: src/Views/StylusView.vala:45
+#: src/Views/StylusView.vala:50
 #, fuzzy
 #| msgid "Test Tablet Settings"
 msgid "Test Settings"
 msgstr "Prøv innstillingane for brettet"
 
-#: src/Views/StylusView.vala:76
+#: src/Views/StylusView.vala:81
 #, fuzzy
 #| msgid "Eraser Pressure Feel:"
 msgid "Eraser Pressure Feel"
 msgstr "Trykkfølelse for viskaren:"
 
-#: src/Views/StylusView.vala:81
+#: src/Views/StylusView.vala:86
 #, fuzzy
 #| msgid "Button Action:"
 msgid "Button Action"
 msgstr "Hending når knappen blir trykt på:"
 
-#: src/Views/StylusView.vala:84 src/Views/StylusView.vala:88
+#: src/Views/StylusView.vala:89 src/Views/StylusView.vala:93
 #, fuzzy
 #| msgid "Top Button Action:"
 msgid "Top Button Action"
 msgstr "Hending når toppknappen blir trykt på:"
 
-#: src/Views/StylusView.vala:85 src/Views/StylusView.vala:90
+#: src/Views/StylusView.vala:90 src/Views/StylusView.vala:95
 #, fuzzy
 #| msgid "Bottom Button Action:"
 msgid "Bottom Button Action"
 msgstr "Hending når botnknappen blir trykt på:"
 
-#: src/Views/StylusView.vala:89
+#: src/Views/StylusView.vala:94
 #, fuzzy
 #| msgid "Middle Button Action:"
 msgid "Middle Button Action"
 msgstr "Hending når mellomknappen blir trykt på:"
 
-#: src/Views/StylusView.vala:95
+#: src/Views/StylusView.vala:100
 #, fuzzy
 #| msgid "Tip Pressure Feel:"
 msgid "Tip Pressure Feel"
 msgstr "Trykkfølelse på tuppen:"
 
-#: src/Views/StylusView.vala:110
+#: src/Views/StylusView.vala:115
 msgid "Default"
 msgstr "Standard"
 
-#: src/Views/StylusView.vala:111
+#: src/Views/StylusView.vala:116
 msgid "Middle Mouse Button Click"
 msgstr "Trykk med mellomknappen på musa"
 
-#: src/Views/StylusView.vala:112
+#: src/Views/StylusView.vala:117
 msgid "Right Mouse Button Click"
 msgstr "Trykk med høgreknappen på musa"
 
-#: src/Views/StylusView.vala:113
+#: src/Views/StylusView.vala:118
 msgid "Back"
 msgstr "Tilbake"
 
-#: src/Views/StylusView.vala:114
+#: src/Views/StylusView.vala:119
 msgid "Forward"
 msgstr "Framøve"
 
-#: src/Views/StylusView.vala:139
+#: src/Views/StylusView.vala:144
 msgid "Soft"
 msgstr "Lett"
 
-#: src/Views/StylusView.vala:140
+#: src/Views/StylusView.vala:145
 msgid "Firm"
 msgstr "Hardt"
 

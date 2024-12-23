@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-10 20:07+0000\n"
-"PO-Revision-Date: 2024-08-07 18:16+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2024-12-17 19:11+0000\n"
+"PO-Revision-Date: 2024-12-22 12:16+0000\n"
+"Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom-extra/nl/>\n"
 "Language: nl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.8.4\n"
 
 #: data/wacom.metainfo.xml.in:10
 msgid "Wacom Settings"
@@ -32,25 +32,30 @@ msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
 #: data/wacom.metainfo.xml.in:36
-msgid "A Big Redesign!"
-msgstr ""
+msgid "Updates:"
+msgstr "Updates:"
 
-#: data/wacom.metainfo.xml.in:38
-msgid "See all settings in a single page"
-msgstr ""
-
-#: data/wacom.metainfo.xml.in:39
-msgid "Show pen names"
-msgstr ""
-
-#: data/wacom.metainfo.xml.in:40 data/wacom.metainfo.xml.in:49
+#: data/wacom.metainfo.xml.in:38 data/wacom.metainfo.xml.in:52
+#: data/wacom.metainfo.xml.in:61
 msgid "Updated translations"
 msgstr "Bijgewerkte vertalingen"
 
-#: data/wacom.metainfo.xml.in:47
+#: data/wacom.metainfo.xml.in:48
+msgid "A Big Redesign!"
+msgstr "Een groots nieuw ontwerp!"
+
+#: data/wacom.metainfo.xml.in:50
+msgid "See all settings in a single page"
+msgstr "Bekijk alle instellingen op een enkele pagina"
+
+#: data/wacom.metainfo.xml.in:51
+msgid "Show pen names"
+msgstr "Geef pennamen weer"
+
+#: data/wacom.metainfo.xml.in:59
 msgid "Minor updates:"
 msgstr "Kleine updates:"
 
-#: data/wacom.metainfo.xml.in:56
+#: data/wacom.metainfo.xml.in:68
 msgid "Initial Release!"
 msgstr "Initiële uitgave!"

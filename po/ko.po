@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-10 20:07+0000\n"
+"POT-Creation-Date: 2024-12-17 19:11+0000\n"
 "PO-Revision-Date: 2022-08-06 22:53+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/plug-"
@@ -19,73 +19,73 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.4.2\n"
 
-#: src/Views/StylusView.vala:45
+#: src/Views/StylusView.vala:50
 #, fuzzy
 #| msgid "Test Tablet Settings"
 msgid "Test Settings"
 msgstr "태블릿 설정 테스트"
 
-#: src/Views/StylusView.vala:76
+#: src/Views/StylusView.vala:81
 #, fuzzy
 #| msgid "Eraser Pressure Feel:"
 msgid "Eraser Pressure Feel"
 msgstr "지우개 압력 느낌:"
 
-#: src/Views/StylusView.vala:81
+#: src/Views/StylusView.vala:86
 #, fuzzy
 #| msgid "Button Action:"
 msgid "Button Action"
 msgstr "버튼 동작:"
 
-#: src/Views/StylusView.vala:84 src/Views/StylusView.vala:88
+#: src/Views/StylusView.vala:89 src/Views/StylusView.vala:93
 #, fuzzy
 #| msgid "Top Button Action:"
 msgid "Top Button Action"
 msgstr "위 버튼 동작:"
 
-#: src/Views/StylusView.vala:85 src/Views/StylusView.vala:90
+#: src/Views/StylusView.vala:90 src/Views/StylusView.vala:95
 #, fuzzy
 #| msgid "Bottom Button Action:"
 msgid "Bottom Button Action"
 msgstr "아래 버튼 동작:"
 
-#: src/Views/StylusView.vala:89
+#: src/Views/StylusView.vala:94
 #, fuzzy
 #| msgid "Middle Button Action:"
 msgid "Middle Button Action"
 msgstr "가운데 버튼 동작:"
 
-#: src/Views/StylusView.vala:95
+#: src/Views/StylusView.vala:100
 #, fuzzy
 #| msgid "Tip Pressure Feel:"
 msgid "Tip Pressure Feel"
 msgstr "팁 압력 느낌:"
 
-#: src/Views/StylusView.vala:110
+#: src/Views/StylusView.vala:115
 msgid "Default"
 msgstr "기본"
 
-#: src/Views/StylusView.vala:111
+#: src/Views/StylusView.vala:116
 msgid "Middle Mouse Button Click"
 msgstr "마우스 가운데 버튼 클릭"
 
-#: src/Views/StylusView.vala:112
+#: src/Views/StylusView.vala:117
 msgid "Right Mouse Button Click"
 msgstr "마우스 오른쪽 버튼 클릭"
 
-#: src/Views/StylusView.vala:113
+#: src/Views/StylusView.vala:118
 msgid "Back"
 msgstr "뒤로"
 
-#: src/Views/StylusView.vala:114
+#: src/Views/StylusView.vala:119
 msgid "Forward"
 msgstr "앞으로"
 
-#: src/Views/StylusView.vala:139
+#: src/Views/StylusView.vala:144
 msgid "Soft"
 msgstr "부드러운"
 
-#: src/Views/StylusView.vala:140
+#: src/Views/StylusView.vala:145
 msgid "Firm"
 msgstr "단단한"
 
