@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-17 19:11+0000\n"
-"PO-Revision-Date: 2024-06-19 02:57+0000\n"
+"PO-Revision-Date: 2025-01-01 22:16+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "plug-wacom-extra/hu/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.9.2\n"
 
 #: data/wacom.metainfo.xml.in:10
 msgid "Wacom Settings"
@@ -32,10 +32,8 @@ msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
 #: data/wacom.metainfo.xml.in:36
-#, fuzzy
-#| msgid "Minor updates:"
 msgid "Updates:"
-msgstr "Kisebb frissítések:"
+msgstr "Újítások:"
 
 #: data/wacom.metainfo.xml.in:38 data/wacom.metainfo.xml.in:52
 #: data/wacom.metainfo.xml.in:61
