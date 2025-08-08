@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: wacom-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-17 19:11+0000\n"
-"PO-Revision-Date: 2025-08-03 10:55+0000\n"
+"PO-Revision-Date: 2025-08-09 11:55+0000\n"
 "Last-Translator: JieXu <xujie0739@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://"
 "l10n.elementaryos.org/projects/settings/plug-wacom/zh_Hans/>\n"
@@ -20,46 +20,32 @@ msgstr ""
 "X-Generator: Weblate 5.11.4\n"
 
 #: src/Views/StylusView.vala:50
-#, fuzzy
-#| msgid "Test Tablet Settings"
 msgid "Test Settings"
-msgstr "测试数位板设置"
+msgstr "测试设置"
 
 #: src/Views/StylusView.vala:81
-#, fuzzy
-#| msgid "Eraser Pressure Feel:"
 msgid "Eraser Pressure Feel"
-msgstr "橡皮擦压感："
+msgstr "橡皮擦压感"
 
 #: src/Views/StylusView.vala:86
-#, fuzzy
-#| msgid "Button Action:"
 msgid "Button Action"
-msgstr "按键行为："
+msgstr "按键行为"
 
 #: src/Views/StylusView.vala:89 src/Views/StylusView.vala:93
-#, fuzzy
-#| msgid "Top Button Action:"
 msgid "Top Button Action"
-msgstr "顶部按键行为："
+msgstr "顶部按键行为"
 
 #: src/Views/StylusView.vala:90 src/Views/StylusView.vala:95
-#, fuzzy
-#| msgid "Bottom Button Action:"
 msgid "Bottom Button Action"
-msgstr "底部按键行为："
+msgstr "底部按键行为"
 
 #: src/Views/StylusView.vala:94
-#, fuzzy
-#| msgid "Middle Button Action:"
 msgid "Middle Button Action"
-msgstr "中部按键行为："
+msgstr "中部按键行为"
 
 #: src/Views/StylusView.vala:100
-#, fuzzy
-#| msgid "Tip Pressure Feel:"
 msgid "Tip Pressure Feel"
-msgstr "提示功能压感："
+msgstr "笔尖压感"
 
 #: src/Views/StylusView.vala:115
 msgid "Default"
@@ -98,16 +84,12 @@ msgid "Touchpad (relative)"
 msgstr "触控板（相关）"
 
 #: src/Views/TabletView.vala:55
-#, fuzzy
-#| msgid "Tracking mode:"
 msgid "Tracking Mode"
-msgstr "跟踪模式："
+msgstr "跟踪模式"
 
 #: src/Views/TabletView.vala:63
-#, fuzzy
-#| msgid "Left-handed orientation:"
 msgid "Left Hand Orientation"
-msgstr "适配左手："
+msgstr "左手方向"
 
 #: src/MainPage.vala:22 src/Plug.vala:21
 msgid "Wacom"
@@ -127,7 +109,7 @@ msgstr "未检测到触笔"
 
 #: src/MainPage.vala:35
 msgid "Move the stylus over this window"
-msgstr ""
+msgstr "请将电容笔移动到此视窗上方"
 
 #: src/Plug.vala:22
 msgid "Configure Wacom tablet"
